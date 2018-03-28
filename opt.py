@@ -39,7 +39,7 @@ def default_options():
     options['momentum'] =  0.9       # only valid when solver is set to momentum optimizer
     options['batch_size'] = 160      # training batch size
     options['eval_batch_size'] = 40  # evaluation (loss) batch size
-    options['learning_rate'] = 1e-3  # initial learning rate (I fix learning rate to 1e-3 during training phase)
+    options['lr'] = 1e-3             # initial learning rate (I fix learning rate to 1e-3 during training phase)
     options['reg'] = 1e-5            # regularization strength (control L2 regularization ratio)
     options['init_scale'] = 0.08     # the init scale for uniform distribution
     options['max_epochs'] = 100    # maximum training epochs to run
