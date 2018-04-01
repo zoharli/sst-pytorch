@@ -31,7 +31,6 @@ def default_options():
 
     
     #*** OPTIMIZATION ***#
-    options['gpu_id'] = 0            # GPU id to use
     options['train_id'] = 1          # train id (useful when you have multiple runs, store checkpoints from diff runs into different folders: "checkpoints/1", "checkpoints/2", ...)
     options['init_from'] = ''        # initial model path (set it to empty string when using ranom initialization)
     options['use_weight'] = True     # whether use pre-calculated weights for positive/negative samples (deal with imbalance class problem)
@@ -57,7 +56,7 @@ def default_options():
     #*** INFERENCE ***#
     options['proposal_score_threshold'] = 0.2  # score threshold to select proposals
     options['nms_threshold'] = 0.8             # threshold for non-maximum suppression
-    options['out_json_file']= 'results/%d/predict_proposals.json'%options['train_id'] # output json file to save prediction results
+    options['out_json_file'] = 'results/%d/predict_proposals.json'%options['train_id'] # output json file to save prediction results
     options['tiou_measure'] = list(np.linspace(0.5, 1.0, 11))  # tIoU thresholds for calculating recall
     #options['tiou_measure'] = [0.8]
     

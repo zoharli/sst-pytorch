@@ -12,10 +12,8 @@ import tensorflow as tf
 from opt import *
 from data_provider import *
 from model import *
+from utils import *
 
-
-def getKey(item):
-    return item['score']
 
 """
 Non-Maximum Suppression
@@ -72,15 +70,11 @@ def test(options):
     '''
     Device setting
     '''
-    sess_config = tf.ConfigProto()
-    sess_config.gpu_options.allow_growth=True
-    os.environ['CUDA_VISIBLE_DEVICES'] = str(options['gpu_id'])
-    sess = tf.InteractiveSession(config=sess_config)
+    find_idle_gpu()
 
     # build model
     print('Building model ...')
     model = ProposalModel(options)
-    inputs, outputs = model.build_proposal_inference()
 
     print('Loading data ...')
     data_provision = DataProvision(options)

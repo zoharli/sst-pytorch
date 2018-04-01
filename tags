@@ -1,0 +1,189 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DataLoader	train.py	/^from torch.utils.data import DataLoader$/;"	i
+DataProvision	data_provider.py	/^class DataProvision:$/;"	c	inherits:
+GRUCell	model.py	/^class GRUCell(nn.Module):$/;"	c	inherits:nn.Module
+LSTMCell	model.py	/^class LSTMCell(nn.Module):$/;"	c	inherits:nn.Module
+N	dataset/thumos14/prepare_gt_proposal_data.py	/^		N = len(k)$/;"	v
+OrderedDict	data_provider.py	/^from collections import OrderedDict$/;"	i
+OrderedDict	opt.py	/^from collections import OrderedDict$/;"	i
+PadCollate	data_provider.py	/^class PadCollate:$/;"	c	inherits:
+ProposalModel	model.py	/^class ProposalModel(nn.Module):$/;"	c	inherits:nn.Module
+RNN	model.py	/^class RNN(nn.Module):$/;"	c	inherits:nn.Module
+Variable	model.py	/^from torch.autograd import Variable$/;"	i
+Variable	train.py	/^from torch.autograd import Variable$/;"	i
+__call__	data_provider.py	/^    def __call__(self, batch):$/;"	m	class:PadCollate	file:	access:private
+__getitem__	data_provider.py	/^    def __getitem__(self,index):$/;"	m	class:DataProvision	file:	access:private
+__init__	data_provider.py	/^    def __init__(self, dim=0):$/;"	m	class:PadCollate	access:public
+__init__	data_provider.py	/^    def __init__(self, options,split='train'):$/;"	m	class:DataProvision	access:public
+__init__	model.py	/^    def __init__(self, cell_class, input_size, hidden_size, num_layers=1,$/;"	m	class:RNN	access:public
+__init__	model.py	/^    def __init__(self, input_size, hidden_size, use_bias=True):$/;"	m	class:GRUCell	access:public
+__init__	model.py	/^    def __init__(self, input_size, hidden_size, use_bias=True):$/;"	m	class:LSTMCell	access:public
+__init__	model.py	/^    def __init__(self, options):$/;"	m	class:ProposalModel	access:public
+__len__	data_provider.py	/^    def __len__(self):$/;"	m	class:DataProvision	file:	access:private
+__repr__	model.py	/^    def __repr__(self):$/;"	m	class:GRUCell	file:	access:private
+__repr__	model.py	/^    def __repr__(self):$/;"	m	class:LSTMCell	file:	access:private
+_forward_rnn	model.py	/^    def _forward_rnn(cell, input_, length, hx):$/;"	m	class:RNN	access:public
+_init	model.py	/^    def _init(self):$/;"	m	class:ProposalModel	access:public
+anchors	dataset/thumos14/anchors/get_anchor_weight.py	/^anchors = list(range(c3d_resolution, (n_anchors+1)*c3d_resolution, c3d_resolution))$/;"	v
+annos	dataset/thumos14/prepare_gt_proposal_data.py	/^		annos = open(filepath, 'r').readlines()$/;"	v
+argparse	test.py	/^import argparse$/;"	i
+argparse	train.py	/^import argparse$/;"	i
+args	test.py	/^    args = parser.parse_args()$/;"	v
+args	test.py	/^    args = vars(args)$/;"	v
+args	train.py	/^    args = parser.parse_args()$/;"	v
+args	train.py	/^    args = vars(args)$/;"	v
+average_recall_vs_nr_proposals	eval.py	/^def average_recall_vs_nr_proposals(proposals, ground_truth,$/;"	f	access:public
+c3d_resolution	dataset/thumos14/anchors/get_anchor_weight.py	/^c3d_resolution = 16$/;"	v
+color	eval.py	/^             color=method['color'],$/;"	v
+color	eval.py	/^         color=method['color'],$/;"	v
+count_anchors	dataset/thumos14/anchors/get_anchor_weight.py	/^count_anchors = [0 for _ in range(n_anchors)]$/;"	v
+data	dataset/thumos14/anchors/get_anchor_weight.py	/^    data = split_data[vid]$/;"	v
+default_options	opt.py	/^def default_options():$/;"	f	access:public
+end	dataset/thumos14/anchors/get_anchor_weight.py	/^            end = stamp[1]$/;"	v
+end_feat	dataset/thumos14/prepare_gt_proposal_data.py	/^			end_feat = end_frame\/\/feat_resolution$/;"	v
+end_feat_id	dataset/thumos14/anchors/get_anchor_weight.py	/^        end_feat_id = min(start_feat_id + sample_len, feature_len)$/;"	v
+end_frame	dataset/thumos14/prepare_gt_proposal_data.py	/^			end_frame = int(extracted_frame_num*(end_time\/video_info[vid]['duration']))$/;"	v
+end_frame_id	dataset/thumos14/anchors/get_anchor_weight.py	/^        end_frame_id = (end_feat_id - 1) * c3d_resolution + c3d_resolution \/ 2$/;"	v
+end_point	dataset/thumos14/anchors/get_anchor_weight.py	/^            end_point = end + (end - start + 1)$/;"	v
+evaluation	train.py	/^def evaluation(model,weight,options, val_dataloader):$/;"	f	access:public
+extracted_frame_num	dataset/thumos14/prepare_gt_proposal_data.py	/^			extracted_frame_num = int(feat_data[vid]['total_frames'].value)$/;"	v
+feat_data	dataset/thumos14/prepare_gt_proposal_data.py	/^feat_data = h5py.File(feat_path, 'r')$/;"	v
+feat_path	dataset/thumos14/prepare_gt_proposal_data.py	/^feat_path = 'features\/thumos14_c3d_fc6.hdf5'$/;"	v
+feat_resolution	dataset/thumos14/prepare_gt_proposal_data.py	/^feat_resolution = 16$/;"	v
+feature	dataset/thumos14/anchors/get_anchor_weight.py	/^    feature = features[vid]['c3d_features'].value$/;"	v
+feature_len	dataset/thumos14/anchors/get_anchor_weight.py	/^    feature_len = feature.shape[0]$/;"	v
+feature_path	dataset/thumos14/anchors/get_anchor_weight.py	/^feature_path = '..\/features\/thumos14_c3d_fc6.hdf5'$/;"	v
+features	dataset/thumos14/anchors/get_anchor_weight.py	/^features = h5py.File(feature_path, 'r')$/;"	v
+fid	eval.py	/^fid = h5py.File('results\/1\/recall_prop.hdf5', 'w')$/;"	v
+filepath	dataset/thumos14/prepare_gt_proposal_data.py	/^		filepath = os.path.join(source, file)$/;"	v
+files	dataset/thumos14/prepare_gt_proposal_data.py	/^	files = os.listdir(source)$/;"	v
+fn_size	eval.py	/^fn_size = 14$/;"	v
+forward	model.py	/^    def forward(self, input_, h_0):$/;"	m	class:GRUCell	access:public
+forward	model.py	/^    def forward(self, input_, hx):$/;"	m	class:LSTMCell	access:public
+forward	model.py	/^    def forward(self, input_, length=None, hx=None):$/;"	m	class:RNN	access:public
+forward	model.py	/^    def forward(self,x,length):$/;"	m	class:ProposalModel	access:public
+frame_id	dataset/thumos14/anchors/get_anchor_weight.py	/^                frame_id = feat_id*c3d_resolution + c3d_resolution\/2$/;"	v
+frame_num	dataset/thumos14/anchors/get_anchor_weight.py	/^    frame_num = c3d_resolution*feature_len  # valid frame number$/;"	v
+framestamps	dataset/thumos14/anchors/get_anchor_weight.py	/^    framestamps = data['framestamps']$/;"	v
+getKey	test.py	/^def getKey(item):$/;"	f	access:public
+get_cell	model.py	/^    def get_cell(self, layer):$/;"	m	class:RNN	access:public
+get_intersection	data_provider.py	/^    def get_intersection(self, region1, region2):$/;"	m	class:DataProvision	access:public
+get_intersection	dataset/thumos14/anchors/get_anchor_weight.py	/^def get_intersection(region1, region2):$/;"	f	access:public
+get_iou	data_provider.py	/^    def get_iou(self, pred, gt):$/;"	m	class:DataProvision	access:public
+get_iou	dataset/thumos14/anchors/get_anchor_weight.py	/^def get_iou(pred, gt):$/;"	f	access:public
+ground_truth	eval.py	/^ground_truth = json.load(open(ground_truth_filename, 'r'))$/;"	v
+ground_truth_filename	eval.py	/^ground_truth_filename = 'dataset\/thumos14\/gt_proposals\/thumos14_temporal_proposal_%s.json'%split$/;"	v
+h5py	data_provider.py	/^import h5py$/;"	i
+h5py	dataset/thumos14/anchors/get_anchor_weight.py	/^import h5py$/;"	i
+h5py	dataset/thumos14/prepare_gt_proposal_data.py	/^import h5py$/;"	i
+h5py	eval.py	/^import h5py$/;"	i
+h5py	test.py	/^import h5py$/;"	i
+items	dataset/thumos14/prepare_gt_proposal_data.py	/^			items = line.strip().split()$/;"	v
+json	data_provider.py	/^import json$/;"	i
+json	dataset/thumos14/anchors/get_anchor_weight.py	/^import json$/;"	i
+json	dataset/thumos14/prepare_gt_proposal_data.py	/^import json$/;"	i
+json	eval.py	/^import json$/;"	i
+json	opt.py	/^import json$/;"	i
+json	test.py	/^import json$/;"	i
+k	dataset/thumos14/prepare_gt_proposal_data.py	/^		k = out_data.keys()$/;"	v
+label	eval.py	/^             label=method['legend'], $/;"	v
+label	eval.py	/^         label=method['legend'], $/;"	v
+linestyle	eval.py	/^             linestyle=str(method['linestyle']),$/;"	v
+linestyle	eval.py	/^         linestyle=str(method['linestyle']))$/;"	v
+linewidth	eval.py	/^             linewidth=method['linewidth'],$/;"	v
+linewidth	eval.py	/^         linewidth=method['linewidth'],$/;"	v
+marker	eval.py	/^             marker=str(method['marker']))$/;"	v
+math	data_provider.py	/^import math$/;"	i
+math	dataset/thumos14/anchors/get_anchor_weight.py	/^import math$/;"	i
+math	eval.py	/^import math$/;"	i
+math	model.py	/^import math$/;"	i
+matplotlib	eval.py	/^import matplotlib.pyplot as plt$/;"	i
+method	eval.py	/^method = {'legend': 'SST',$/;"	v
+n_anchors	dataset/thumos14/anchors/get_anchor_weight.py	/^n_anchors = 32$/;"	v
+nms_detections	test.py	/^def nms_detections(proposals, overlap=0.7):$/;"	f	access:public
+nn	model.py	/^from torch import nn$/;"	i
+np	data_provider.py	/^import numpy as np$/;"	i
+np	dataset/thumos14/anchors/get_anchor_weight.py	/^import numpy as np$/;"	i
+np	eval.py	/^import numpy as np$/;"	i
+np	opt.py	/^import numpy as np$/;"	i
+np	test.py	/^import numpy as np$/;"	i
+np	train.py	/^import numpy as np$/;"	i
+options	eval.py	/^options = default_options()$/;"	v
+options	test.py	/^    options = default_options()$/;"	v
+options	train.py	/^    options = default_options()$/;"	v
+os	data_provider.py	/^import os$/;"	i
+os	dataset/thumos14/anchors/get_anchor_weight.py	/^import os$/;"	i
+os	dataset/thumos14/prepare_gt_proposal_data.py	/^import os$/;"	i
+os	eval.py	/^import os$/;"	i
+os	opt.py	/^import os$/;"	i
+os	test.py	/^import os$/;"	i
+os	train.py	/^import os$/;"	i
+out_data	dataset/thumos14/prepare_gt_proposal_data.py	/^	out_data = dict()$/;"	v
+out_data_train	dataset/thumos14/prepare_gt_proposal_data.py	/^		out_data_train = {k:out_data[k] for k in train_keys}$/;"	v
+out_data_val	dataset/thumos14/prepare_gt_proposal_data.py	/^		out_data_val = {k:out_data[k] for k in val_keys}$/;"	v
+out_weight_path	dataset/thumos14/anchors/get_anchor_weight.py	/^out_weight_path = 'weights.json'$/;"	v
+pad_collate	data_provider.py	/^    def pad_collate(self, batch):$/;"	m	class:PadCollate	access:public
+pad_tensor	data_provider.py	/^def pad_tensor(vec, pad, dim):$/;"	f	access:public
+parser	test.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	train.py	/^    parser = argparse.ArgumentParser()$/;"	v
+plt	eval.py	/^import matplotlib.pyplot as plt$/;"	i
+pred	dataset/thumos14/anchors/get_anchor_weight.py	/^                    pred = (frame_id + 1- anchor, frame_id + 1)$/;"	v
+proposal_file_path	dataset/thumos14/anchors/get_anchor_weight.py	/^proposal_file_path = os.path.join(proposal_source, 'thumos14_temporal_proposal_%s.json'%split)$/;"	v
+proposal_source	dataset/thumos14/anchors/get_anchor_weight.py	/^proposal_source = '..\/gt_proposals'$/;"	v
+proposal_train	dataset/thumos14/anchors/get_anchor_weight.py	/^proposal_train = json.load(open(proposal_file_path, 'r'))$/;"	v
+random	data_provider.py	/^import random$/;"	i
+random	dataset/thumos14/anchors/get_anchor_weight.py	/^import random$/;"	i
+random	dataset/thumos14/prepare_gt_proposal_data.py	/^import random$/;"	i
+recall_vs_tiou_thresholds	eval.py	/^def recall_vs_tiou_thresholds(proposals, ground_truth, nr_proposals=1000,$/;"	f	access:public
+reset_parameters	model.py	/^    def reset_parameters(self):$/;"	m	class:GRUCell	access:public
+reset_parameters	model.py	/^    def reset_parameters(self):$/;"	m	class:LSTMCell	access:public
+reset_parameters	model.py	/^    def reset_parameters(self):$/;"	m	class:RNN	access:public
+result_filename	eval.py	/^result_filename = 'results\/1\/predict_proposals.json'$/;"	v
+results	eval.py	/^results = json.load(open(result_filename, 'r'))['results']$/;"	v
+sample_len	dataset/thumos14/anchors/get_anchor_weight.py	/^sample_len = 2048\/16 # length of sampled stream, measured in feature number $/;"	v
+sample_num	dataset/thumos14/anchors/get_anchor_weight.py	/^sample_num = 100     # sampling number for a video $/;"	v
+save_checkpoint	train.py	/^def save_checkpoint(filename,state,is_best):$/;"	f	access:public
+segment_tiou	eval.py	/^def segment_tiou(target_segments, test_segments):$/;"	f	access:public
+shutil	train.py	/^import shutil$/;"	i
+source	dataset/thumos14/prepare_gt_proposal_data.py	/^	source = sources[split]$/;"	v
+sources	dataset/thumos14/prepare_gt_proposal_data.py	/^sources = {'val': val_anno_folder, 'test': test_anno_folder}$/;"	v
+split	dataset/thumos14/anchors/get_anchor_weight.py	/^split = 'train'$/;"	v
+split	eval.py	/^split = 'test'$/;"	v
+split_data	dataset/thumos14/anchors/get_anchor_weight.py	/^split_data = json.load(open(os.path.join(proposal_source, 'thumos14_temporal_proposal_%s.json'%split)))$/;"	v
+splits	dataset/thumos14/anchors/get_anchor_weight.py	/^splits = {'train', 'val', 'test'}$/;"	v
+start	dataset/thumos14/anchors/get_anchor_weight.py	/^            start = stamp[0]$/;"	v
+start_feat	dataset/thumos14/prepare_gt_proposal_data.py	/^			start_feat = start_frame\/\/feat_resolution$/;"	v
+start_feat_id	dataset/thumos14/anchors/get_anchor_weight.py	/^        start_feat_id = random.randint(0, max((feature_len - sample_len), 0))$/;"	v
+start_frame	dataset/thumos14/prepare_gt_proposal_data.py	/^			start_frame = int(extracted_frame_num*(start_time\/video_info[vid]['duration']))$/;"	v
+start_frame_id	dataset/thumos14/anchors/get_anchor_weight.py	/^        start_frame_id = start_feat_id * c3d_resolution + c3d_resolution \/ 2$/;"	v
+start_point	dataset/thumos14/anchors/get_anchor_weight.py	/^            start_point = max((start + end) \/ 2, 0)$/;"	v
+sum_sample_length	dataset/thumos14/anchors/get_anchor_weight.py	/^sum_sample_length = 0$/;"	v
+sys	opt.py	/^import sys$/;"	i
+test	test.py	/^def test(options):$/;"	f	access:public
+test_anno_folder	dataset/thumos14/prepare_gt_proposal_data.py	/^test_anno_folder = 'th14_temporal_annotations_test\/annotation'$/;"	v
+tf	test.py	/^import tensorflow as tf$/;"	i
+this_sample_len	dataset/thumos14/anchors/get_anchor_weight.py	/^    this_sample_len = min(feature_len, sample_len)$/;"	v
+time	opt.py	/^import time$/;"	i
+tiou	dataset/thumos14/anchors/get_anchor_weight.py	/^                    tiou = get_iou(pred, (start, end + 1))$/;"	v
+torch	data_provider.py	/^import torch$/;"	i
+torch	model.py	/^import torch$/;"	i
+torch	train.py	/^import torch$/;"	i
+train	train.py	/^def train(options):$/;"	f	access:public
+train_keys	dataset/thumos14/prepare_gt_proposal_data.py	/^		train_keys = k[:train_num]$/;"	v
+train_num	dataset/thumos14/prepare_gt_proposal_data.py	/^		train_num = int(val_split['train']*N)$/;"	v
+val_anno_folder	dataset/thumos14/prepare_gt_proposal_data.py	/^val_anno_folder = 'th14_temporal_annotations_validation\/annotation'$/;"	v
+val_keys	dataset/thumos14/prepare_gt_proposal_data.py	/^		val_keys = k[train_num:]$/;"	v
+val_num	dataset/thumos14/prepare_gt_proposal_data.py	/^		val_num = N - train_num$/;"	v
+val_split	dataset/thumos14/prepare_gt_proposal_data.py	/^val_split = {'train': 0.8, 'val': 0.2}  # further split validation set into train set and validation set$/;"	v
+valid_frame_num	dataset/thumos14/prepare_gt_proposal_data.py	/^			valid_frame_num = int(feat_data[vid]['valid_frames'].value)$/;"	v
+vid	dataset/thumos14/prepare_gt_proposal_data.py	/^			vid = items[0]$/;"	v
+video_ids	dataset/thumos14/anchors/get_anchor_weight.py	/^video_ids = split_data.keys()$/;"	v
+video_info	dataset/thumos14/prepare_gt_proposal_data.py	/^video_info = json.load(open(video_info_file, 'r'))$/;"	v
+video_info_file	dataset/thumos14/prepare_gt_proposal_data.py	/^video_info_file = 'thumos_video_info.json' # THUMOS14 website provided meta data, I already convert original .mat data to .json data$/;"	v
+weights	dataset/thumos14/anchors/get_anchor_weight.py	/^weights = [[0., 0.] for _ in range(n_anchors)]$/;"	v
+work_dir	train.py	/^    work_dir = options['ckpt_prefix']$/;"	v

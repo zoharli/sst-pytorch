@@ -102,7 +102,8 @@ class DataProvision:
            
         feature=torch.Tensor(feature)
         gt_proposal=torch.Tensor(gt_proposal)
-        return feature,gt_proposal,feature.shape[0]
+        mask=torch.ones(gt_proposal.shape)
+        return feature,gt_proposal,feature.shape[0],mask
 
     def __len__(self):
         return self._sizes
@@ -157,21 +158,18 @@ class PadCollate:
     def pad_collate(self, batch):
         """
         args:
-            batch - list of (tensor, label,length)
-
-        reutrn:
-            xs - a tensor of all examples in 'batch' after padding
-            ys - a Tensor of all labels in batch
+            batch - list of (tensor, label,length,mask)
         """
         # find longest sequence
         max_len = max(list(map(lambda x: x[0].shape[self.dim], batch)))
         # pad according to max_len
-        batch = list(map(lambda x: (pad_tensor(x[0], pad=max_len, dim=self.dim),x[1],x[2]), batch))
         # stack all
-        xs = torch.stack(list(map(lambda x: x[0], batch)), dim=1)
-        ys = torch.stack(list(map(lambda x: x[1], batch)), dim=1)
+        xs = torch.stack(list(map(lambda x: pad_tensor(x[0],max_len,self.dim), batch)), dim=1)
+        ys = torch.stack(list(map(lambda x: pad_tensor(x[1],max_len,self.dim), batch)), dim=1)
         lengths=[x[2] for x in batch]
-        return xs, ys,lengths
+        mask=torch.stack(list(map(lambda x: pad_tensor(x[3],max_len,self.dim), batch)), dim=1)
+        
+        return xs, ys,lengths,mask
 
     def __call__(self, batch):
         return self.pad_collate(batch)

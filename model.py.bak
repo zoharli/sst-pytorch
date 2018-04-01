@@ -26,12 +26,11 @@ class ProposalModel(nn.Module):
         self._init()
 
     def forward(self,x,length):
-        batch_size=x.size()[1]
         x,_=self.rnn(x,length)
         x=x.view(-1,self.options['rnn_size'])#??
         x=self.fc(x)
-        x=torch.sigmoid(x)
-        x=x.view(-1,batch_size,self.options['num_anchors'])
+        #x=self.sig(x)
+        x=x.view(-1,self.options['batch_size'],self.options['num_anchors'])
         return x
 
     def _init(self):
@@ -212,7 +211,7 @@ class RNN(nn.Module):
         for time in range(max_time):
             if isinstance(cell,LSTMCell):
                 h_next, c_next = cell(input_[time], hx)
-                mask = Variable((time < length).float().unsqueeze(1).expand_as(h_next))
+                mask = (time < length).float().unsqueeze(1).expand_as(h_next)
                 h_next = h_next*mask + hx[0]*(1 - mask)
                 c_next = c_next*mask + hx[1]*(1 - mask)
                 hx_next = (h_next, c_next)
@@ -220,7 +219,8 @@ class RNN(nn.Module):
                 hx = hx_next
             elif isinstance(cell,GRUCell):
                 h_next = cell(input_[time],hx)
-                mask = Variable((time < length).float().unsqueeze(1).expand_as(h_next))
+                mask = (time < length).float().unsqueeze(1).expand_as(h_next)
+                print(h_next.is_cuda,mask.is_cuda,hx.is_cuda)
                 h_next = h_next*mask + hx*(1 - mask)
                 output.append(h_next)
                 hx = h_next
@@ -241,7 +241,7 @@ class RNN(nn.Module):
                 cx = Variable(input_.data.new(batch_size, self.hidden_size).zero_())
                 hx = (hx, cx)
         if input_.is_cuda:
-            length=length.cuda()
+            length = length.cuda()
             if self.cell_class == LSTMCell:
                 hx=(hx[0].cuda(),hx[1].cuda())
             elif self.cell_class == GRUCell:
@@ -259,6 +259,6 @@ class RNN(nn.Module):
             h_n = torch.stack(list(map(lambda x:x[0],h_n)), 0)
             c_n = torch.stack(list(map(lambda x:x[1],c_n)), 0)
             h_n = (h_n,c_n)
-        elif self.cell_class == GRUCell:
+        elif slef.cell_class == GRUCell:
             h_n = torch.stack(h_n,0)
         return output, h_n 

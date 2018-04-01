@@ -11,22 +11,25 @@ from torch.optim import *
 from opt import *
 from data_provider import *
 from model import * 
+from utils import *
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 
-# loss evaluation
+
 def evaluation(model,weight,options, val_dataloader):
 
     val_loss_list = []
-    val_count = val_data_provision.__len__()
+    val_count = val_dataloader.dataset.__len__()
     model.eval()
 
-    for i,(input,target,length) in enumerate(val_dataloader):
-        print('Evaluating batch: #%d'%count)
-        input=Variable(input,volatile=True)
-        target=Variable(target,volatile=True)
-        criterion=torch.BCEWithLogitsLoss(weight=weight.expand_as(target))
-        loss=criterion(model(input,length),target)
+    for i,(input,target,length,mask) in enumerate(val_dataloader):
+        print('Evaluating batch: #%d'%i)
+        input=Variable(input,volatile=True).cuda()
+        target=Variable(target,volatile=True).cuda()
+        mask=Variable(mask,volatile=True).cuda()
+        output=model(input,length)*mask
+        criterion=torch.nn.BCELoss(weight=weight.expand_as(target)).cuda()
+        loss=criterion(output,target)
         val_loss_list.append(loss.data[0]*len(length))
         
     ave_val_loss = sum(val_loss_list) / float(val_count)
@@ -36,7 +39,7 @@ def evaluation(model,weight,options, val_dataloader):
 def save_checkpoint(filename,state,is_best):
     torch.save(state, filename)
     if is_best:
-        shutil.copyfile(filename, os.path.join(logdir,'best_'+args.model_name))
+        shutil.copyfile(filename, 'checkpoints/best_model.pth')
 
 def train(options):
     
@@ -45,7 +48,7 @@ def train(options):
     train_data_provision = DataProvision(options,'train')
     train_dataloader=torch.utils.data.DataLoader(train_data_provision,options['batch_size'],True,collate_fn=collate_fn)
     val_data_provision = DataProvision(options,'val')
-    val_dataloader=torch.utils.data.DataLoader(train_data_provision,options['eval_batch_size'],True,collate_fn=collate_fn)
+    val_dataloader=torch.utils.data.DataLoader(val_data_provision,options['eval_batch_size'],True,collate_fn=collate_fn)
     batch_size = options['batch_size']
     max_epochs = options['max_epochs']
     init_epoch = options['init_epoch']
@@ -88,13 +91,13 @@ def train(options):
     for epoch in range(init_epoch, max_epochs):
         model.train()
         print('epoch: %d/%d, lr: %.1E (%.1E)'%(epoch, max_epochs, lr, lr_init))
-        for iter,(input,target,length) in enumerate(train_dataloader):
-            input_var = Variable(input)
-            target_var = Variable(target)
-            
+        for iter,(input,target,length,mask) in enumerate(train_dataloader):
+            input_var = Variable(input).cuda()
+            target_var = Variable(target).cuda()
+            mask=Variable(mask).cuda()
             optimizer.zero_grad()
-            output=model(input_var,length)
-            criterion=torch.BCEWithLogitsLoss(weight=weight.expand_as(target_var))
+            output=model(input_var,length)*mask
+            criterion=torch.nn.BCELoss(weight=weight.expand_as(target_var)).cuda()
             loss=criterion(output,target_var)
             loss.backward()
             torch.nn.utils.clip_grad_norm(model.parameters(),options['clip_gradient_norm'])
@@ -138,6 +141,6 @@ if __name__ == '__main__':
     work_dir = options['ckpt_prefix']
     if not os.path.exists(work_dir) :
         os.makedirs(work_dir)
-
+    find_idle_gpu()
     train(options)
 
