@@ -1,0 +1,287 @@
+training on gpu 0
+Load data ...
+Data Size:
+train-split: 160 videos.
+Loading c3d features ...
+Loading anchor weight data ...
+Done train set loading.
+Data Size:
+val-split: 40 videos.
+Loading c3d features ...
+Loading anchor weight data ...
+Done val set loading.
+using dropout in rnn!
+Build model for training stage ...
+epoch: 0/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 0/1000, 
+lr: 1.0E-04, loss: 10.7253
+epoch: 1/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 1/1000, 
+lr: 1.0E-04, loss: 10.6645
+epoch: 2/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 2/1000, 
+lr: 1.0E-04, loss: 10.5997
+epoch: 3/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 3/1000, 
+lr: 1.0E-04, loss: 10.5385
+epoch: 4/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 4/1000, 
+lr: 1.0E-04, loss: 10.4740
+epoch: 5/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 5/1000, 
+lr: 1.0E-04, loss: 10.3996
+epoch: 6/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 6/1000, 
+lr: 1.0E-04, loss: 10.3378
+epoch: 7/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 7/1000, 
+lr: 1.0E-04, loss: 10.2607
+epoch: 8/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 8/1000, 
+lr: 1.0E-04, loss: 10.1820
+epoch: 9/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 9/1000, 
+lr: 1.0E-04, loss: 10.1056
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.8825
+epoch: 10/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 10/1000, 
+lr: 1.0E-04, loss: 10.0196
+epoch: 11/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 11/1000, 
+lr: 1.0E-04, loss: 9.9307
+epoch: 12/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 12/1000, 
+lr: 1.0E-04, loss: 9.8280
+epoch: 13/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 13/1000, 
+lr: 1.0E-04, loss: 9.7340
+epoch: 14/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 14/1000, 
+lr: 1.0E-04, loss: 9.6378
+epoch: 15/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 15/1000, 
+lr: 1.0E-04, loss: 9.5279
+epoch: 16/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 16/1000, 
+lr: 1.0E-04, loss: 9.4128
+epoch: 17/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 17/1000, 
+lr: 1.0E-04, loss: 9.3089
+epoch: 18/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 18/1000, 
+lr: 1.0E-04, loss: 9.1844
+epoch: 19/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 19/1000, 
+lr: 1.0E-04, loss: 9.0712
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6462
+epoch: 20/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 20/1000, 
+lr: 1.0E-04, loss: 8.9477
+epoch: 21/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 21/1000, 
+lr: 1.0E-04, loss: 8.8309
+epoch: 22/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 22/1000, 
+lr: 1.0E-04, loss: 8.7145
+epoch: 23/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 23/1000, 
+lr: 1.0E-04, loss: 8.5764
+epoch: 24/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 24/1000, 
+lr: 1.0E-04, loss: 8.4670
+epoch: 25/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 25/1000, 
+lr: 1.0E-04, loss: 8.3431
+epoch: 26/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 26/1000, 
+lr: 1.0E-04, loss: 8.2254
+epoch: 27/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 27/1000, 
+lr: 1.0E-04, loss: 8.1065
+epoch: 28/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 28/1000, 
+lr: 1.0E-04, loss: 7.9833
+epoch: 29/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 29/1000, 
+lr: 1.0E-04, loss: 7.8638
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4187
+epoch: 30/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 30/1000, 
+lr: 1.0E-04, loss: 7.7422
+epoch: 31/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 31/1000, 
+lr: 1.0E-04, loss: 7.6523
+epoch: 32/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 32/1000, 
+lr: 1.0E-04, loss: 7.5281
+epoch: 33/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 33/1000, 
+lr: 1.0E-04, loss: 7.4160
+epoch: 34/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 34/1000, 
+lr: 1.0E-04, loss: 7.2947
+epoch: 35/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 35/1000, 
+lr: 1.0E-04, loss: 7.2089
+epoch: 36/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 36/1000, 
+lr: 1.0E-04, loss: 7.1027
+epoch: 37/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 37/1000, 
+lr: 1.0E-04, loss: 7.0008
+epoch: 38/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 38/1000, 
+lr: 1.0E-04, loss: 6.9133
+epoch: 39/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 39/1000, 
+lr: 1.0E-04, loss: 6.7980
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2419
+epoch: 40/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 40/1000, 
+lr: 1.0E-04, loss: 6.6917
+epoch: 41/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 41/1000, 
+lr: 1.0E-04, loss: 6.6233
+epoch: 42/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 42/1000, 
+lr: 1.0E-04, loss: 6.5363
+epoch: 43/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 43/1000, 
+lr: 1.0E-04, loss: 6.4237
+epoch: 44/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 44/1000, 
+lr: 1.0E-04, loss: 6.3342
+epoch: 45/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 45/1000, 
+lr: 1.0E-04, loss: 6.2347
+epoch: 46/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 46/1000, 
+lr: 1.0E-04, loss: 6.1645
+epoch: 47/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 47/1000, 
+lr: 1.0E-04, loss: 6.0879
+epoch: 48/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 48/1000, 
+lr: 1.0E-04, loss: 6.0052
+epoch: 49/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 49/1000, 
+lr: 1.0E-04, loss: 5.9341
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1025
+epoch: 50/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 50/1000, 
+lr: 1.0E-04, loss: 5.8462
+epoch: 51/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 51/1000, 
+lr: 1.0E-04, loss: 5.8061
+epoch: 52/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 52/1000, 
+lr: 1.0E-04, loss: 5.6627
+epoch: 53/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 53/1000, 
+lr: 1.0E-04, loss: 5.6324
+epoch: 54/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 54/1000, 
+lr: 1.0E-04, loss: 5.5670
+epoch: 55/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 55/1000, 
+lr: 1.0E-04, loss: 5.4915
+epoch: 56/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 56/1000, 
+lr: 1.0E-04, loss: 5.4150
+epoch: 57/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 57/1000, 
+lr: 1.0E-04, loss: 5.4142
+epoch: 58/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 58/1000, 
+lr: 1.0E-04, loss: 5.3456
+epoch: 59/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 59/1000, 
+lr: 1.0E-04, loss: 5.2067
+Evaluating model ...
+Evaluating batch: #0
+loss: 0.9943
+epoch: 60/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 60/1000, 
+lr: 1.0E-04, loss: 5.1786
+epoch: 61/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 61/1000, 
+lr: 1.0E-04, loss: 5.1368
+epoch: 62/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 62/1000, 
+lr: 1.0E-04, loss: 5.1084
+epoch: 63/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 63/1000, 
+lr: 1.0E-04, loss: 5.0476
+epoch: 64/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 64/1000, 
+lr: 1.0E-04, loss: 4.9801
+epoch: 65/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 65/1000, 
+lr: 1.0E-04, loss: 4.8548
+epoch: 66/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 66/1000, 
+lr: 1.0E-04, loss: 4.8846
+epoch: 67/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 67/1000, 
+lr: 1.0E-04, loss: 4.7813
+epoch: 68/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 68/1000, 
+lr: 1.0E-04, loss: 4.7280
+epoch: 69/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 69/1000, 
+lr: 1.0E-04, loss: 4.7318
+Evaluating model ...
+Evaluating batch: #0
+loss: 0.9113
+epoch: 70/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 70/1000, 
+lr: 1.0E-04, loss: 4.6731
+epoch: 71/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 71/1000, 
+lr: 1.0E-04, loss: 4.6572
+epoch: 72/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 72/1000, 
+lr: 1.0E-04, loss: 4.5558
+epoch: 73/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 73/1000, 
+lr: 1.0E-04, loss: 4.6082
+epoch: 74/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 74/1000, 
+lr: 1.0E-04, loss: 4.4840
+epoch: 75/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 75/1000, 
+lr: 1.0E-04, loss: 4.4947
+epoch: 76/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 76/1000, 
+lr: 1.0E-04, loss: 4.4182
+epoch: 77/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 77/1000, 
+lr: 1.0E-04, loss: 4.3598
+epoch: 78/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 78/1000, 
+lr: 1.0E-04, loss: 4.3349
+epoch: 79/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 79/1000, 
+lr: 1.0E-04, loss: 4.2591
+Evaluating model ...
+Evaluating batch: #0
+loss: 0.8478
+epoch: 80/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 80/1000, 
+lr: 1.0E-04, loss: 4.2449
+epoch: 81/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 81/1000, 
+lr: 1.0E-04, loss: 4.2450
+epoch: 82/1000, lr: 1.0E-04 (1.0E-04)
+iter: 0, epoch: 82/1000, 
+lr: 1.0E-04, loss: 4.3034

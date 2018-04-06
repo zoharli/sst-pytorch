@@ -4,13 +4,30 @@ Evaluate performance of generated proposals: avg recall vs avg proposal number, 
 This scrip is directly modified from Victor Escorcia's code
 """
 
+import sys
 import os
-import numpy as np
+import time
+import math
+import random
 import json
 import h5py
-import math
-import matplotlib.pyplot as plt
+
+import torch
+import torch.nn as nn
+from torch.autograd import Variable as var
+from torch import Tensor as tensor
+
+import numpy as np
+import pandas as pd
+from scipy.misc import imread,imresize
+
 from opt import *
+
+import matplotlib
+import matplotlib.pyplot as plt
+matplotlib.pyplot.switch_backend('Agg')
+from visdom import Visdom
+viz=Visdom()
 
 
 """ Useful functions for the proposals evaluation.
@@ -34,7 +51,7 @@ def segment_tiou(target_segments, test_segments):
 
     m, n = target_segments.shape[0], test_segments.shape[0]
     tiou = np.empty((m, n))
-    for i in xrange(m):
+    for i in range(m):
         tt1 = np.maximum(target_segments[i, 0], test_segments[:, 0])
         tt2 = np.minimum(target_segments[i, 1], test_segments[:, 1])
 
@@ -264,23 +281,6 @@ method = {'legend': 'SST',
 fn_size = 14
 plt.figure(num=None, figsize=(6, 5))
 
-# Plots Average Recall vs Average number of proposals.
-plt.semilogx(proposals_per_video, recalls_avg,
-             label=method['legend'], 
-             color=method['color'],
-             linewidth=method['linewidth'],
-             linestyle=str(method['linestyle']),
-             marker=str(method['marker']))
-
-plt.ylabel('Average Recall', fontsize=fn_size)
-plt.xlabel('Average number of proposals', fontsize=fn_size)
-plt.grid(b=True, which="both")
-plt.ylim([0, 1.0])
-plt.xlim([10**1, 10**4])
-plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
-plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
-plt.show()
-
 
 # Plots recall at different tiou thresholds.
 plt.plot(tiou_thresholds, recalls_tiou,
@@ -297,4 +297,21 @@ plt.xlim([0.1,1])
 plt.xticks(np.arange(0, 1.2, 0.2))
 plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
 plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
-plt.show()
+viz.matplot(plt)
+
+# Plots Average Recall vs Average number of proposals.
+plt.semilogx(proposals_per_video, recalls_avg,
+             label=method['legend'], 
+             color=method['color'],
+             linewidth=method['linewidth'],
+             linestyle=str(method['linestyle']),
+             marker=str(method['marker']))
+
+plt.ylabel('Average Recall', fontsize=fn_size)
+plt.xlabel('Average number of proposals', fontsize=fn_size)
+plt.grid(b=True, which="both")
+plt.ylim([0, 1.0])
+plt.xlim([10**1, 10**4])
+plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
+plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
+viz.matplot(plt)

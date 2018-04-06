@@ -27,8 +27,9 @@ def evaluation(model,weight,options, val_dataloader):
         input=Variable(input,volatile=True).cuda()
         target=Variable(target,volatile=True).cuda()
         mask=Variable(mask,volatile=True).cuda()
-        output=model(input,length)*mask
-        criterion=torch.nn.BCELoss(weight=weight.expand_as(target)).cuda()
+        output=model(input,length)+mask
+        criterion=torch.nn.BCEWithLogitsLoss(weight=weight.expand_as(target)).cuda()
+#        criterion=torch.nn.BCEWithLogitsLoss().cuda()
         loss=criterion(output,target)
         val_loss_list.append(loss.data[0]*len(length))
         
@@ -39,7 +40,7 @@ def evaluation(model,weight,options, val_dataloader):
 def save_checkpoint(filename,state,is_best):
     torch.save(state, filename)
     if is_best:
-        shutil.copyfile(filename, 'checkpoints/best_model.pth')
+        shutil.copyfile(filename, os.path.dirname(filename)+'/best_model.pth')
 
 def train(options):
     
@@ -48,7 +49,7 @@ def train(options):
     train_data_provision = DataProvision(options,'train')
     train_dataloader=torch.utils.data.DataLoader(train_data_provision,options['batch_size'],True,collate_fn=collate_fn)
     val_data_provision = DataProvision(options,'val')
-    val_dataloader=torch.utils.data.DataLoader(val_data_provision,options['eval_batch_size'],True,collate_fn=collate_fn)
+    val_dataloader=torch.utils.data.DataLoader(val_data_provision,options['eval_batch_size'],False,collate_fn=collate_fn)
     batch_size = options['batch_size']
     max_epochs = options['max_epochs']
     init_epoch = options['init_epoch']
@@ -63,26 +64,15 @@ def train(options):
     print('Build model for training stage ...')
     
     weight=train_data_provision._proposal_weight.contiguous()
-    weight=weight.view([1,1,weight.shape[0]])
+    weight=weight.view(1,1,*weight.shape)
     
     if options['solver'] == 'adam':
-        optimizer = Adam(model.parameters(),lr,weight_decay=options['reg'])
+        optimizer = Adam(model.parameters(),lr)
     elif options['solver'] == 'adadelta':
         optimizer = Adadelta(model.parameters(),lr,weight_decay=options['reg'])
     else:
         optimizer = SGD(model.parameters(),lr,weight_decay=options['reg'])
 
-    # initialize model from a given checkpoint path
-    #if options['init_from']:
-    #    print('Init model from %s'%options['init_from'])
-    #    saver.restore(sess, options['init_from'])
-
-
-    #if options['eval_init']:
-    #    print('Evaluating the initialized model ...')
-    #    val_loss = evaluation(options, data_provision, sess, inputs, t_loss, t_summary)
-    #    print('loss: %.4f'%val_loss)
-    #        
 
     t0 = time.time()
     eval_id = 0
@@ -92,13 +82,16 @@ def train(options):
         model.train()
         print('epoch: %d/%d, lr: %.1E (%.1E)'%(epoch, max_epochs, lr, lr_init))
         for iter,(input,target,length,mask) in enumerate(train_dataloader):
-            input_var = Variable(input).cuda()
+            input_var = Variable(input,requires_grad=True).cuda()
             target_var = Variable(target).cuda()
             mask=Variable(mask).cuda()
             optimizer.zero_grad()
-            output=model(input_var,length)*mask
-            criterion=torch.nn.BCELoss(weight=weight.expand_as(target_var)).cuda()
+            output=model(input_var,length)+mask
+            criterion=torch.nn.BCEWithLogitsLoss(weight.expand_as(target_var)).cuda()
             loss=criterion(output,target_var)
+            for x in model.parameters():
+                if x is not None:
+                    loss+= options['reg']*torch.sum(x**2)/2
             loss.backward()
             torch.nn.utils.clip_grad_norm(model.parameters(),options['clip_gradient_norm'])
             optimizer.step()

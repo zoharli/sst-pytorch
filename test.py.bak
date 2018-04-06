@@ -74,7 +74,7 @@ def test(options):
     '''
     Device setting
     '''
-    find_idle_gpu(options['gpu'])
+    find_idle_gpu()
 
     # build model
     print('Building model ...')
@@ -85,7 +85,8 @@ def test(options):
     data_provision = DataProvision(options,'test')
 
     batch_size=options['test_batch_size']
-    dataloader=torch.utils.data.DataLoader(data_provision,batch_size,False,collate_fn=collate_fn)
+    dataloader=torch.utils.data.DataLoader(data_provision,batch_size,False,
+collate_fn=collate_fn)
     print('Restoring model from %s'%options['init_from'])
     ckpt=torch.load(options['init_from'])
     model.load_state_dict(ckpt['state_dict'])
@@ -112,7 +113,7 @@ def test(options):
     for i,(input,target,length,mask) in enumerate(dataloader): 
         input=Variable(input,volatile=True).cuda()
         target=Variable(target,volatile=True).cuda()
-        proposal_score=torch.sigmoid(model(input,length))
+        proposal_score=model(input,length)
         
         for sample_id in range(batch_size):
             vid = video_ids[count]
@@ -150,9 +151,6 @@ def test(options):
             num_nms.append(len(result))
 
             result = sorted(result, key=getKey, reverse=True)
-            scores=np.array([item['score'] for item in result])
-            print('after nms:',scores.mean(),scores.min(),scores.max())
-
 
             # score threshold
             result = [item for item in result if item['score'] >= options['proposal_score_threshold']]
@@ -171,7 +169,7 @@ def test(options):
     
     avg_num_before=sum(num_before) / float(len(num_before))
     avg_num_nms=sum(num_nms) / float(len(num_nms))
-    avg_proposal_num = sum(proposal_numbers) / (float(len(proposal_numbers))+1)
+    avg_proposal_num = sum(proposal_numbers) / float(len(proposal_numbers))
     print('Average proposal number: %f'%avg_proposal_num)
     viz.text(time.strftime('%dth-%H:%M:%S',time.localtime(time.time()))+"\navg_num_before:%.2f\navg_num_nms:%.2f\navg_proposal_num:%.2f\n"%(avg_num_before,avg_num_nms,avg_proposal_num))
 

@@ -61,8 +61,8 @@ class DataProvision:
 
             
             # sampling
-        if self.split == 'train':
-            sample_len = int(self._options['sample_len'])
+        if self.split=='train':
+            sample_len=self._options['sample_len']
         else:
             sample_len = feature_len
 
@@ -102,7 +102,7 @@ class DataProvision:
            
         feature=torch.Tensor(feature)
         gt_proposal=torch.Tensor(gt_proposal)
-        mask=torch.ones(gt_proposal.shape)
+        mask=torch.zeros(end_feat_id-start_feat_id,self._options['num_anchors'])
         return feature,gt_proposal,feature.shape[0],mask
 
     def __len__(self):
@@ -127,7 +127,7 @@ class DataProvision:
 
 
 #-------------------------dataloader----------------------
-def pad_tensor(vec, pad, dim):
+def pad_tensor(vec, pad, dim,val=0):
     """
     args:
         vec - tensor to pad
@@ -139,7 +139,7 @@ def pad_tensor(vec, pad, dim):
     """
     pad_size = list(vec.shape)
     pad_size[dim] = pad - vec.size(dim)
-    return torch.cat([vec, torch.zeros(*pad_size)], dim=dim)
+    return torch.cat([vec, torch.ones(*pad_size)*val], dim=dim)
 
 
 class PadCollate:
@@ -148,12 +148,13 @@ class PadCollate:
     a batch of sequences
     """
 
-    def __init__(self, dim=0):
+    def __init__(self, split='val',dim=0):
         """
         args:
             dim - the dimension to be padded (dimension of time in sequences)
         """
         self.dim = dim
+        self.split=split
 
     def pad_collate(self, batch):
         """
@@ -167,7 +168,7 @@ class PadCollate:
         xs = torch.stack(list(map(lambda x: pad_tensor(x[0],max_len,self.dim), batch)), dim=1)
         ys = torch.stack(list(map(lambda x: pad_tensor(x[1],max_len,self.dim), batch)), dim=1)
         lengths=[x[2] for x in batch]
-        mask=torch.stack(list(map(lambda x: pad_tensor(x[3],max_len,self.dim), batch)), dim=1)
+        mask=torch.stack(list(map(lambda x: pad_tensor(x[3],max_len,self.dim,val=-9999999.), batch)), dim=1)
         
         return xs, ys,lengths,mask
 

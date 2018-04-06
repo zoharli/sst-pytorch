@@ -26,12 +26,8 @@ class ProposalModel(nn.Module):
         self._init()
 
     def forward(self,x,length):
-        batch_size=x.size()[1]
         x,_=self.rnn(x,length)
-        x=x.view(-1,self.options['rnn_size'])#??
         x=self.fc(x)
-        x=torch.sigmoid(x)
-        x=x.view(-1,batch_size,self.options['num_anchors'])
         return x
 
     def _init(self):
@@ -108,12 +104,7 @@ class LSTMCell(nn.Module):
 
 class GRUCell(nn.Module):
 
-    """A basic LSTM cell."""
-
     def __init__(self, input_size, hidden_size, use_bias=True):
-        """
-        Most parts are copied from torch.nn.LSTMCell.
-        """
 
         super(GRUCell, self).__init__()
         self.input_size = input_size
@@ -250,14 +241,16 @@ class RNN(nn.Module):
         layer_output = None
         for layer in range(self.num_layers):
             cell = self.get_cell(layer)
+            input_ = self.dropout_layer(input_)
             layer_output, layer_h_n = RNN._forward_rnn(
                 cell=cell, input_=input_, length=length, hx=hx)
-            input_ = self.dropout_layer(layer_output)
+            layer_output = self.dropout_layer(layer_output)
+            input_=layer_output
             h_n.append(layer_h_n)
         output = layer_output
         if self.cell_class == LSTMCell:
             h_n = torch.stack(list(map(lambda x:x[0],h_n)), 0)
-            c_n = torch.stack(list(map(lambda x:x[1],c_n)), 0)
+            c_n = torch.stack(list(map(lambda x:x[1],h_n)), 0)
             h_n = (h_n,c_n)
         elif self.cell_class == GRUCell:
             h_n = torch.stack(h_n,0)
