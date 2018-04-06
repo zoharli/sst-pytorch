@@ -237,7 +237,7 @@ class RNN(nn.Module):
                 hx=(hx[0].cuda(),hx[1].cuda())
             elif self.cell_class == GRUCell:
                 hx=hx.cuda()
-        h_n = []
+        h = []
         layer_output = None
         for layer in range(self.num_layers):
             cell = self.get_cell(layer)
@@ -246,12 +246,12 @@ class RNN(nn.Module):
                 cell=cell, input_=input_, length=length, hx=hx)
             layer_output = self.dropout_layer(layer_output)
             input_=layer_output
-            h_n.append(layer_h_n)
+            h.append(layer_h_n)
         output = layer_output
         if self.cell_class == LSTMCell:
-            h_n = torch.stack(list(map(lambda x:x[0],h_n)), 0)
-            c_n = torch.stack(list(map(lambda x:x[1],h_n)), 0)
+            h_n = torch.stack(list(map(lambda x:x[0],h)), 0)
+            c_n = torch.stack(list(map(lambda x:x[0],h)), 0)
             h_n = (h_n,c_n)
         elif self.cell_class == GRUCell:
-            h_n = torch.stack(h_n,0)
+            h_n = torch.stack(h,0)
         return output, h_n 

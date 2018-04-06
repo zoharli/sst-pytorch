@@ -92,7 +92,7 @@ class DataProvision:
             feat_check_start, feat_check_end = frame_check_start // c3d_resolution, frame_check_end // c3d_resolution
 
             for feat_id in range(feat_check_start, feat_check_end + 1):
-                frame_id = feat_id*c3d_resolution + c3d_resolution/2
+                frame_id = feat_id*c3d_resolution + c3d_resolution//2
                 for anchor_id, anchor in enumerate(self._anchors):
                     pred = (frame_id + 1- anchor, frame_id + 1)
                     tiou = self.get_iou(pred, (start, end + 1))

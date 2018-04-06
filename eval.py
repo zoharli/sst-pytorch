@@ -289,6 +289,7 @@ plt.plot(tiou_thresholds, recalls_tiou,
          linewidth=method['linewidth'],
          linestyle=str(method['linestyle']))
 
+plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
 plt.grid(b=True, which="both")
 plt.ylabel('Recall@1000 proposals', fontsize=fn_size)
 plt.xlabel('tIoU', fontsize=fn_size)    
@@ -307,6 +308,7 @@ plt.semilogx(proposals_per_video, recalls_avg,
              linestyle=str(method['linestyle']),
              marker=str(method['marker']))
 
+plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
 plt.ylabel('Average Recall', fontsize=fn_size)
 plt.xlabel('Average number of proposals', fontsize=fn_size)
 plt.grid(b=True, which="both")

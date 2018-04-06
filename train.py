@@ -80,6 +80,11 @@ def train(options):
     best_loss=100000.0
     for epoch in range(init_epoch, max_epochs):
         model.train()
+        if epoch==options['max_epochs']//2:
+            lr=lr_init/10
+            for pg in optimizer.param_groups:
+                pg['lr']=lr
+        
         print('epoch: %d/%d, lr: %.1E (%.1E)'%(epoch, max_epochs, lr, lr_init))
         for iter,(input,target,length,mask) in enumerate(train_dataloader):
             input_var = Variable(input,requires_grad=True).cuda()
@@ -130,7 +135,7 @@ if __name__ == '__main__':
     for key, value in args.items():
         if value is not None:
             options[key] = value
-
+    options=later_options(options)
     work_dir = options['ckpt_prefix']
     if not os.path.exists(work_dir) :
         os.makedirs(work_dir)

@@ -202,5 +202,5 @@ if __name__ == '__main__':
     for key, value in args.items():
         if value:
             options[key] = value
-
+    options=later_options(options)
     test(options)
