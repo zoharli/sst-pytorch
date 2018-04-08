@@ -15,10 +15,6 @@ from utils import *
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 
-def BceLoss(output,target,weight):
-    log_weight=1 + (weight -1)*target
-    loss=(1-target)*output+log_weight*(torch.log(1+(torch.exp(-torch.abs(output))))+torch.nn.functional.relu(-output))
-    return loss.mean()
 
 def evaluation(model,weight,options, val_dataloader):
 
@@ -32,8 +28,9 @@ def evaluation(model,weight,options, val_dataloader):
         target=Variable(target,volatile=True).cuda()
         mask=Variable(mask,volatile=True).cuda()
         output=model(input,length)+mask
-        pos_weight=weight.expand_as(target)
-        loss=BceLoss(output,target,pos_weight)
+        criterion=torch.nn.BCEWithLogitsLoss(weight=weight.expand_as(target)).cuda()
+#        criterion=torch.nn.BCEWithLogitsLoss().cuda()
+        loss=criterion(output,target)
         val_loss_list.append(loss.data[0]*len(length))
         
     ave_val_loss = sum(val_loss_list) / float(val_count)
@@ -67,7 +64,7 @@ def train(options):
     print('Build model for training stage ...')
     
     weight=train_data_provision._proposal_weight.contiguous()
-    weight=Variable(weight.view(1,1,*weight.shape)).cuda()
+    weight=weight.view(1,1,*weight.shape)
     
     if options['solver'] == 'adam':
         optimizer = Adam(model.parameters(),lr)
@@ -95,8 +92,8 @@ def train(options):
             mask=Variable(mask).cuda()
             optimizer.zero_grad()
             output=model(input_var,length)+mask
-            pos_weight=weight.expand_as(target_var)
-            loss=BceLoss(output,target_var,pos_weight)
+            criterion=torch.nn.BCEWithLogitsLoss(weight.expand_as(target_var)).cuda()
+            loss=criterion(output,target_var)
             for x in model.parameters():
                 if x is not None:
                     loss+= options['reg']*torch.sum(x**2)/2
@@ -143,5 +140,8 @@ if __name__ == '__main__':
     if not os.path.exists(work_dir) :
         os.makedirs(work_dir)
     find_idle_gpu(options['gpu'])
+    options['max_epochs']=1000000
+    options['train_id']=9999
+    options['n_eval_per_epoch']=0.0001
     train(options)
 

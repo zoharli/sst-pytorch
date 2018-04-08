@@ -168,7 +168,7 @@ class PadCollate:
         xs = torch.stack(list(map(lambda x: pad_tensor(x[0],max_len,self.dim), batch)), dim=1)
         ys = torch.stack(list(map(lambda x: pad_tensor(x[1],max_len,self.dim), batch)), dim=1)
         lengths=[x[2] for x in batch]
-        mask=torch.stack(list(map(lambda x: pad_tensor(x[3],max_len,self.dim,val=-9999999.), batch)), dim=1)
+        mask=torch.stack(list(map(lambda x: pad_tensor(x[3],max_len,self.dim,val=-999999999.), batch)), dim=1)
         
         return xs, ys,lengths,mask
 

@@ -23,15 +23,15 @@ def default_options():
 
     #*** MODEL CONFIG ***#
     options['video_feat_dim'] = 4096 # dim of video feature
-    options['num_rnn_layers'] = 3    # number of RNN layers
-    options['rnn_size'] =256       # hidden neuron size
-    options['rnn_type'] = 'lstm'      # LSTM or GRU
+    options['num_rnn_layers'] = 2    # number of RNN layers
+    options['rnn_size'] =128       # hidden neuron size
+    options['rnn_type'] = 'gru'      # LSTM or GRU
     options['rnn_drop'] = 0.3        # rnn dropout ratio 
     options['num_anchors'] = 32      # number of anchors
 
     
     #*** OPTIMIZATION ***#
-    options['train_id'] = 2          # train id (useful when you have multiple runs, store checkpoints from diff runs into different folders: "checkpoints/1", "checkpoints/2", ...)
+    options['train_id'] = 1          # train id (useful when you have multiple runs, store checkpoints from diff runs into different folders: "checkpoints/1", "checkpoints/2", ...)
     options['gpu']=''
     options['use_weight'] = True     # whether use pre-calculated weights for positive/negative samples (deal with imbalance class problem)
     options['solver'] = 'adam'       # 'adam','rmsprop','sgd', or 'momentum'
@@ -39,8 +39,8 @@ def default_options():
     options['batch_size'] = 160      # training batch size
     options['eval_batch_size'] = 40  # evaluation (loss) batch size
     options['test_batch_size'] = 1  # evaluation (loss) batch size
-    options['lr'] = 1e-4             # initial learning rate (I fix learning rate to 1e-3 during training phase)
-    options['reg'] = 1e-2            # regularization strength (control L2 regularization ratio)
+    options['lr'] = 1e-3             # initial learning rate (I fix learning rate to 1e-3 during training phase)
+    options['reg'] = 1e-5            # regularization strength (control L2 regularization ratio)
     options['init_scale'] = 0.08     # the init scale for uniform distribution
     options['max_epochs'] = 1000    # maximum training epochs to run
     options['init_epoch'] = 0        # initial epoch (useful when you needs to continue from some checkpoints)
@@ -54,7 +54,7 @@ def default_options():
     options['n_iters_display'] = 1             # display frequency
 
     #*** INFERENCE ***#
-    options['proposal_score_threshold'] = 0.05  # score threshold to select proposals
+    options['proposal_score_threshold'] = 0.2  # score threshold to select proposals
     options['nms_threshold'] = 0.8             # threshold for non-maximum suppression
     options['tiou_measure'] = list(np.linspace(0.5, 1.0, 11))  # tIoU thresholds for calculating recall
     #options['tiou_measure'] = [0.8]
