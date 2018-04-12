@@ -25,10 +25,13 @@ def default_options():
     options['video_feat_dim'] = 4096 # dim of video feature
     options['num_rnn_layers'] = 2    # number of RNN layers
     options['rnn_size'] =128       # hidden neuron size
-    options['rnn_type'] = 'gru'      # LSTM or GRU
+    options['rnn_type'] = 'mann'      # LSTM or GRU
     options['rnn_drop'] = 0.3        # rnn dropout ratio 
     options['num_anchors'] = 32      # number of anchors
-
+    
+    #*** MEMORY CONFIG***#
+    options['mem_cap']=30
+    options['entry_size']=options['rnn_size']
     
     #*** OPTIMIZATION ***#
     options['train_id'] = 1          # train id (useful when you have multiple runs, store checkpoints from diff runs into different folders: "checkpoints/1", "checkpoints/2", ...)

@@ -11,6 +11,7 @@ from torch.optim import *
 from opt import *
 from data_provider import *
 from model import * 
+from MemModel import *
 from utils import *
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
@@ -63,7 +64,15 @@ def train(options):
     eval_in_iters = int(n_iters_per_epoch / float(options['n_eval_per_epoch']))
     
     # build model 
-    model = ProposalModel(options).cuda()
+    
+    if options['rnn_type']=='mann':
+        model_class=MaSST
+    else:
+        model_class=ProposalModel
+    options['mode']='train'
+    model = model_class(options).cuda()
+    options['mode']='val'
+    val_model = model_class(options).cuda()
     print('Build model for training stage ...')
     
     weight=train_data_provision._proposal_weight.contiguous()
@@ -110,7 +119,8 @@ def train(options):
             if (total_iter+1) % eval_in_iters == 0:
                 is_best=0       
                 print('Evaluating model ...')
-                val_loss = evaluation(model,weight,options,val_dataloader) 
+                val_model.load_state_dict(model.state_dict())
+                val_loss = evaluation(val_model,weight,options,val_dataloader) 
                 if val_loss<best_loss:
                     best_loss=val_loss
                     is_best=1

@@ -78,6 +78,7 @@ def test(options):
 
     # build model
     print('Building model ...')
+    options['mode']='test'
     model = ProposalModel(options).cuda()
 
     print('Loading data ...')

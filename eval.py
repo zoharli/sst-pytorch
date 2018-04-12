@@ -11,6 +11,7 @@ import math
 import random
 import json
 import h5py
+import argparse
 
 import torch
 import torch.nn as nn
@@ -242,78 +243,90 @@ def average_recall_vs_nr_proposals(proposals, ground_truth,
     proposals_per_video = pcn_lst * (float(proposal_total_number) / video_lst.shape[0])
     
     return recall, proposals_per_video
+def eval(options):
+    split = 'test'
+    result_filename = options['out_json_file']
+    results = json.load(open(result_filename, 'r'))['results']
+    #ground_truth_filename = options['proposal_data_path']+'/thumos14_temporal_proposal_%s.json'%split
+    ground_truth_filename = 'dataset/thumos14/gt_proposals/thumos14_temporal_proposal_%s.json'%split
+    ground_truth = json.load(open(ground_truth_filename, 'r'))
+    recalls_avg, proposals_per_video = average_recall_vs_nr_proposals(results, ground_truth, np.array(options['tiou_measure']))
+    recalls_tiou, tiou_thresholds = recall_vs_tiou_thresholds(results, ground_truth)
 
-options = default_options()
-split = 'test'
-result_filename = 'results/1/predict_proposals.json'
-results = json.load(open(result_filename, 'r'))['results']
-#ground_truth_filename = options['proposal_data_path']+'/thumos14_temporal_proposal_%s.json'%split
-ground_truth_filename = 'dataset/thumos14/gt_proposals/thumos14_temporal_proposal_%s.json'%split
-ground_truth = json.load(open(ground_truth_filename, 'r'))
-recalls_avg, proposals_per_video = average_recall_vs_nr_proposals(results, ground_truth, np.array(options['tiou_measure']))
-recalls_tiou, tiou_thresholds = recall_vs_tiou_thresholds(results, ground_truth)
+    fid = h5py.File('results/'+options['train_id']+'/recall_prop.hdf5', 'w')
 
-fid = h5py.File('results/1/recall_prop.hdf5', 'w')
+    fid.create_group('recall').create_dataset('recall', data=recalls_avg)
+    fid.create_group('proposals_per_video').create_dataset('proposal', data=proposals_per_video)
+    fid.close()
 
-fid.create_group('recall').create_dataset('recall', data=recalls_avg)
-fid.create_group('proposals_per_video').create_dataset('proposal', data=proposals_per_video)
-fid.close()
+    for recall, prop_per_video in zip(recalls_avg, proposals_per_video):
+        if math.fabs(prop_per_video - 1000) <= 2:
+            print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
+        if math.fabs(prop_per_video - 500) <= 2:
+            print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
+        if math.fabs(prop_per_video - 200) <= 2:
+            print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
+        if math.fabs(prop_per_video - 100) <= 2:
+            print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
+        if math.fabs(prop_per_video - 10) <= 2:
+            print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
 
-for recall, prop_per_video in zip(recalls_avg, proposals_per_video):
-    if math.fabs(prop_per_video - 1000) <= 2:
-        print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
-    if math.fabs(prop_per_video - 500) <= 2:
-        print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
-    if math.fabs(prop_per_video - 200) <= 2:
-        print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
-    if math.fabs(prop_per_video - 100) <= 2:
-        print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
-    if math.fabs(prop_per_video - 10) <= 2:
-        print('avg recall: %f, prop_per_video: %d'%(recall, prop_per_video))
-
-print('Plotting avg recall vs avg proposal number ...')
-# Define plot style.
-method = {'legend': 'SST',
-          'color': np.array([102,166,30]) / 255.0,
-          'marker': None,
-          'linewidth': 4,
-          'linestyle': '-'}
-fn_size = 14
-plt.figure(num=None, figsize=(6, 5))
+    print('Plotting avg recall vs avg proposal number ...')
+    # Define plot style.
+    method = {'legend': 'SST',
+              'color': np.array([102,166,30]) / 255.0,
+              'marker': None,
+              'linewidth': 4,
+              'linestyle': '-'}
+    fn_size = 14
+    plt.figure(num=None, figsize=(6, 5))
 
 
-# Plots recall at different tiou thresholds.
-plt.plot(tiou_thresholds, recalls_tiou,
-         label=method['legend'], 
-         color=method['color'],
-         linewidth=method['linewidth'],
-         linestyle=str(method['linestyle']))
-
-plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
-plt.grid(b=True, which="both")
-plt.ylabel('Recall@1000 proposals', fontsize=fn_size)
-plt.xlabel('tIoU', fontsize=fn_size)    
-plt.ylim([0,1])
-plt.xlim([0.1,1])
-plt.xticks(np.arange(0, 1.2, 0.2))
-plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
-plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
-viz.matplot(plt)
-
-# Plots Average Recall vs Average number of proposals.
-plt.semilogx(proposals_per_video, recalls_avg,
+    # Plots recall at different tiou thresholds.
+    plt.plot(tiou_thresholds, recalls_tiou,
              label=method['legend'], 
              color=method['color'],
              linewidth=method['linewidth'],
-             linestyle=str(method['linestyle']),
-             marker=str(method['marker']))
+             linestyle=str(method['linestyle']))
 
-plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
-plt.ylabel('Average Recall', fontsize=fn_size)
-plt.xlabel('Average number of proposals', fontsize=fn_size)
-plt.grid(b=True, which="both")
-plt.ylim([0, 1.0])
-plt.xlim([10**1, 10**4])
-plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
-plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
-viz.matplot(plt)
+    plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
+    plt.grid(b=True, which="both")
+    plt.ylabel('Recall@1000 proposals', fontsize=fn_size)
+    plt.xlabel('tIoU', fontsize=fn_size)    
+    plt.ylim([0,1])
+    plt.xlim([0.1,1])
+    plt.xticks(np.arange(0, 1.2, 0.2))
+    plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
+    plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
+    viz.matplot(plt)
+
+    # Plots Average Recall vs Average number of proposals.
+    plt.semilogx(proposals_per_video, recalls_avg,
+                 label=method['legend'], 
+                 color=method['color'],
+                 linewidth=method['linewidth'],
+                 linestyle=str(method['linestyle']),
+                 marker=str(method['marker']))
+
+    plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
+    plt.ylabel('Average Recall', fontsize=fn_size)
+    plt.xlabel('Average number of proposals', fontsize=fn_size)
+    plt.grid(b=True, which="both")
+    plt.ylim([0, 1.0])
+    plt.xlim([10**1, 10**4])
+    plt.setp(plt.axes().get_xticklabels(), fontsize=fn_size)
+    plt.setp(plt.axes().get_yticklabels(), fontsize=fn_size)
+    viz.matplot(plt)
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    options = default_options()
+    for key, value in options.items():
+        parser.add_argument('--%s'%key, dest=key, type=type(value), default=None)
+    args = parser.parse_args()
+    args = vars(args)
+    for key, value in args.items():
+        if value:
+            options[key] = value
+    options=later_options(options)
+    eval(options)
