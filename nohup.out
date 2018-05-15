@@ -1,9 +1,0 @@
-./run.sh: line 8:  8228 Terminated              python train.py $options
-Traceback (most recent call last):
-  File "test.py", line 217, in <module>
-    test(options)
-  File "test.py", line 99, in test
-    ckpt=torch.load(options['init_from'])
-  File "/home/lzh/anaconda3/lib/python3.6/site-packages/torch/serialization.py", line 301, in load
-    f = open(f, 'rb')
-FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/1/best_model.pth'
