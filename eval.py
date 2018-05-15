@@ -3,7 +3,8 @@ Evaluate performance of generated proposals: avg recall vs avg proposal number, 
 
 This scrip is directly modified from Victor Escorcia's code
 """
-
+import warnings
+warnings.filterwarnings("ignore")
 import sys
 import os
 import time
@@ -243,6 +244,7 @@ def average_recall_vs_nr_proposals(proposals, ground_truth,
     proposals_per_video = pcn_lst * (float(proposal_total_number) / video_lst.shape[0])
     
     return recall, proposals_per_video
+
 def eval(options):
     split = 'test'
     result_filename = options['out_json_file']
@@ -253,7 +255,7 @@ def eval(options):
     recalls_avg, proposals_per_video = average_recall_vs_nr_proposals(results, ground_truth, np.array(options['tiou_measure']))
     recalls_tiou, tiou_thresholds = recall_vs_tiou_thresholds(results, ground_truth)
 
-    fid = h5py.File('results/'+options['train_id']+'/recall_prop.hdf5', 'w')
+    fid = h5py.File('results/'+str(options['train_id'])+'/recall_prop.hdf5', 'w')
 
     fid.create_group('recall').create_dataset('recall', data=recalls_avg)
     fid.create_group('proposals_per_video').create_dataset('proposal', data=proposals_per_video)
@@ -276,7 +278,7 @@ def eval(options):
     method = {'legend': 'SST',
               'color': np.array([102,166,30]) / 255.0,
               'marker': None,
-              'linewidth': 4,
+              'linewidth': 2,
               'linestyle': '-'}
     fn_size = 14
     plt.figure(num=None, figsize=(6, 5))
@@ -289,7 +291,7 @@ def eval(options):
              linewidth=method['linewidth'],
              linestyle=str(method['linestyle']))
 
-    plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
+    plt.title('train_id=%d'%options['train_id'])
     plt.grid(b=True, which="both")
     plt.ylabel('Recall@1000 proposals', fontsize=fn_size)
     plt.xlabel('tIoU', fontsize=fn_size)    
@@ -308,7 +310,7 @@ def eval(options):
                  linestyle=str(method['linestyle']),
                  marker=str(method['marker']))
 
-    plt.title(time.strftime('%dth-%H:%M:%S',time.localtime(time.time())))
+    plt.title('train_id=%d'%options['train_id'])
     plt.ylabel('Average Recall', fontsize=fn_size)
     plt.xlabel('Average number of proposals', fontsize=fn_size)
     plt.grid(b=True, which="both")

@@ -3,6 +3,8 @@ Generate proposals
 
 Suggestion: use non-maximum threshold of 0.8, I found it works almost the best
 """
+import warnings
+warnings.filterwarnings("ignore")
 import os
 import numpy as np
 import json
@@ -11,10 +13,12 @@ import argparse
 from opt import *
 from data_provider import *
 from model import *
+from MemModel import *
 from utils import *
 import torch
 import torch.utils.data
 from visdom import Visdom
+from hyper_param import *
 viz=Visdom()
 
 def getKey(item):
@@ -79,8 +83,12 @@ def test(options):
     # build model
     print('Building model ...')
     options['mode']='test'
-    model = ProposalModel(options).cuda()
-
+    if options['rnn_type']=='mann':
+        model = MaSST(options).cuda()
+        model.set_tau(20)
+    else:
+        model = ProposalModel(options).cuda()
+    
     print('Loading data ...')
     collate_fn=PadCollate()
     data_provision = DataProvision(options,'test')
@@ -174,8 +182,10 @@ def test(options):
     avg_num_nms=sum(num_nms) / float(len(num_nms))
     avg_proposal_num = sum(proposal_numbers) / (float(len(proposal_numbers))+1)
     print('Average proposal number: %f'%avg_proposal_num)
-    viz.text(time.strftime('%dth-%H:%M:%S',time.localtime(time.time()))+"\navg_num_before:%.2f\navg_num_nms:%.2f\navg_proposal_num:%.2f\n"%(avg_num_before,avg_num_nms,avg_proposal_num))
-
+    info=time.strftime('%dth-%H:%M:%S',time.localtime(time.time()))+"\ntrain_id=%d"%options['train_id']+"\navg_num_before:%.2f\navg_num_nms:%.2f\navg_proposal_num:%.2f\n"%(avg_num_before,avg_num_nms,avg_proposal_num)
+    for x in hyper_params:
+        info+=x+':'+str(options[x])+'\n'
+    viz.text(info)
     out_json_file = options['out_json_file']
 
     rootfolder1 = os.path.dirname(out_json_file)

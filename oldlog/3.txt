@@ -1,0 +1,2959 @@
+training on gpu 2
+Load data ...
+Data Size:
+train-split: 160 videos.
+Loading c3d features ...
+Loading anchor weight data ...
+Done train set loading.
+Data Size:
+val-split: 40 videos.
+Loading c3d features ...
+Loading anchor weight data ...
+Done val set loading.
+using dropout in rnn!
+using dropout in rnn!
+Build model for training stage ...
+epoch: 0/200, lr: 1.0E-04 (1.0E-04) tau:5
+iter: 0, epoch: 0/200, 
+lr: 1.0E-04, loss: 1.3719, reg_loss: 1.3795
+iter: 1, epoch: 0/200, 
+lr: 1.0E-04, loss: 1.2207, reg_loss: 1.2283
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4658
+epoch: 1/200, lr: 1.0E-04 (1.0E-04) tau:6
+iter: 0, epoch: 1/200, 
+lr: 1.0E-04, loss: 1.2523, reg_loss: 1.2600
+iter: 1, epoch: 1/200, 
+lr: 1.0E-04, loss: 1.1777, reg_loss: 1.1854
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4509
+epoch: 2/200, lr: 1.0E-04 (1.0E-04) tau:7
+iter: 0, epoch: 2/200, 
+lr: 1.0E-04, loss: 1.1967, reg_loss: 1.2043
+iter: 1, epoch: 2/200, 
+lr: 1.0E-04, loss: 1.2848, reg_loss: 1.2924
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4367
+epoch: 3/200, lr: 1.0E-04 (1.0E-04) tau:8
+iter: 0, epoch: 3/200, 
+lr: 1.0E-04, loss: 1.2482, reg_loss: 1.2559
+iter: 1, epoch: 3/200, 
+lr: 1.0E-04, loss: 1.1290, reg_loss: 1.1366
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4091
+epoch: 4/200, lr: 1.0E-04 (1.0E-04) tau:9
+iter: 0, epoch: 4/200, 
+lr: 1.0E-04, loss: 1.2405, reg_loss: 1.2481
+iter: 1, epoch: 4/200, 
+lr: 1.0E-04, loss: 1.1341, reg_loss: 1.1418
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3803
+epoch: 5/200, lr: 1.0E-04 (1.0E-04) tau:10
+iter: 0, epoch: 5/200, 
+lr: 1.0E-04, loss: 1.1936, reg_loss: 1.2013
+iter: 1, epoch: 5/200, 
+lr: 1.0E-04, loss: 1.1653, reg_loss: 1.1729
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3532
+epoch: 6/200, lr: 1.0E-04 (1.0E-04) tau:11
+iter: 0, epoch: 6/200, 
+lr: 1.0E-04, loss: 1.1965, reg_loss: 1.2041
+iter: 1, epoch: 6/200, 
+lr: 1.0E-04, loss: 1.1045, reg_loss: 1.1121
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3281
+epoch: 7/200, lr: 1.0E-04 (1.0E-04) tau:12
+iter: 0, epoch: 7/200, 
+lr: 1.0E-04, loss: 1.1116, reg_loss: 1.1192
+iter: 1, epoch: 7/200, 
+lr: 1.0E-04, loss: 1.1782, reg_loss: 1.1858
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3087
+epoch: 8/200, lr: 1.0E-04 (1.0E-04) tau:13
+iter: 0, epoch: 8/200, 
+lr: 1.0E-04, loss: 1.1557, reg_loss: 1.1633
+iter: 1, epoch: 8/200, 
+lr: 1.0E-04, loss: 1.1319, reg_loss: 1.1395
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2871
+epoch: 9/200, lr: 1.0E-04 (1.0E-04) tau:14
+iter: 0, epoch: 9/200, 
+lr: 1.0E-04, loss: 1.1306, reg_loss: 1.1382
+iter: 1, epoch: 9/200, 
+lr: 1.0E-04, loss: 1.1300, reg_loss: 1.1376
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2660
+epoch: 10/200, lr: 1.0E-04 (1.0E-04) tau:15
+iter: 0, epoch: 10/200, 
+lr: 1.0E-04, loss: 1.0465, reg_loss: 1.0541
+iter: 1, epoch: 10/200, 
+lr: 1.0E-04, loss: 1.0809, reg_loss: 1.0885
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2533
+epoch: 11/200, lr: 1.0E-04 (1.0E-04) tau:16
+iter: 0, epoch: 11/200, 
+lr: 1.0E-04, loss: 1.1320, reg_loss: 1.1396
+iter: 1, epoch: 11/200, 
+lr: 1.0E-04, loss: 0.9830, reg_loss: 0.9906
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2435
+epoch: 12/200, lr: 1.0E-04 (1.0E-04) tau:17
+iter: 0, epoch: 12/200, 
+lr: 1.0E-04, loss: 1.0477, reg_loss: 1.0552
+iter: 1, epoch: 12/200, 
+lr: 1.0E-04, loss: 1.0910, reg_loss: 1.0986
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2373
+epoch: 13/200, lr: 1.0E-04 (1.0E-04) tau:18
+iter: 0, epoch: 13/200, 
+lr: 1.0E-04, loss: 1.0693, reg_loss: 1.0768
+iter: 1, epoch: 13/200, 
+lr: 1.0E-04, loss: 0.9652, reg_loss: 0.9728
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2245
+epoch: 14/200, lr: 1.0E-04 (1.0E-04) tau:19
+iter: 0, epoch: 14/200, 
+lr: 1.0E-04, loss: 0.9823, reg_loss: 0.9899
+iter: 1, epoch: 14/200, 
+lr: 1.0E-04, loss: 0.9866, reg_loss: 0.9941
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2221
+epoch: 15/200, lr: 1.0E-04 (1.0E-04) tau:20
+iter: 0, epoch: 15/200, 
+lr: 1.0E-04, loss: 0.9910, reg_loss: 0.9986
+iter: 1, epoch: 15/200, 
+lr: 1.0E-04, loss: 0.9759, reg_loss: 0.9834
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2043
+epoch: 16/200, lr: 1.0E-04 (1.0E-04) tau:21
+iter: 0, epoch: 16/200, 
+lr: 1.0E-04, loss: 0.9860, reg_loss: 0.9936
+iter: 1, epoch: 16/200, 
+lr: 1.0E-04, loss: 0.9260, reg_loss: 0.9335
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1920
+epoch: 17/200, lr: 1.0E-04 (1.0E-04) tau:22
+iter: 0, epoch: 17/200, 
+lr: 1.0E-04, loss: 0.9152, reg_loss: 0.9228
+iter: 1, epoch: 17/200, 
+lr: 1.0E-04, loss: 0.9897, reg_loss: 0.9972
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1864
+epoch: 18/200, lr: 1.0E-04 (1.0E-04) tau:23
+iter: 0, epoch: 18/200, 
+lr: 1.0E-04, loss: 1.0271, reg_loss: 1.0347
+iter: 1, epoch: 18/200, 
+lr: 1.0E-04, loss: 0.9153, reg_loss: 0.9228
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1806
+epoch: 19/200, lr: 1.0E-04 (1.0E-04) tau:24
+iter: 0, epoch: 19/200, 
+lr: 1.0E-04, loss: 0.9111, reg_loss: 0.9187
+iter: 1, epoch: 19/200, 
+lr: 1.0E-04, loss: 1.0210, reg_loss: 1.0285
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1685
+epoch: 20/200, lr: 1.0E-04 (1.0E-04) tau:25
+iter: 0, epoch: 20/200, 
+lr: 1.0E-04, loss: 0.9603, reg_loss: 0.9679
+iter: 1, epoch: 20/200, 
+lr: 1.0E-04, loss: 0.9368, reg_loss: 0.9444
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1520
+epoch: 21/200, lr: 1.0E-04 (1.0E-04) tau:26
+iter: 0, epoch: 21/200, 
+lr: 1.0E-04, loss: 0.9412, reg_loss: 0.9487
+iter: 1, epoch: 21/200, 
+lr: 1.0E-04, loss: 0.9228, reg_loss: 0.9303
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1420
+epoch: 22/200, lr: 1.0E-04 (1.0E-04) tau:27
+iter: 0, epoch: 22/200, 
+lr: 1.0E-04, loss: 0.8528, reg_loss: 0.8604
+iter: 1, epoch: 22/200, 
+lr: 1.0E-04, loss: 0.9643, reg_loss: 0.9718
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1418
+epoch: 23/200, lr: 1.0E-04 (1.0E-04) tau:28
+iter: 0, epoch: 23/200, 
+lr: 1.0E-04, loss: 0.8944, reg_loss: 0.9019
+iter: 1, epoch: 23/200, 
+lr: 1.0E-04, loss: 0.9414, reg_loss: 0.9489
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1359
+epoch: 24/200, lr: 1.0E-04 (1.0E-04) tau:29
+iter: 0, epoch: 24/200, 
+lr: 1.0E-04, loss: 0.8730, reg_loss: 0.8806
+iter: 1, epoch: 24/200, 
+lr: 1.0E-04, loss: 0.8930, reg_loss: 0.9005
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1270
+epoch: 25/200, lr: 1.0E-04 (1.0E-04) tau:30
+iter: 0, epoch: 25/200, 
+lr: 1.0E-04, loss: 0.8330, reg_loss: 0.8405
+iter: 1, epoch: 25/200, 
+lr: 1.0E-04, loss: 0.8689, reg_loss: 0.8764
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1279
+epoch: 26/200, lr: 1.0E-04 (1.0E-04) tau:31
+iter: 0, epoch: 26/200, 
+lr: 1.0E-04, loss: 0.9404, reg_loss: 0.9479
+iter: 1, epoch: 26/200, 
+lr: 1.0E-04, loss: 0.8161, reg_loss: 0.8236
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1204
+epoch: 27/200, lr: 1.0E-04 (1.0E-04) tau:32
+iter: 0, epoch: 27/200, 
+lr: 1.0E-04, loss: 0.8314, reg_loss: 0.8389
+iter: 1, epoch: 27/200, 
+lr: 1.0E-04, loss: 0.8188, reg_loss: 0.8263
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1205
+epoch: 28/200, lr: 1.0E-04 (1.0E-04) tau:33
+iter: 0, epoch: 28/200, 
+lr: 1.0E-04, loss: 0.8374, reg_loss: 0.8450
+iter: 1, epoch: 28/200, 
+lr: 1.0E-04, loss: 0.8604, reg_loss: 0.8679
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1185
+epoch: 29/200, lr: 1.0E-04 (1.0E-04) tau:34
+iter: 0, epoch: 29/200, 
+lr: 1.0E-04, loss: 0.8188, reg_loss: 0.8263
+iter: 1, epoch: 29/200, 
+lr: 1.0E-04, loss: 0.8789, reg_loss: 0.8864
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1125
+epoch: 30/200, lr: 1.0E-04 (1.0E-04) tau:35
+iter: 0, epoch: 30/200, 
+lr: 1.0E-04, loss: 0.7279, reg_loss: 0.7354
+iter: 1, epoch: 30/200, 
+lr: 1.0E-04, loss: 0.8893, reg_loss: 0.8968
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1113
+epoch: 31/200, lr: 1.0E-04 (1.0E-04) tau:36
+iter: 0, epoch: 31/200, 
+lr: 1.0E-04, loss: 0.8298, reg_loss: 0.8373
+iter: 1, epoch: 31/200, 
+lr: 1.0E-04, loss: 0.8468, reg_loss: 0.8543
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1102
+epoch: 32/200, lr: 1.0E-04 (1.0E-04) tau:37
+iter: 0, epoch: 32/200, 
+lr: 1.0E-04, loss: 0.7532, reg_loss: 0.7607
+iter: 1, epoch: 32/200, 
+lr: 1.0E-04, loss: 0.8033, reg_loss: 0.8108
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1243
+epoch: 33/200, lr: 1.0E-04 (1.0E-04) tau:38
+iter: 0, epoch: 33/200, 
+lr: 1.0E-04, loss: 0.8136, reg_loss: 0.8211
+iter: 1, epoch: 33/200, 
+lr: 1.0E-04, loss: 0.7977, reg_loss: 0.8052
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1144
+epoch: 34/200, lr: 1.0E-04 (1.0E-04) tau:39
+iter: 0, epoch: 34/200, 
+lr: 1.0E-04, loss: 0.7270, reg_loss: 0.7345
+iter: 1, epoch: 34/200, 
+lr: 1.0E-04, loss: 0.8886, reg_loss: 0.8961
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1027
+epoch: 35/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 35/200, 
+lr: 1.0E-04, loss: 0.7387, reg_loss: 0.7461
+iter: 1, epoch: 35/200, 
+lr: 1.0E-04, loss: 0.8401, reg_loss: 0.8476
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1053
+epoch: 36/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 36/200, 
+lr: 1.0E-04, loss: 0.7654, reg_loss: 0.7729
+iter: 1, epoch: 36/200, 
+lr: 1.0E-04, loss: 0.8288, reg_loss: 0.8363
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1217
+epoch: 37/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 37/200, 
+lr: 1.0E-04, loss: 0.7504, reg_loss: 0.7579
+iter: 1, epoch: 37/200, 
+lr: 1.0E-04, loss: 0.8142, reg_loss: 0.8217
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1169
+epoch: 38/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 38/200, 
+lr: 1.0E-04, loss: 0.7960, reg_loss: 0.8035
+iter: 1, epoch: 38/200, 
+lr: 1.0E-04, loss: 0.6665, reg_loss: 0.6740
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1221
+epoch: 39/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 39/200, 
+lr: 1.0E-04, loss: 0.7788, reg_loss: 0.7863
+iter: 1, epoch: 39/200, 
+lr: 1.0E-04, loss: 0.6863, reg_loss: 0.6938
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1353
+epoch: 40/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 40/200, 
+lr: 1.0E-04, loss: 0.7757, reg_loss: 0.7832
+iter: 1, epoch: 40/200, 
+lr: 1.0E-04, loss: 0.7462, reg_loss: 0.7537
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1466
+epoch: 41/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 41/200, 
+lr: 1.0E-04, loss: 0.6746, reg_loss: 0.6821
+iter: 1, epoch: 41/200, 
+lr: 1.0E-04, loss: 0.7330, reg_loss: 0.7405
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1355
+epoch: 42/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 42/200, 
+lr: 1.0E-04, loss: 0.6289, reg_loss: 0.6364
+iter: 1, epoch: 42/200, 
+lr: 1.0E-04, loss: 0.7082, reg_loss: 0.7156
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1386
+epoch: 43/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 43/200, 
+lr: 1.0E-04, loss: 0.6908, reg_loss: 0.6983
+iter: 1, epoch: 43/200, 
+lr: 1.0E-04, loss: 0.7505, reg_loss: 0.7580
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1131
+epoch: 44/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 44/200, 
+lr: 1.0E-04, loss: 0.7517, reg_loss: 0.7592
+iter: 1, epoch: 44/200, 
+lr: 1.0E-04, loss: 0.6664, reg_loss: 0.6739
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1091
+epoch: 45/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 45/200, 
+lr: 1.0E-04, loss: 0.7069, reg_loss: 0.7143
+iter: 1, epoch: 45/200, 
+lr: 1.0E-04, loss: 0.6418, reg_loss: 0.6492
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1391
+epoch: 46/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 46/200, 
+lr: 1.0E-04, loss: 0.6975, reg_loss: 0.7050
+iter: 1, epoch: 46/200, 
+lr: 1.0E-04, loss: 0.6803, reg_loss: 0.6878
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1052
+epoch: 47/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 47/200, 
+lr: 1.0E-04, loss: 0.6800, reg_loss: 0.6875
+iter: 1, epoch: 47/200, 
+lr: 1.0E-04, loss: 0.6607, reg_loss: 0.6681
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1164
+epoch: 48/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 48/200, 
+lr: 1.0E-04, loss: 0.6077, reg_loss: 0.6152
+iter: 1, epoch: 48/200, 
+lr: 1.0E-04, loss: 0.7218, reg_loss: 0.7293
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1513
+epoch: 49/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 49/200, 
+lr: 1.0E-04, loss: 0.6631, reg_loss: 0.6705
+iter: 1, epoch: 49/200, 
+lr: 1.0E-04, loss: 0.6785, reg_loss: 0.6860
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1037
+epoch: 50/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 50/200, 
+lr: 1.0E-04, loss: 0.6848, reg_loss: 0.6923
+iter: 1, epoch: 50/200, 
+lr: 1.0E-04, loss: 0.6249, reg_loss: 0.6324
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1373
+epoch: 51/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 51/200, 
+lr: 1.0E-04, loss: 0.7182, reg_loss: 0.7256
+iter: 1, epoch: 51/200, 
+lr: 1.0E-04, loss: 0.5878, reg_loss: 0.5953
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1330
+epoch: 52/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 52/200, 
+lr: 1.0E-04, loss: 0.6259, reg_loss: 0.6334
+iter: 1, epoch: 52/200, 
+lr: 1.0E-04, loss: 0.6335, reg_loss: 0.6409
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1534
+epoch: 53/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 53/200, 
+lr: 1.0E-04, loss: 0.6648, reg_loss: 0.6723
+iter: 1, epoch: 53/200, 
+lr: 1.0E-04, loss: 0.6179, reg_loss: 0.6254
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1534
+epoch: 54/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 54/200, 
+lr: 1.0E-04, loss: 0.6166, reg_loss: 0.6240
+iter: 1, epoch: 54/200, 
+lr: 1.0E-04, loss: 0.6708, reg_loss: 0.6783
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1546
+epoch: 55/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 55/200, 
+lr: 1.0E-04, loss: 0.6322, reg_loss: 0.6397
+iter: 1, epoch: 55/200, 
+lr: 1.0E-04, loss: 0.6745, reg_loss: 0.6820
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2030
+epoch: 56/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 56/200, 
+lr: 1.0E-04, loss: 0.6097, reg_loss: 0.6171
+iter: 1, epoch: 56/200, 
+lr: 1.0E-04, loss: 0.5975, reg_loss: 0.6049
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1448
+epoch: 57/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 57/200, 
+lr: 1.0E-04, loss: 0.6911, reg_loss: 0.6985
+iter: 1, epoch: 57/200, 
+lr: 1.0E-04, loss: 0.5830, reg_loss: 0.5905
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1630
+epoch: 58/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 58/200, 
+lr: 1.0E-04, loss: 0.6058, reg_loss: 0.6133
+iter: 1, epoch: 58/200, 
+lr: 1.0E-04, loss: 0.6037, reg_loss: 0.6111
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2392
+epoch: 59/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 59/200, 
+lr: 1.0E-04, loss: 0.6284, reg_loss: 0.6358
+iter: 1, epoch: 59/200, 
+lr: 1.0E-04, loss: 0.5965, reg_loss: 0.6039
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1608
+epoch: 60/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 60/200, 
+lr: 1.0E-04, loss: 0.6456, reg_loss: 0.6531
+iter: 1, epoch: 60/200, 
+lr: 1.0E-04, loss: 0.5761, reg_loss: 0.5836
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3133
+epoch: 61/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 61/200, 
+lr: 1.0E-04, loss: 0.6034, reg_loss: 0.6109
+iter: 1, epoch: 61/200, 
+lr: 1.0E-04, loss: 0.5351, reg_loss: 0.5426
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1854
+epoch: 62/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 62/200, 
+lr: 1.0E-04, loss: 0.6483, reg_loss: 0.6557
+iter: 1, epoch: 62/200, 
+lr: 1.0E-04, loss: 0.5640, reg_loss: 0.5715
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1829
+epoch: 63/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 63/200, 
+lr: 1.0E-04, loss: 0.6268, reg_loss: 0.6343
+iter: 1, epoch: 63/200, 
+lr: 1.0E-04, loss: 0.5308, reg_loss: 0.5383
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3210
+epoch: 64/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 64/200, 
+lr: 1.0E-04, loss: 0.5776, reg_loss: 0.5851
+iter: 1, epoch: 64/200, 
+lr: 1.0E-04, loss: 0.5935, reg_loss: 0.6010
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.1753
+epoch: 65/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 65/200, 
+lr: 1.0E-04, loss: 0.5754, reg_loss: 0.5828
+iter: 1, epoch: 65/200, 
+lr: 1.0E-04, loss: 0.5731, reg_loss: 0.5806
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2434
+epoch: 66/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 66/200, 
+lr: 1.0E-04, loss: 0.5835, reg_loss: 0.5910
+iter: 1, epoch: 66/200, 
+lr: 1.0E-04, loss: 0.5532, reg_loss: 0.5606
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2547
+epoch: 67/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 67/200, 
+lr: 1.0E-04, loss: 0.5633, reg_loss: 0.5707
+iter: 1, epoch: 67/200, 
+lr: 1.0E-04, loss: 0.5183, reg_loss: 0.5258
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2269
+epoch: 68/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 68/200, 
+lr: 1.0E-04, loss: 0.5913, reg_loss: 0.5988
+iter: 1, epoch: 68/200, 
+lr: 1.0E-04, loss: 0.5408, reg_loss: 0.5483
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3041
+epoch: 69/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 69/200, 
+lr: 1.0E-04, loss: 0.4679, reg_loss: 0.4754
+iter: 1, epoch: 69/200, 
+lr: 1.0E-04, loss: 0.6258, reg_loss: 0.6332
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2562
+epoch: 70/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 70/200, 
+lr: 1.0E-04, loss: 0.5179, reg_loss: 0.5253
+iter: 1, epoch: 70/200, 
+lr: 1.0E-04, loss: 0.5775, reg_loss: 0.5849
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3034
+epoch: 71/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 71/200, 
+lr: 1.0E-04, loss: 0.5215, reg_loss: 0.5290
+iter: 1, epoch: 71/200, 
+lr: 1.0E-04, loss: 0.5508, reg_loss: 0.5582
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3452
+epoch: 72/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 72/200, 
+lr: 1.0E-04, loss: 0.4547, reg_loss: 0.4622
+iter: 1, epoch: 72/200, 
+lr: 1.0E-04, loss: 0.5798, reg_loss: 0.5872
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3020
+epoch: 73/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 73/200, 
+lr: 1.0E-04, loss: 0.6015, reg_loss: 0.6089
+iter: 1, epoch: 73/200, 
+lr: 1.0E-04, loss: 0.5019, reg_loss: 0.5094
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3958
+epoch: 74/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 74/200, 
+lr: 1.0E-04, loss: 0.5431, reg_loss: 0.5505
+iter: 1, epoch: 74/200, 
+lr: 1.0E-04, loss: 0.4901, reg_loss: 0.4975
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3859
+epoch: 75/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 75/200, 
+lr: 1.0E-04, loss: 0.5222, reg_loss: 0.5296
+iter: 1, epoch: 75/200, 
+lr: 1.0E-04, loss: 0.5157, reg_loss: 0.5231
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4072
+epoch: 76/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 76/200, 
+lr: 1.0E-04, loss: 0.5500, reg_loss: 0.5574
+iter: 1, epoch: 76/200, 
+lr: 1.0E-04, loss: 0.4797, reg_loss: 0.4871
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.2966
+epoch: 77/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 77/200, 
+lr: 1.0E-04, loss: 0.4598, reg_loss: 0.4672
+iter: 1, epoch: 77/200, 
+lr: 1.0E-04, loss: 0.5487, reg_loss: 0.5562
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3705
+epoch: 78/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 78/200, 
+lr: 1.0E-04, loss: 0.5138, reg_loss: 0.5212
+iter: 1, epoch: 78/200, 
+lr: 1.0E-04, loss: 0.5121, reg_loss: 0.5196
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3245
+epoch: 79/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 79/200, 
+lr: 1.0E-04, loss: 0.4620, reg_loss: 0.4694
+iter: 1, epoch: 79/200, 
+lr: 1.0E-04, loss: 0.5013, reg_loss: 0.5088
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3863
+epoch: 80/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 80/200, 
+lr: 1.0E-04, loss: 0.5376, reg_loss: 0.5450
+iter: 1, epoch: 80/200, 
+lr: 1.0E-04, loss: 0.4755, reg_loss: 0.4829
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5724
+epoch: 81/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 81/200, 
+lr: 1.0E-04, loss: 0.4649, reg_loss: 0.4724
+iter: 1, epoch: 81/200, 
+lr: 1.0E-04, loss: 0.4938, reg_loss: 0.5012
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3860
+epoch: 82/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 82/200, 
+lr: 1.0E-04, loss: 0.4666, reg_loss: 0.4740
+iter: 1, epoch: 82/200, 
+lr: 1.0E-04, loss: 0.5428, reg_loss: 0.5502
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4961
+epoch: 83/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 83/200, 
+lr: 1.0E-04, loss: 0.4612, reg_loss: 0.4686
+iter: 1, epoch: 83/200, 
+lr: 1.0E-04, loss: 0.5490, reg_loss: 0.5564
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3600
+epoch: 84/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 84/200, 
+lr: 1.0E-04, loss: 0.4584, reg_loss: 0.4658
+iter: 1, epoch: 84/200, 
+lr: 1.0E-04, loss: 0.5334, reg_loss: 0.5409
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4244
+epoch: 85/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 85/200, 
+lr: 1.0E-04, loss: 0.4709, reg_loss: 0.4783
+iter: 1, epoch: 85/200, 
+lr: 1.0E-04, loss: 0.4431, reg_loss: 0.4505
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5500
+epoch: 86/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 86/200, 
+lr: 1.0E-04, loss: 0.4531, reg_loss: 0.4605
+iter: 1, epoch: 86/200, 
+lr: 1.0E-04, loss: 0.5400, reg_loss: 0.5475
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3890
+epoch: 87/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 87/200, 
+lr: 1.0E-04, loss: 0.4535, reg_loss: 0.4610
+iter: 1, epoch: 87/200, 
+lr: 1.0E-04, loss: 0.4979, reg_loss: 0.5053
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5490
+epoch: 88/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 88/200, 
+lr: 1.0E-04, loss: 0.4606, reg_loss: 0.4680
+iter: 1, epoch: 88/200, 
+lr: 1.0E-04, loss: 0.4770, reg_loss: 0.4845
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5008
+epoch: 89/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 89/200, 
+lr: 1.0E-04, loss: 0.4928, reg_loss: 0.5002
+iter: 1, epoch: 89/200, 
+lr: 1.0E-04, loss: 0.4500, reg_loss: 0.4574
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4633
+epoch: 90/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 90/200, 
+lr: 1.0E-04, loss: 0.4620, reg_loss: 0.4694
+iter: 1, epoch: 90/200, 
+lr: 1.0E-04, loss: 0.4642, reg_loss: 0.4716
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6621
+epoch: 91/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 91/200, 
+lr: 1.0E-04, loss: 0.4646, reg_loss: 0.4720
+iter: 1, epoch: 91/200, 
+lr: 1.0E-04, loss: 0.4797, reg_loss: 0.4871
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4008
+epoch: 92/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 92/200, 
+lr: 1.0E-04, loss: 0.4211, reg_loss: 0.4285
+iter: 1, epoch: 92/200, 
+lr: 1.0E-04, loss: 0.5126, reg_loss: 0.5200
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5235
+epoch: 93/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 93/200, 
+lr: 1.0E-04, loss: 0.4544, reg_loss: 0.4618
+iter: 1, epoch: 93/200, 
+lr: 1.0E-04, loss: 0.5395, reg_loss: 0.5469
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4208
+epoch: 94/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 94/200, 
+lr: 1.0E-04, loss: 0.4932, reg_loss: 0.5006
+iter: 1, epoch: 94/200, 
+lr: 1.0E-04, loss: 0.5112, reg_loss: 0.5186
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4011
+epoch: 95/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 95/200, 
+lr: 1.0E-04, loss: 0.4557, reg_loss: 0.4631
+iter: 1, epoch: 95/200, 
+lr: 1.0E-04, loss: 0.4617, reg_loss: 0.4691
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6331
+epoch: 96/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 96/200, 
+lr: 1.0E-04, loss: 0.4162, reg_loss: 0.4236
+iter: 1, epoch: 96/200, 
+lr: 1.0E-04, loss: 0.5158, reg_loss: 0.5232
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4110
+epoch: 97/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 97/200, 
+lr: 1.0E-04, loss: 0.5134, reg_loss: 0.5208
+iter: 1, epoch: 97/200, 
+lr: 1.0E-04, loss: 0.4410, reg_loss: 0.4484
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4338
+epoch: 98/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 98/200, 
+lr: 1.0E-04, loss: 0.4973, reg_loss: 0.5047
+iter: 1, epoch: 98/200, 
+lr: 1.0E-04, loss: 0.4325, reg_loss: 0.4399
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6714
+epoch: 99/200, lr: 1.0E-04 (1.0E-04) tau:40
+iter: 0, epoch: 99/200, 
+lr: 1.0E-04, loss: 0.4938, reg_loss: 0.5012
+iter: 1, epoch: 99/200, 
+lr: 1.0E-04, loss: 0.4890, reg_loss: 0.4964
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3497
+epoch: 100/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 100/200, 
+lr: 1.0E-05, loss: 0.4568, reg_loss: 0.4642
+iter: 1, epoch: 100/200, 
+lr: 1.0E-05, loss: 0.4713, reg_loss: 0.4787
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.3558
+epoch: 101/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 101/200, 
+lr: 1.0E-05, loss: 0.4429, reg_loss: 0.4503
+iter: 1, epoch: 101/200, 
+lr: 1.0E-05, loss: 0.4625, reg_loss: 0.4699
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4127
+epoch: 102/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 102/200, 
+lr: 1.0E-05, loss: 0.4425, reg_loss: 0.4499
+iter: 1, epoch: 102/200, 
+lr: 1.0E-05, loss: 0.4458, reg_loss: 0.4532
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4939
+epoch: 103/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 103/200, 
+lr: 1.0E-05, loss: 0.4931, reg_loss: 0.5005
+iter: 1, epoch: 103/200, 
+lr: 1.0E-05, loss: 0.4314, reg_loss: 0.4388
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5613
+epoch: 104/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 104/200, 
+lr: 1.0E-05, loss: 0.4431, reg_loss: 0.4505
+iter: 1, epoch: 104/200, 
+lr: 1.0E-05, loss: 0.4241, reg_loss: 0.4315
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6205
+epoch: 105/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 105/200, 
+lr: 1.0E-05, loss: 0.4816, reg_loss: 0.4890
+iter: 1, epoch: 105/200, 
+lr: 1.0E-05, loss: 0.4429, reg_loss: 0.4503
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5936
+epoch: 106/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 106/200, 
+lr: 1.0E-05, loss: 0.4660, reg_loss: 0.4734
+iter: 1, epoch: 106/200, 
+lr: 1.0E-05, loss: 0.4458, reg_loss: 0.4532
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5548
+epoch: 107/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 107/200, 
+lr: 1.0E-05, loss: 0.4195, reg_loss: 0.4269
+iter: 1, epoch: 107/200, 
+lr: 1.0E-05, loss: 0.4411, reg_loss: 0.4485
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5260
+epoch: 108/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 108/200, 
+lr: 1.0E-05, loss: 0.4231, reg_loss: 0.4305
+iter: 1, epoch: 108/200, 
+lr: 1.0E-05, loss: 0.4175, reg_loss: 0.4249
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4991
+epoch: 109/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 109/200, 
+lr: 1.0E-05, loss: 0.4443, reg_loss: 0.4517
+iter: 1, epoch: 109/200, 
+lr: 1.0E-05, loss: 0.4406, reg_loss: 0.4480
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4683
+epoch: 110/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 110/200, 
+lr: 1.0E-05, loss: 0.4422, reg_loss: 0.4496
+iter: 1, epoch: 110/200, 
+lr: 1.0E-05, loss: 0.4322, reg_loss: 0.4396
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.4856
+epoch: 111/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 111/200, 
+lr: 1.0E-05, loss: 0.3931, reg_loss: 0.4005
+iter: 1, epoch: 111/200, 
+lr: 1.0E-05, loss: 0.4857, reg_loss: 0.4931
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5122
+epoch: 112/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 112/200, 
+lr: 1.0E-05, loss: 0.4015, reg_loss: 0.4089
+iter: 1, epoch: 112/200, 
+lr: 1.0E-05, loss: 0.4241, reg_loss: 0.4315
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5374
+epoch: 113/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 113/200, 
+lr: 1.0E-05, loss: 0.4535, reg_loss: 0.4609
+iter: 1, epoch: 113/200, 
+lr: 1.0E-05, loss: 0.4151, reg_loss: 0.4225
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5664
+epoch: 114/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 114/200, 
+lr: 1.0E-05, loss: 0.4220, reg_loss: 0.4294
+iter: 1, epoch: 114/200, 
+lr: 1.0E-05, loss: 0.4932, reg_loss: 0.5006
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5833
+epoch: 115/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 115/200, 
+lr: 1.0E-05, loss: 0.4241, reg_loss: 0.4315
+iter: 1, epoch: 115/200, 
+lr: 1.0E-05, loss: 0.4702, reg_loss: 0.4776
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5672
+epoch: 116/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 116/200, 
+lr: 1.0E-05, loss: 0.4338, reg_loss: 0.4412
+iter: 1, epoch: 116/200, 
+lr: 1.0E-05, loss: 0.4172, reg_loss: 0.4246
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5544
+epoch: 117/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 117/200, 
+lr: 1.0E-05, loss: 0.4272, reg_loss: 0.4346
+iter: 1, epoch: 117/200, 
+lr: 1.0E-05, loss: 0.4440, reg_loss: 0.4514
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5352
+epoch: 118/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 118/200, 
+lr: 1.0E-05, loss: 0.4197, reg_loss: 0.4271
+iter: 1, epoch: 118/200, 
+lr: 1.0E-05, loss: 0.4214, reg_loss: 0.4288
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5440
+epoch: 119/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 119/200, 
+lr: 1.0E-05, loss: 0.4642, reg_loss: 0.4716
+iter: 1, epoch: 119/200, 
+lr: 1.0E-05, loss: 0.4229, reg_loss: 0.4303
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5453
+epoch: 120/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 120/200, 
+lr: 1.0E-05, loss: 0.4260, reg_loss: 0.4334
+iter: 1, epoch: 120/200, 
+lr: 1.0E-05, loss: 0.4867, reg_loss: 0.4941
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5361
+epoch: 121/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 121/200, 
+lr: 1.0E-05, loss: 0.4113, reg_loss: 0.4187
+iter: 1, epoch: 121/200, 
+lr: 1.0E-05, loss: 0.4712, reg_loss: 0.4786
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5406
+epoch: 122/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 122/200, 
+lr: 1.0E-05, loss: 0.4573, reg_loss: 0.4647
+iter: 1, epoch: 122/200, 
+lr: 1.0E-05, loss: 0.3975, reg_loss: 0.4049
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5611
+epoch: 123/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 123/200, 
+lr: 1.0E-05, loss: 0.4262, reg_loss: 0.4336
+iter: 1, epoch: 123/200, 
+lr: 1.0E-05, loss: 0.4760, reg_loss: 0.4834
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5587
+epoch: 124/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 124/200, 
+lr: 1.0E-05, loss: 0.4829, reg_loss: 0.4903
+iter: 1, epoch: 124/200, 
+lr: 1.0E-05, loss: 0.3865, reg_loss: 0.3939
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5581
+epoch: 125/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 125/200, 
+lr: 1.0E-05, loss: 0.4651, reg_loss: 0.4725
+iter: 1, epoch: 125/200, 
+lr: 1.0E-05, loss: 0.4572, reg_loss: 0.4646
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5571
+epoch: 126/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 126/200, 
+lr: 1.0E-05, loss: 0.3780, reg_loss: 0.3855
+iter: 1, epoch: 126/200, 
+lr: 1.0E-05, loss: 0.4962, reg_loss: 0.5036
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5630
+epoch: 127/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 127/200, 
+lr: 1.0E-05, loss: 0.4781, reg_loss: 0.4855
+iter: 1, epoch: 127/200, 
+lr: 1.0E-05, loss: 0.3894, reg_loss: 0.3969
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5639
+epoch: 128/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 128/200, 
+lr: 1.0E-05, loss: 0.4371, reg_loss: 0.4446
+iter: 1, epoch: 128/200, 
+lr: 1.0E-05, loss: 0.4069, reg_loss: 0.4143
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5749
+epoch: 129/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 129/200, 
+lr: 1.0E-05, loss: 0.4158, reg_loss: 0.4232
+iter: 1, epoch: 129/200, 
+lr: 1.0E-05, loss: 0.4451, reg_loss: 0.4525
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5970
+epoch: 130/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 130/200, 
+lr: 1.0E-05, loss: 0.4561, reg_loss: 0.4635
+iter: 1, epoch: 130/200, 
+lr: 1.0E-05, loss: 0.4013, reg_loss: 0.4087
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5750
+epoch: 131/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 131/200, 
+lr: 1.0E-05, loss: 0.4311, reg_loss: 0.4385
+iter: 1, epoch: 131/200, 
+lr: 1.0E-05, loss: 0.4516, reg_loss: 0.4590
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5663
+epoch: 132/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 132/200, 
+lr: 1.0E-05, loss: 0.4346, reg_loss: 0.4420
+iter: 1, epoch: 132/200, 
+lr: 1.0E-05, loss: 0.3969, reg_loss: 0.4043
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5624
+epoch: 133/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 133/200, 
+lr: 1.0E-05, loss: 0.4372, reg_loss: 0.4446
+iter: 1, epoch: 133/200, 
+lr: 1.0E-05, loss: 0.4257, reg_loss: 0.4331
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5661
+epoch: 134/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 134/200, 
+lr: 1.0E-05, loss: 0.4789, reg_loss: 0.4863
+iter: 1, epoch: 134/200, 
+lr: 1.0E-05, loss: 0.4291, reg_loss: 0.4365
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5670
+epoch: 135/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 135/200, 
+lr: 1.0E-05, loss: 0.4168, reg_loss: 0.4243
+iter: 1, epoch: 135/200, 
+lr: 1.0E-05, loss: 0.4559, reg_loss: 0.4633
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5603
+epoch: 136/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 136/200, 
+lr: 1.0E-05, loss: 0.4433, reg_loss: 0.4507
+iter: 1, epoch: 136/200, 
+lr: 1.0E-05, loss: 0.4518, reg_loss: 0.4592
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5748
+epoch: 137/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 137/200, 
+lr: 1.0E-05, loss: 0.4555, reg_loss: 0.4629
+iter: 1, epoch: 137/200, 
+lr: 1.0E-05, loss: 0.4198, reg_loss: 0.4272
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6038
+epoch: 138/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 138/200, 
+lr: 1.0E-05, loss: 0.4064, reg_loss: 0.4138
+iter: 1, epoch: 138/200, 
+lr: 1.0E-05, loss: 0.4471, reg_loss: 0.4545
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5839
+epoch: 139/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 139/200, 
+lr: 1.0E-05, loss: 0.4337, reg_loss: 0.4411
+iter: 1, epoch: 139/200, 
+lr: 1.0E-05, loss: 0.4367, reg_loss: 0.4441
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5756
+epoch: 140/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 140/200, 
+lr: 1.0E-05, loss: 0.3996, reg_loss: 0.4070
+iter: 1, epoch: 140/200, 
+lr: 1.0E-05, loss: 0.4367, reg_loss: 0.4441
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5978
+epoch: 141/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 141/200, 
+lr: 1.0E-05, loss: 0.4126, reg_loss: 0.4200
+iter: 1, epoch: 141/200, 
+lr: 1.0E-05, loss: 0.4505, reg_loss: 0.4579
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5836
+epoch: 142/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 142/200, 
+lr: 1.0E-05, loss: 0.4290, reg_loss: 0.4364
+iter: 1, epoch: 142/200, 
+lr: 1.0E-05, loss: 0.4487, reg_loss: 0.4561
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5946
+epoch: 143/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 143/200, 
+lr: 1.0E-05, loss: 0.4092, reg_loss: 0.4166
+iter: 1, epoch: 143/200, 
+lr: 1.0E-05, loss: 0.3880, reg_loss: 0.3954
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5948
+epoch: 144/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 144/200, 
+lr: 1.0E-05, loss: 0.4238, reg_loss: 0.4312
+iter: 1, epoch: 144/200, 
+lr: 1.0E-05, loss: 0.4223, reg_loss: 0.4297
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5733
+epoch: 145/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 145/200, 
+lr: 1.0E-05, loss: 0.4032, reg_loss: 0.4106
+iter: 1, epoch: 145/200, 
+lr: 1.0E-05, loss: 0.4825, reg_loss: 0.4899
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5663
+epoch: 146/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 146/200, 
+lr: 1.0E-05, loss: 0.4178, reg_loss: 0.4252
+iter: 1, epoch: 146/200, 
+lr: 1.0E-05, loss: 0.4464, reg_loss: 0.4538
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5795
+epoch: 147/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 147/200, 
+lr: 1.0E-05, loss: 0.4090, reg_loss: 0.4164
+iter: 1, epoch: 147/200, 
+lr: 1.0E-05, loss: 0.4476, reg_loss: 0.4550
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5722
+epoch: 148/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 148/200, 
+lr: 1.0E-05, loss: 0.4357, reg_loss: 0.4431
+iter: 1, epoch: 148/200, 
+lr: 1.0E-05, loss: 0.4027, reg_loss: 0.4101
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5821
+epoch: 149/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 149/200, 
+lr: 1.0E-05, loss: 0.4431, reg_loss: 0.4505
+iter: 1, epoch: 149/200, 
+lr: 1.0E-05, loss: 0.4454, reg_loss: 0.4528
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5966
+epoch: 150/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 150/200, 
+lr: 1.0E-05, loss: 0.4084, reg_loss: 0.4158
+iter: 1, epoch: 150/200, 
+lr: 1.0E-05, loss: 0.4179, reg_loss: 0.4253
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6272
+epoch: 151/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 151/200, 
+lr: 1.0E-05, loss: 0.4131, reg_loss: 0.4205
+iter: 1, epoch: 151/200, 
+lr: 1.0E-05, loss: 0.4573, reg_loss: 0.4647
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6325
+epoch: 152/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 152/200, 
+lr: 1.0E-05, loss: 0.4278, reg_loss: 0.4352
+iter: 1, epoch: 152/200, 
+lr: 1.0E-05, loss: 0.4343, reg_loss: 0.4417
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6281
+epoch: 153/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 153/200, 
+lr: 1.0E-05, loss: 0.4090, reg_loss: 0.4164
+iter: 1, epoch: 153/200, 
+lr: 1.0E-05, loss: 0.4867, reg_loss: 0.4942
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6382
+epoch: 154/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 154/200, 
+lr: 1.0E-05, loss: 0.4226, reg_loss: 0.4300
+iter: 1, epoch: 154/200, 
+lr: 1.0E-05, loss: 0.4355, reg_loss: 0.4429
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6156
+epoch: 155/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 155/200, 
+lr: 1.0E-05, loss: 0.4217, reg_loss: 0.4291
+iter: 1, epoch: 155/200, 
+lr: 1.0E-05, loss: 0.4594, reg_loss: 0.4668
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6230
+epoch: 156/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 156/200, 
+lr: 1.0E-05, loss: 0.4119, reg_loss: 0.4193
+iter: 1, epoch: 156/200, 
+lr: 1.0E-05, loss: 0.4295, reg_loss: 0.4369
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.5994
+epoch: 157/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 157/200, 
+lr: 1.0E-05, loss: 0.4197, reg_loss: 0.4271
+iter: 1, epoch: 157/200, 
+lr: 1.0E-05, loss: 0.4660, reg_loss: 0.4734
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6011
+epoch: 158/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 158/200, 
+lr: 1.0E-05, loss: 0.4465, reg_loss: 0.4539
+iter: 1, epoch: 158/200, 
+lr: 1.0E-05, loss: 0.4033, reg_loss: 0.4107
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6252
+epoch: 159/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 159/200, 
+lr: 1.0E-05, loss: 0.4396, reg_loss: 0.4471
+iter: 1, epoch: 159/200, 
+lr: 1.0E-05, loss: 0.4104, reg_loss: 0.4178
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6607
+epoch: 160/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 160/200, 
+lr: 1.0E-05, loss: 0.4509, reg_loss: 0.4583
+iter: 1, epoch: 160/200, 
+lr: 1.0E-05, loss: 0.4298, reg_loss: 0.4372
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6551
+epoch: 161/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 161/200, 
+lr: 1.0E-05, loss: 0.4561, reg_loss: 0.4635
+iter: 1, epoch: 161/200, 
+lr: 1.0E-05, loss: 0.4005, reg_loss: 0.4079
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6532
+epoch: 162/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 162/200, 
+lr: 1.0E-05, loss: 0.4532, reg_loss: 0.4606
+iter: 1, epoch: 162/200, 
+lr: 1.0E-05, loss: 0.4334, reg_loss: 0.4408
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6232
+epoch: 163/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 163/200, 
+lr: 1.0E-05, loss: 0.4440, reg_loss: 0.4514
+iter: 1, epoch: 163/200, 
+lr: 1.0E-05, loss: 0.3991, reg_loss: 0.4065
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6266
+epoch: 164/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 164/200, 
+lr: 1.0E-05, loss: 0.4686, reg_loss: 0.4760
+iter: 1, epoch: 164/200, 
+lr: 1.0E-05, loss: 0.3621, reg_loss: 0.3695
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6443
+epoch: 165/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 165/200, 
+lr: 1.0E-05, loss: 0.4312, reg_loss: 0.4386
+iter: 1, epoch: 165/200, 
+lr: 1.0E-05, loss: 0.4293, reg_loss: 0.4367
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6468
+epoch: 166/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 166/200, 
+lr: 1.0E-05, loss: 0.4008, reg_loss: 0.4082
+iter: 1, epoch: 166/200, 
+lr: 1.0E-05, loss: 0.4137, reg_loss: 0.4211
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6519
+epoch: 167/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 167/200, 
+lr: 1.0E-05, loss: 0.4298, reg_loss: 0.4372
+iter: 1, epoch: 167/200, 
+lr: 1.0E-05, loss: 0.4303, reg_loss: 0.4377
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6687
+epoch: 168/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 168/200, 
+lr: 1.0E-05, loss: 0.4318, reg_loss: 0.4392
+iter: 1, epoch: 168/200, 
+lr: 1.0E-05, loss: 0.4231, reg_loss: 0.4305
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6438
+epoch: 169/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 169/200, 
+lr: 1.0E-05, loss: 0.4636, reg_loss: 0.4710
+iter: 1, epoch: 169/200, 
+lr: 1.0E-05, loss: 0.3712, reg_loss: 0.3786
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6447
+epoch: 170/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 170/200, 
+lr: 1.0E-05, loss: 0.3687, reg_loss: 0.3761
+iter: 1, epoch: 170/200, 
+lr: 1.0E-05, loss: 0.4230, reg_loss: 0.4304
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6075
+epoch: 171/200, lr: 1.0E-05 (1.0E-04) tau:40/home/lzh/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+train.py:116: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  torch.nn.utils.clip_grad_norm(model.parameters(),options['clip_gradient_norm'])
+train.py:120: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  print('iter: %d, epoch: %d/%d, \nlr: %.1E, loss: %.4f, reg_loss: %.4f'%(iter, epoch, max_epochs, lr, loss.data[0],reg_loss.data[0]))
+train.py:38: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  val_loss_list.append(loss.data[0])
+
+iter: 0, epoch: 171/200, 
+lr: 1.0E-05, loss: 0.3987, reg_loss: 0.4061
+iter: 1, epoch: 171/200, 
+lr: 1.0E-05, loss: 0.4844, reg_loss: 0.4918
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6126
+epoch: 172/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 172/200, 
+lr: 1.0E-05, loss: 0.3683, reg_loss: 0.3757
+iter: 1, epoch: 172/200, 
+lr: 1.0E-05, loss: 0.4605, reg_loss: 0.4679
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6337
+epoch: 173/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 173/200, 
+lr: 1.0E-05, loss: 0.4168, reg_loss: 0.4242
+iter: 1, epoch: 173/200, 
+lr: 1.0E-05, loss: 0.4523, reg_loss: 0.4597
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6374
+epoch: 174/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 174/200, 
+lr: 1.0E-05, loss: 0.4220, reg_loss: 0.4294
+iter: 1, epoch: 174/200, 
+lr: 1.0E-05, loss: 0.4033, reg_loss: 0.4107
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6438
+epoch: 175/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 175/200, 
+lr: 1.0E-05, loss: 0.4346, reg_loss: 0.4420
+iter: 1, epoch: 175/200, 
+lr: 1.0E-05, loss: 0.4213, reg_loss: 0.4287
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6573
+epoch: 176/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 176/200, 
+lr: 1.0E-05, loss: 0.4110, reg_loss: 0.4184
+iter: 1, epoch: 176/200, 
+lr: 1.0E-05, loss: 0.4315, reg_loss: 0.4389
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6425
+epoch: 177/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 177/200, 
+lr: 1.0E-05, loss: 0.4259, reg_loss: 0.4333
+iter: 1, epoch: 177/200, 
+lr: 1.0E-05, loss: 0.4635, reg_loss: 0.4709
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6489
+epoch: 178/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 178/200, 
+lr: 1.0E-05, loss: 0.4332, reg_loss: 0.4406
+iter: 1, epoch: 178/200, 
+lr: 1.0E-05, loss: 0.4035, reg_loss: 0.4108
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6335
+epoch: 179/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 179/200, 
+lr: 1.0E-05, loss: 0.4517, reg_loss: 0.4591
+iter: 1, epoch: 179/200, 
+lr: 1.0E-05, loss: 0.4047, reg_loss: 0.4121
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6135
+epoch: 180/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 180/200, 
+lr: 1.0E-05, loss: 0.3897, reg_loss: 0.3971
+iter: 1, epoch: 180/200, 
+lr: 1.0E-05, loss: 0.4266, reg_loss: 0.4340
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6312
+epoch: 181/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 181/200, 
+lr: 1.0E-05, loss: 0.4400, reg_loss: 0.4474
+iter: 1, epoch: 181/200, 
+lr: 1.0E-05, loss: 0.3784, reg_loss: 0.3858
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6511
+epoch: 182/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 182/200, 
+lr: 1.0E-05, loss: 0.4864, reg_loss: 0.4938
+iter: 1, epoch: 182/200, 
+lr: 1.0E-05, loss: 0.4009, reg_loss: 0.4083
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6382
+epoch: 183/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 183/200, 
+lr: 1.0E-05, loss: 0.3655, reg_loss: 0.3729
+iter: 1, epoch: 183/200, 
+lr: 1.0E-05, loss: 0.4466, reg_loss: 0.4540
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6330
+epoch: 184/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 184/200, 
+lr: 1.0E-05, loss: 0.4004, reg_loss: 0.4078
+iter: 1, epoch: 184/200, 
+lr: 1.0E-05, loss: 0.4494, reg_loss: 0.4568
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6192
+epoch: 185/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 185/200, 
+lr: 1.0E-05, loss: 0.4599, reg_loss: 0.4673
+iter: 1, epoch: 185/200, 
+lr: 1.0E-05, loss: 0.4094, reg_loss: 0.4168
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6052
+epoch: 186/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 186/200, 
+lr: 1.0E-05, loss: 0.4288, reg_loss: 0.4362
+iter: 1, epoch: 186/200, 
+lr: 1.0E-05, loss: 0.4333, reg_loss: 0.4407
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6113
+epoch: 187/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 187/200, 
+lr: 1.0E-05, loss: 0.3982, reg_loss: 0.4056
+iter: 1, epoch: 187/200, 
+lr: 1.0E-05, loss: 0.4303, reg_loss: 0.4377
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6314
+epoch: 188/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 188/200, 
+lr: 1.0E-05, loss: 0.4658, reg_loss: 0.4732
+iter: 1, epoch: 188/200, 
+lr: 1.0E-05, loss: 0.4286, reg_loss: 0.4360
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6624
+epoch: 189/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 189/200, 
+lr: 1.0E-05, loss: 0.4426, reg_loss: 0.4499
+iter: 1, epoch: 189/200, 
+lr: 1.0E-05, loss: 0.3915, reg_loss: 0.3989
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6651
+epoch: 190/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 190/200, 
+lr: 1.0E-05, loss: 0.3704, reg_loss: 0.3778
+iter: 1, epoch: 190/200, 
+lr: 1.0E-05, loss: 0.4421, reg_loss: 0.4495
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6689
+epoch: 191/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 191/200, 
+lr: 1.0E-05, loss: 0.4735, reg_loss: 0.4809
+iter: 1, epoch: 191/200, 
+lr: 1.0E-05, loss: 0.3425, reg_loss: 0.3499
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6636
+epoch: 192/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 192/200, 
+lr: 1.0E-05, loss: 0.4350, reg_loss: 0.4424
+iter: 1, epoch: 192/200, 
+lr: 1.0E-05, loss: 0.4227, reg_loss: 0.4301
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6468
+epoch: 193/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 193/200, 
+lr: 1.0E-05, loss: 0.4230, reg_loss: 0.4304
+iter: 1, epoch: 193/200, 
+lr: 1.0E-05, loss: 0.4326, reg_loss: 0.4400
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6434
+epoch: 194/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 194/200, 
+lr: 1.0E-05, loss: 0.4206, reg_loss: 0.4280
+iter: 1, epoch: 194/200, 
+lr: 1.0E-05, loss: 0.4026, reg_loss: 0.4100
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6098
+epoch: 195/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 195/200, 
+lr: 1.0E-05, loss: 0.4232, reg_loss: 0.4306
+iter: 1, epoch: 195/200, 
+lr: 1.0E-05, loss: 0.4287, reg_loss: 0.4361
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6339
+epoch: 196/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 196/200, 
+lr: 1.0E-05, loss: 0.4194, reg_loss: 0.4268
+iter: 1, epoch: 196/200, 
+lr: 1.0E-05, loss: 0.4552, reg_loss: 0.4626
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6524
+epoch: 197/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 197/200, 
+lr: 1.0E-05, loss: 0.4257, reg_loss: 0.4331
+iter: 1, epoch: 197/200, 
+lr: 1.0E-05, loss: 0.4068, reg_loss: 0.4142
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.6812
+epoch: 198/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 198/200, 
+lr: 1.0E-05, loss: 0.3735, reg_loss: 0.3809
+iter: 1, epoch: 198/200, 
+lr: 1.0E-05, loss: 0.4331, reg_loss: 0.4405
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.7188
+epoch: 199/200, lr: 1.0E-05 (1.0E-04) tau:40
+iter: 0, epoch: 199/200, 
+lr: 1.0E-05, loss: 0.4435, reg_loss: 0.4509
+iter: 1, epoch: 199/200, 
+lr: 1.0E-05, loss: 0.3863, reg_loss: 0.3937
+Evaluating model ...
+Evaluating batch: #0
+loss: 1.7115
+training on gpu 2
+Building model ...
+using dropout in rnn!
+Loading data ...
+Data Size:
+test-split: 212 videos.
+Loading c3d features ...
+Loading anchor weight data ...
+Done test set loading.
+Restoring model from checkpoints/3/best_model.pth
+Start to predict ...
+0-th video: video_test_0001270, feat_len: 496
+Number of proposals (before post-processing): 15377
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3842
+after nms: 0.315716634278575 0.029450951144099236 1.0
+Number of proposals (after score threshold): 1735
+1-th video: video_test_0000740, feat_len: 771
+Number of proposals (before post-processing): 24177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 6007
+after nms: 0.3045723606183175 0.020269887521862984 1.0
+Number of proposals (after score threshold): 2605
+2-th video: video_test_0000896, feat_len: 424
+Number of proposals (before post-processing): 13073
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3314
+after nms: 0.2640691304795206 0.024232983589172363 1.0
+Number of proposals (after score threshold): 1177
+3-th video: video_test_0000897, feat_len: 225
+Number of proposals (before post-processing): 6705
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1738
+after nms: 0.2549975279480716 0.022185267880558968 1.0
+Number of proposals (after score threshold): 833
+4-th video: video_test_0000950, feat_len: 2055
+Number of proposals (before post-processing): 65265
+Non-maximum Suppresion ...
+Number of proposals (after nms): 16172
+after nms: 0.29323635573712903 0.019104963168501854 1.0
+Number of proposals (after score threshold): 8381
+5-th video: video_test_0001159, feat_len: 1131
+Number of proposals (before post-processing): 35697
+Non-maximum Suppresion ...
+Number of proposals (after nms): 9004
+after nms: 0.2658675315664516 0.010562009178102016 1.0
+Number of proposals (after score threshold): 4057
+6-th video: video_test_0001079, feat_len: 920
+Number of proposals (before post-processing): 28945
+Non-maximum Suppresion ...
+Number of proposals (after nms): 7257
+after nms: 0.2474176800449566 0.025945261120796204 1.0
+Number of proposals (after score threshold): 2711
+7-th video: video_test_0000073, feat_len: 185
+Number of proposals (before post-processing): 5425
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1381
+after nms: 0.27798050585365397 0.02584809437394142 1.0
+Number of proposals (after score threshold): 654
+8-th video: video_test_0000179, feat_len: 315
+Number of proposals (before post-processing): 9585
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2486
+after nms: 0.4627125423899099 0.037104979157447815 1.0
+Number of proposals (after score threshold): 2002
+9-th video: video_test_0000173, feat_len: 359
+Number of proposals (before post-processing): 10993
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2824
+after nms: 0.2702646084313173 0.030633294954895973 1.0
+Number of proposals (after score threshold): 1514
+10-th video: video_test_0001072, feat_len: 534
+Number of proposals (before post-processing): 16593
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4117
+after nms: 0.3743036101353467 0.02461535483598709 1.0
+Number of proposals (after score threshold): 2524
+11-th video: video_test_0001075, feat_len: 396
+Number of proposals (before post-processing): 12177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3119
+after nms: 0.4138858311723902 0.04738585650920868 1.0
+Number of proposals (after score threshold): 2321
+12-th video: video_test_0000767, feat_len: 144
+Number of proposals (before post-processing): 4113
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1062
+after nms: 0.1796972163989719 0.03650926053524017 1.0
+Number of proposals (after score threshold): 352
+13-th video: video_test_0001076, feat_len: 121
+Number of proposals (before post-processing): 3377
+Non-maximum Suppresion ...
+Number of proposals (after nms): 896
+after nms: 0.32961433007273755 0.02432689629495144 1.0
+Number of proposals (after score threshold): 537
+14-th video: video_test_0001268, feat_len: 177
+Number of proposals (before post-processing): 5169
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1359
+after nms: 0.2593332129921915 0.03197744861245155 1.0
+Number of proposals (after score threshold): 594
+15-th video: video_test_0000006, feat_len: 125
+Number of proposals (before post-processing): 3505
+Non-maximum Suppresion ...
+Number of proposals (after nms): 892
+after nms: 0.28722446819040676 0.0339934341609478 1.0
+Number of proposals (after score threshold): 604
+16-th video: video_test_0000004, feat_len: 63
+Number of proposals (before post-processing): 1521
+Non-maximum Suppresion ...
+Number of proposals (after nms): 456
+after nms: 0.3676666233263779 0.08016104996204376 1.0
+Number of proposals (after score threshold): 345
+17-th video: video_test_0001174, feat_len: 438
+Number of proposals (before post-processing): 13521
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3369
+after nms: 0.5049489146492696 0.043149933218955994 1.0
+Number of proposals (after score threshold): 2878
+18-th video: video_test_0001153, feat_len: 240
+Number of proposals (before post-processing): 7185
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1814
+after nms: 0.3702061975738311 0.040543992072343826 1.0
+Number of proposals (after score threshold): 1467
+19-th video: video_test_0000718, feat_len: 76
+Number of proposals (before post-processing): 1937
+Non-maximum Suppresion ...
+Number of proposals (after nms): 560
+after nms: 0.30449053379041807 0.06082117184996605 1.0
+Number of proposals (after score threshold): 348
+20-th video: video_test_0000716, feat_len: 1256
+Number of proposals (before post-processing): 39697
+Non-maximum Suppresion ...
+Number of proposals (after nms): 10213
+after nms: 0.4785396036577338 0.03447878733277321 1.0
+Number of proposals (after score threshold): 8141
+21-th video: video_test_0001309, feat_len: 159
+Number of proposals (before post-processing): 4593
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1198
+after nms: 0.3858325976555007 0.03756735473871231 1.0
+Number of proposals (after score threshold): 755
+22-th video: video_test_0000242, feat_len: 87
+Number of proposals (before post-processing): 2289
+Non-maximum Suppresion ...
+Number of proposals (after nms): 617
+after nms: 0.22729268574081904 0.0532023124396801 1.0
+Number of proposals (after score threshold): 268
+23-th video: video_test_0000558, feat_len: 376
+Number of proposals (before post-processing): 11537
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2805
+after nms: 0.18315261989539744 0.04827490821480751 1.0
+Number of proposals (after score threshold): 1127
+24-th video: video_test_0001496, feat_len: 283
+Number of proposals (before post-processing): 8561
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2192
+after nms: 0.35423142920812445 0.040152620524168015 1.0
+Number of proposals (after score threshold): 1567
+25-th video: video_test_0000367, feat_len: 416
+Number of proposals (before post-processing): 12817
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3240
+after nms: 0.18061143901130117 0.04113171994686127 1.0
+Number of proposals (after score threshold): 965
+26-th video: video_test_0001324, feat_len: 307
+Number of proposals (before post-processing): 9329
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2350
+after nms: 0.27954711611917676 0.04901158809661865 1.0
+Number of proposals (after score threshold): 1348
+27-th video: video_test_0000085, feat_len: 413
+Number of proposals (before post-processing): 12721
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3310
+after nms: 0.5677707426520092 0.045432813465595245 1.0
+Number of proposals (after score threshold): 3063
+28-th video: video_test_0000887, feat_len: 724
+Number of proposals (before post-processing): 22673
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5752
+after nms: 0.2821557296732096 0.022418688982725143 1.0
+Number of proposals (after score threshold): 2869
+29-th video: video_test_0001209, feat_len: 658
+Number of proposals (before post-processing): 20561
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5163
+after nms: 0.23058099160809664 0.02954328991472721 1.0
+Number of proposals (after score threshold): 2012
+30-th video: video_test_0001281, feat_len: 131
+Number of proposals (before post-processing): 3697
+Non-maximum Suppresion ...
+Number of proposals (after nms): 998
+after nms: 0.30209957589703296 0.024798784404993057 1.0
+Number of proposals (after score threshold): 402
+31-th video: video_test_0000882, feat_len: 465
+Number of proposals (before post-processing): 14385
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3573
+after nms: 0.451246164035883 0.02452627196907997 1.0
+Number of proposals (after score threshold): 2648
+32-th video: video_test_0000671, feat_len: 218
+Number of proposals (before post-processing): 6481
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1670
+after nms: 0.4760748178547549 0.03576567769050598 1.0
+Number of proposals (after score threshold): 1284
+33-th video: video_test_0000964, feat_len: 118
+Number of proposals (before post-processing): 3281
+Non-maximum Suppresion ...
+Number of proposals (after nms): 913
+after nms: 0.31460166555652874 0.02144450880587101 1.0
+Number of proposals (after score threshold): 527
+34-th video: video_test_0000673, feat_len: 318
+Number of proposals (before post-processing): 9681
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2422
+after nms: 0.3978292889090164 0.05363069474697113 1.0
+Number of proposals (after score threshold): 1802
+35-th video: video_test_0001114, feat_len: 90
+Number of proposals (before post-processing): 2385
+Non-maximum Suppresion ...
+Number of proposals (after nms): 671
+after nms: 0.19407418943197646 0.020236099138855934 1.0
+Number of proposals (after score threshold): 202
+36-th video: video_test_0000771, feat_len: 418
+Number of proposals (before post-processing): 12881
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3192
+after nms: 0.14133304233819172 0.020503345876932144 1.0
+Number of proposals (after score threshold): 676
+37-th video: video_test_0001163, feat_len: 188
+Number of proposals (before post-processing): 5521
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1419
+after nms: 0.18075861290905826 0.04599297046661377 1.0
+Number of proposals (after score threshold): 398
+38-th video: video_test_0001118, feat_len: 131
+Number of proposals (before post-processing): 3697
+Non-maximum Suppresion ...
+Number of proposals (after nms): 987
+after nms: 0.25241786384202064 0.04750211536884308 1.0
+Number of proposals (after score threshold): 624
+39-th video: video_test_0001201, feat_len: 774
+Number of proposals (before post-processing): 24273
+Non-maximum Suppresion ...
+Number of proposals (after nms): 6054
+after nms: 0.19457045473960768 0.03066064789891243 1.0
+Number of proposals (after score threshold): 1847
+40-th video: video_test_0001040, feat_len: 331
+Number of proposals (before post-processing): 10097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2511
+after nms: 0.2894015609387239 0.02098376490175724 1.0
+Number of proposals (after score threshold): 1385
+41-th video: video_test_0001207, feat_len: 1655
+Number of proposals (before post-processing): 52465
+Non-maximum Suppresion ...
+Number of proposals (after nms): 12785
+after nms: 0.4687929380709858 0.0249599851667881 1.0
+Number of proposals (after score threshold): 10316
+42-th video: video_test_0000723, feat_len: 424
+Number of proposals (before post-processing): 13073
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3206
+after nms: 0.2133717119881996 0.04564515873789787 1.0
+Number of proposals (after score threshold): 1231
+43-th video: video_test_0000569, feat_len: 165
+Number of proposals (before post-processing): 4785
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1261
+after nms: 0.3705765740956275 0.04149153456091881 1.0
+Number of proposals (after score threshold): 926
+44-th video: video_test_0000672, feat_len: 76
+Number of proposals (before post-processing): 1937
+Non-maximum Suppresion ...
+Number of proposals (after nms): 533
+after nms: 0.4303474055557716 0.07907885313034058 1.0
+Number of proposals (after score threshold): 462
+45-th video: video_test_0001164, feat_len: 1585
+Number of proposals (before post-processing): 50225
+Non-maximum Suppresion ...
+Number of proposals (after nms): 12313
+after nms: 0.4014239795463644 0.022476129233837128 1.0
+Number of proposals (after score threshold): 8320
+46-th video: video_test_0000278, feat_len: 403
+Number of proposals (before post-processing): 12401
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3069
+after nms: 0.5935259914142801 0.05785534903407097 1.0
+Number of proposals (after score threshold): 2813
+47-th video: video_test_0001162, feat_len: 226
+Number of proposals (before post-processing): 6737
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1740
+after nms: 0.3984226558218314 0.02357269823551178 1.0
+Number of proposals (after score threshold): 1311
+48-th video: video_test_0000405, feat_len: 344
+Number of proposals (before post-processing): 10513
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2634
+after nms: 0.25974901061966144 0.033416830003261566 1.0
+Number of proposals (after score threshold): 1215
+49-th video: video_test_0001078, feat_len: 182
+Number of proposals (before post-processing): 5329
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1371
+after nms: 0.6021285695502743 0.09941151738166809 1.0
+Number of proposals (after score threshold): 1356
+50-th video: video_test_0000560, feat_len: 93
+Number of proposals (before post-processing): 2481
+Non-maximum Suppresion ...
+Number of proposals (after nms): 681
+after nms: 0.2939080408283355 0.055132556706666946 1.0
+Number of proposals (after score threshold): 400
+51-th video: video_test_0001276, feat_len: 116
+Number of proposals (before post-processing): 3217
+Non-maximum Suppresion ...
+Number of proposals (after nms): 886
+after nms: 0.19351184712491643 0.05195695161819458 1.0
+Number of proposals (after score threshold): 364
+52-th video: video_test_0000270, feat_len: 330
+Number of proposals (before post-processing): 10065
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2602
+after nms: 0.1726412372828263 0.03480885922908783 1.0
+Number of proposals (after score threshold): 754
+53-th video: video_test_0000273, feat_len: 240
+Number of proposals (before post-processing): 7185
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1852
+after nms: 0.548291614478289 0.046503495424985886 1.0
+Number of proposals (after score threshold): 1705
+54-th video: video_test_0000374, feat_len: 228
+Number of proposals (before post-processing): 6801
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1744
+after nms: 0.4187327945068769 0.029407769441604614 1.0
+Number of proposals (after score threshold): 1443
+55-th video: video_test_0000372, feat_len: 551
+Number of proposals (before post-processing): 17137
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4225
+after nms: 0.49094134025584313 0.03912169858813286 1.0
+Number of proposals (after score threshold): 3506
+56-th video: video_test_0000379, feat_len: 1588
+Number of proposals (before post-processing): 50321
+Non-maximum Suppresion ...
+Number of proposals (after nms): 12346
+after nms: 0.2960956450331478 0.019307643175125122 1.0
+Number of proposals (after score threshold): 5935
+57-th video: video_test_0001446, feat_len: 535
+Number of proposals (before post-processing): 16625
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4123
+after nms: 0.3946712016697911 0.0449046827852726 1.0
+Number of proposals (after score threshold): 2847
+58-th video: video_test_0001447, feat_len: 430
+Number of proposals (before post-processing): 13265
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3337
+after nms: 0.1964758621762622 0.03925860673189163 1.0
+Number of proposals (after score threshold): 1218
+59-th video: video_test_0001098, feat_len: 311
+Number of proposals (before post-processing): 9457
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2363
+after nms: 0.5393853995096138 0.05445287376642227 1.0
+Number of proposals (after score threshold): 2160
+60-th video: video_test_0000873, feat_len: 65
+Number of proposals (before post-processing): 1585
+Non-maximum Suppresion ...
+Number of proposals (after nms): 473
+after nms: 0.24900717966368788 0.03525717183947563 1.0
+Number of proposals (after score threshold): 225
+61-th video: video_test_0001483, feat_len: 77
+Number of proposals (before post-processing): 1969
+Non-maximum Suppresion ...
+Number of proposals (after nms): 553
+after nms: 0.15704306292517706 0.04127008095383644 1.0
+Number of proposals (after score threshold): 118
+62-th video: video_test_0001038, feat_len: 227
+Number of proposals (before post-processing): 6769
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1781
+after nms: 0.2475266957217341 0.03103109635412693 1.0
+Number of proposals (after score threshold): 741
+63-th video: video_test_0001219, feat_len: 287
+Number of proposals (before post-processing): 8689
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2276
+after nms: 0.23058431535412563 0.02811378426849842 1.0
+Number of proposals (after score threshold): 939
+64-th video: video_test_0000762, feat_len: 249
+Number of proposals (before post-processing): 7473
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1948
+after nms: 0.4520731439003128 0.03277694806456566 1.0
+Number of proposals (after score threshold): 1647
+65-th video: video_test_0000611, feat_len: 334
+Number of proposals (before post-processing): 10193
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2662
+after nms: 0.22148640149718699 0.03881406784057617 1.0
+Number of proposals (after score threshold): 1226
+66-th video: video_test_0000051, feat_len: 217
+Number of proposals (before post-processing): 6449
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1677
+after nms: 0.17335983222604828 0.02244631014764309 1.0
+Number of proposals (after score threshold): 603
+67-th video: video_test_0000615, feat_len: 387
+Number of proposals (before post-processing): 11889
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3059
+after nms: 0.25105872337565427 0.0365431010723114 1.0
+Number of proposals (after score threshold): 1483
+68-th video: video_test_0001168, feat_len: 205
+Number of proposals (before post-processing): 6065
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1571
+after nms: 0.3010749086467306 0.04706208035349846 1.0
+Number of proposals (after score threshold): 1092
+69-th video: video_test_0000292, feat_len: 142
+Number of proposals (before post-processing): 4049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1048
+after nms: 0.28200192818816266 0.02851499617099762 1.0
+Number of proposals (after score threshold): 673
+70-th video: video_test_0000293, feat_len: 437
+Number of proposals (before post-processing): 13489
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3396
+after nms: 0.24937267455264697 0.012394817546010017 1.0
+Number of proposals (after score threshold): 1467
+71-th video: video_test_0000113, feat_len: 161
+Number of proposals (before post-processing): 4657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1307
+after nms: 0.2709356055074096 0.035851601511240005 1.0
+Number of proposals (after score threshold): 591
+72-th video: video_test_0000505, feat_len: 446
+Number of proposals (before post-processing): 13777
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3438
+after nms: 0.27856061156782785 0.017577912658452988 1.0
+Number of proposals (after score threshold): 1353
+73-th video: video_test_0000665, feat_len: 646
+Number of proposals (before post-processing): 20177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5058
+after nms: 0.3112263987669423 0.024747109040617943 1.0
+Number of proposals (after score threshold): 2689
+74-th video: video_test_0000664, feat_len: 161
+Number of proposals (before post-processing): 4657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1237
+after nms: 0.3142348587055214 0.038659051060676575 1.0
+Number of proposals (after score threshold): 721
+75-th video: video_test_0000577, feat_len: 308
+Number of proposals (before post-processing): 9361
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2396
+after nms: 0.318051628707807 0.03262227773666382 1.0
+Number of proposals (after score threshold): 1519
+76-th video: video_test_0000814, feat_len: 339
+Number of proposals (before post-processing): 10353
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2631
+after nms: 0.3360400112556079 0.020651886239647865 1.0
+Number of proposals (after score threshold): 1386
+77-th video: video_test_0001369, feat_len: 1080
+Number of proposals (before post-processing): 34065
+Non-maximum Suppresion ...
+Number of proposals (after nms): 8576
+after nms: 0.22282879411415787 0.021444769576191902 1.0
+Number of proposals (after score threshold): 3459
+78-th video: video_test_0001194, feat_len: 241
+Number of proposals (before post-processing): 7217
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1815
+after nms: 0.25449855304618185 0.04857157543301582 1.0
+Number of proposals (after score threshold): 1125
+79-th video: video_test_0001195, feat_len: 1405
+Number of proposals (before post-processing): 44465
+Non-maximum Suppresion ...
+Number of proposals (after nms): 11150
+after nms: 0.27308724898761433 0.02442414127290249 1.0
+Number of proposals (after score threshold): 5121
+80-th video: video_test_0001512, feat_len: 98
+Number of proposals (before post-processing): 2641
+Non-maximum Suppresion ...
+Number of proposals (after nms): 715
+after nms: 0.41007322724257317 0.07563106715679169 1.0
+Number of proposals (after score threshold): 574
+81-th video: video_test_0001235, feat_len: 1574
+Number of proposals (before post-processing): 49873
+Non-maximum Suppresion ...
+Number of proposals (after nms): 11966
+after nms: 0.4874148473863356 0.03271041065454483 1.0
+Number of proposals (after score threshold): 10113
+82-th video: video_test_0001459, feat_len: 1273
+Number of proposals (before post-processing): 40241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 9843
+after nms: 0.3452690050731063 0.028588008135557175 1.0
+Number of proposals (after score threshold): 6176
+83-th video: video_test_0000691, feat_len: 331
+Number of proposals (before post-processing): 10097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2635
+after nms: 0.3717260058622885 0.038603223860263824 1.0
+Number of proposals (after score threshold): 1830
+84-th video: video_test_0000765, feat_len: 219
+Number of proposals (before post-processing): 6513
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1705
+after nms: 0.2470133522388872 0.04251417517662048 1.0
+Number of proposals (after score threshold): 811
+85-th video: video_test_0001452, feat_len: 136
+Number of proposals (before post-processing): 3857
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1018
+after nms: 0.14674362622947965 0.04668871685862541 1.0
+Number of proposals (after score threshold): 220
+86-th video: video_test_0000188, feat_len: 1010
+Number of proposals (before post-processing): 31825
+Non-maximum Suppresion ...
+Number of proposals (after nms): 8043
+after nms: 0.25304701407447533 0.017780939117074013 1.0
+Number of proposals (after score threshold): 3931
+87-th video: video_test_0000591, feat_len: 62
+Number of proposals (before post-processing): 1489
+Non-maximum Suppresion ...
+Number of proposals (after nms): 449
+after nms: 0.3944226773186091 0.05348621681332588 1.0
+Number of proposals (after score threshold): 366
+88-th video: video_test_0000007, feat_len: 905
+Number of proposals (before post-processing): 28465
+Non-maximum Suppresion ...
+Number of proposals (after nms): 7181
+after nms: 0.4860260886564392 0.040102891623973846 1.0
+Number of proposals (after score threshold): 6336
+89-th video: video_test_0000593, feat_len: 105
+Number of proposals (before post-processing): 2865
+Non-maximum Suppresion ...
+Number of proposals (after nms): 778
+after nms: 0.31278417397357505 0.041903723031282425 1.0
+Number of proposals (after score threshold): 438
+90-th video: video_test_0000864, feat_len: 366
+Number of proposals (before post-processing): 11217
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2766
+after nms: 0.48393410928709 0.03495272621512413 1.0
+Number of proposals (after score threshold): 2239
+91-th video: video_test_0001134, feat_len: 344
+Number of proposals (before post-processing): 10513
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2702
+after nms: 0.2933197497720413 0.02445250377058983 1.0
+Number of proposals (after score threshold): 1304
+92-th video: video_test_0001135, feat_len: 89
+Number of proposals (before post-processing): 2353
+Non-maximum Suppresion ...
+Number of proposals (after nms): 644
+after nms: 0.30908590165018945 0.021879876032471657 1.0
+Number of proposals (after score threshold): 312
+93-th video: video_test_0000556, feat_len: 126
+Number of proposals (before post-processing): 3537
+Non-maximum Suppresion ...
+Number of proposals (after nms): 971
+after nms: 0.2382051666467676 0.054389335215091705 1.0
+Number of proposals (after score threshold): 571
+94-th video: video_test_0001229, feat_len: 450
+Number of proposals (before post-processing): 13905
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3464
+after nms: 0.43733772933891785 0.0332292839884758 1.0
+Number of proposals (after score threshold): 2454
+95-th video: video_test_0000285, feat_len: 361
+Number of proposals (before post-processing): 11057
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2803
+after nms: 0.2882303436144873 0.02446761168539524 1.0
+Number of proposals (after score threshold): 1387
+96-th video: video_test_0001307, feat_len: 383
+Number of proposals (before post-processing): 11761
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2955
+after nms: 0.37176406401920237 0.04249533265829086 1.0
+Number of proposals (after score threshold): 1580
+97-th video: video_test_0000046, feat_len: 333
+Number of proposals (before post-processing): 10161
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2583
+after nms: 0.19904577696030332 0.048065222799777985 1.0
+Number of proposals (after score threshold): 974
+98-th video: video_test_0000045, feat_len: 441
+Number of proposals (before post-processing): 13617
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3363
+after nms: 0.5249866500104728 0.038649022579193115 1.0
+Number of proposals (after score threshold): 2836
+99-th video: video_test_0001223, feat_len: 217
+Number of proposals (before post-processing): 6449
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1683
+after nms: 0.3284234471300388 0.03922470286488533 1.0
+Number of proposals (after score threshold): 1041
+100-th video: video_test_0001358, feat_len: 411
+Number of proposals (before post-processing): 12657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3225
+after nms: 0.23959639210225075 0.02592632547020912 1.0
+Number of proposals (after score threshold): 1353
+101-th video: video_test_0000464, feat_len: 1331
+Number of proposals (before post-processing): 42097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 10296
+after nms: 0.4015033518963891 0.02316213771700859 1.0
+Number of proposals (after score threshold): 6857
+102-th video: video_test_0000698, feat_len: 31
+Number of proposals (before post-processing): 497
+Non-maximum Suppresion ...
+Number of proposals (after nms): 196
+after nms: 0.28479777561614705 0.046269096434116364 1.0
+Number of proposals (after score threshold): 85
+103-th video: video_test_0000461, feat_len: 232
+Number of proposals (before post-processing): 6929
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1798
+after nms: 0.4798300954014958 0.043241336941719055 1.0
+Number of proposals (after score threshold): 1521
+104-th video: video_test_0001058, feat_len: 1509
+Number of proposals (before post-processing): 47793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 11817
+after nms: 0.4191252150214005 0.019085874781012535 1.0
+Number of proposals (after score threshold): 7813
+105-th video: video_test_0000450, feat_len: 53
+Number of proposals (before post-processing): 1201
+Non-maximum Suppresion ...
+Number of proposals (after nms): 390
+after nms: 0.523039246426943 0.04893052205443382 1.0
+Number of proposals (after score threshold): 344
+106-th video: video_test_0000602, feat_len: 389
+Number of proposals (before post-processing): 11953
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3047
+after nms: 0.4907204271032844 0.06056274101138115 1.0
+Number of proposals (after score threshold): 2610
+107-th video: video_test_0000211, feat_len: 185
+Number of proposals (before post-processing): 5425
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1417
+after nms: 0.45198684913975806 0.03848312795162201 1.0
+Number of proposals (after score threshold): 1077
+108-th video: video_test_0000357, feat_len: 237
+Number of proposals (before post-processing): 7089
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1792
+after nms: 0.5113655556820699 0.06035711243748665 1.0
+Number of proposals (after score threshold): 1494
+109-th video: video_test_0001039, feat_len: 440
+Number of proposals (before post-processing): 13585
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3433
+after nms: 0.3979095398648345 0.03768318146467209 1.0
+Number of proposals (after score threshold): 2391
+110-th video: video_test_0000355, feat_len: 1211
+Number of proposals (before post-processing): 38257
+Non-maximum Suppresion ...
+Number of proposals (after nms): 9532
+after nms: 0.16267487253236343 0.019556818529963493 1.0
+Number of proposals (after score threshold): 2308
+111-th video: video_test_0000353, feat_len: 135
+Number of proposals (before post-processing): 3825
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1004
+after nms: 0.35634937336616423 0.05353296920657158 1.0
+Number of proposals (after score threshold): 509
+112-th video: video_test_0001508, feat_len: 349
+Number of proposals (before post-processing): 10673
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2682
+after nms: 0.664338439039047 0.06700636446475983 1.0
+Number of proposals (after score threshold): 2510
+113-th video: video_test_0000981, feat_len: 52
+Number of proposals (before post-processing): 1169
+Non-maximum Suppresion ...
+Number of proposals (after nms): 364
+after nms: 0.39188671595120167 0.08298005163669586 1.0
+Number of proposals (after score threshold): 254
+114-th video: video_test_0000714, feat_len: 336
+Number of proposals (before post-processing): 10257
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2597
+after nms: 0.219276708992206 0.04913567006587982 1.0
+Number of proposals (after score threshold): 1056
+115-th video: video_test_0000854, feat_len: 425
+Number of proposals (before post-processing): 13105
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3225
+after nms: 0.43511893649376177 0.02532297745347023 1.0
+Number of proposals (after score threshold): 2341
+116-th video: video_test_0000601, feat_len: 809
+Number of proposals (before post-processing): 25393
+Non-maximum Suppresion ...
+Number of proposals (after nms): 6422
+after nms: 0.36008835204087175 0.03549849987030029 1.0
+Number of proposals (after score threshold): 4227
+117-th video: video_test_0001484, feat_len: 384
+Number of proposals (before post-processing): 11793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3144
+after nms: 0.3863887384216332 0.05027123540639877 1.0
+Number of proposals (after score threshold): 2414
+118-th video: video_test_0000635, feat_len: 59
+Number of proposals (before post-processing): 1393
+Non-maximum Suppresion ...
+Number of proposals (after nms): 409
+after nms: 0.4101712270150266 0.09892896562814713 1.0
+Number of proposals (after score threshold): 332
+119-th video: video_test_0001129, feat_len: 126
+Number of proposals (before post-processing): 3537
+Non-maximum Suppresion ...
+Number of proposals (after nms): 955
+after nms: 0.1806776604200689 0.01721343770623207 1.0
+Number of proposals (after score threshold): 284
+120-th video: video_test_0001339, feat_len: 292
+Number of proposals (before post-processing): 8849
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2232
+after nms: 0.5732579170375742 0.06772356480360031 1.0
+Number of proposals (after score threshold): 1956
+121-th video: video_test_0000039, feat_len: 426
+Number of proposals (before post-processing): 13137
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3314
+after nms: 0.32675861554219193 0.034481801092624664 1.0
+Number of proposals (after score threshold): 1999
+122-th video: video_test_0001123, feat_len: 481
+Number of proposals (before post-processing): 14897
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3675
+after nms: 0.5004464125876524 0.05338450148701668 1.0
+Number of proposals (after score threshold): 3225
+123-th video: video_test_0001267, feat_len: 236
+Number of proposals (before post-processing): 7057
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1819
+after nms: 0.18403799379057056 0.033074188977479935 1.0
+Number of proposals (after score threshold): 533
+124-th video: video_test_0001127, feat_len: 339
+Number of proposals (before post-processing): 10353
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2662
+after nms: 0.295465262762077 0.0214540958404541 1.0
+Number of proposals (after score threshold): 1450
+125-th video: video_test_0000689, feat_len: 243
+Number of proposals (before post-processing): 7281
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1807
+after nms: 0.13200106019670618 0.03966182842850685 1.0
+Number of proposals (after score threshold): 206
+126-th video: video_test_0000756, feat_len: 67
+Number of proposals (before post-processing): 1649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 478
+after nms: 0.3824566920993218 0.06196159869432449 1.0
+Number of proposals (after score threshold): 397
+127-th video: video_test_0001431, feat_len: 671
+Number of proposals (before post-processing): 20977
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5136
+after nms: 0.40769070094288834 0.03516140952706337 1.0
+Number of proposals (after score threshold): 3638
+128-th video: video_test_0000129, feat_len: 359
+Number of proposals (before post-processing): 10993
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2773
+after nms: 0.3211091447935943 0.013320966623723507 1.0
+Number of proposals (after score threshold): 1639
+129-th video: video_test_0001433, feat_len: 36
+Number of proposals (before post-processing): 657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 254
+after nms: 0.5517995920120262 0.13191455602645874 1.0
+Number of proposals (after score threshold): 220
+130-th video: video_test_0001343, feat_len: 780
+Number of proposals (before post-processing): 24465
+Non-maximum Suppresion ...
+Number of proposals (after nms): 6168
+after nms: 0.24051572906303953 0.025869527831673622 1.0
+Number of proposals (after score threshold): 2330
+131-th video: video_test_0000324, feat_len: 279
+Number of proposals (before post-processing): 8433
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2172
+after nms: 0.25747784177393657 0.03796317055821419 1.0
+Number of proposals (after score threshold): 1020
+132-th video: video_test_0001064, feat_len: 517
+Number of proposals (before post-processing): 16049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4051
+after nms: 0.5855300788464398 0.050919778645038605 1.0
+Number of proposals (after score threshold): 3518
+133-th video: video_test_0001531, feat_len: 407
+Number of proposals (before post-processing): 12529
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3265
+after nms: 0.228614015595996 0.026170901954174042 1.0
+Number of proposals (after score threshold): 1212
+134-th video: video_test_0001532, feat_len: 447
+Number of proposals (before post-processing): 13809
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3468
+after nms: 0.3078026559661468 0.04361014813184738 1.0
+Number of proposals (after score threshold): 1986
+135-th video: video_test_0000413, feat_len: 80
+Number of proposals (before post-processing): 2065
+Non-maximum Suppresion ...
+Number of proposals (after nms): 592
+after nms: 0.34690133009005236 0.04871863126754761 1.0
+Number of proposals (after score threshold): 412
+136-th video: video_test_0000991, feat_len: 154
+Number of proposals (before post-processing): 4433
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1195
+after nms: 0.45509927101339753 0.0350310243666172 1.0
+Number of proposals (after score threshold): 908
+137-th video: video_test_0001255, feat_len: 1973
+Number of proposals (before post-processing): 62641
+Non-maximum Suppresion ...
+Number of proposals (after nms): 16163
+after nms: 0.2384652366777229 0.01789471134543419 1.0
+Number of proposals (after score threshold): 7078
+138-th video: video_test_0001202, feat_len: 85
+Number of proposals (before post-processing): 2225
+Non-maximum Suppresion ...
+Number of proposals (after nms): 599
+after nms: 0.28590481713389315 0.07752984762191772 1.0
+Number of proposals (after score threshold): 417
+139-th video: video_test_0001080, feat_len: 129
+Number of proposals (before post-processing): 3633
+Non-maximum Suppresion ...
+Number of proposals (after nms): 952
+after nms: 0.3585778104665713 0.06196038797497749 1.0
+Number of proposals (after score threshold): 622
+140-th video: video_test_0001081, feat_len: 219
+Number of proposals (before post-processing): 6513
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1721
+after nms: 0.27185272360907814 0.03438854217529297 1.0
+Number of proposals (after score threshold): 779
+141-th video: video_test_0000847, feat_len: 442
+Number of proposals (before post-processing): 13649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3624
+after nms: 0.3470561803651616 0.04643964767456055 1.0
+Number of proposals (after score threshold): 2695
+142-th video: video_test_0000028, feat_len: 273
+Number of proposals (before post-processing): 8241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2164
+after nms: 0.37645104333634405 0.051694612950086594 1.0
+Number of proposals (after score threshold): 1573
+143-th video: video_test_0000844, feat_len: 317
+Number of proposals (before post-processing): 9649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2462
+after nms: 0.3801613060536603 0.016967104747891426 1.0
+Number of proposals (after score threshold): 1709
+144-th video: video_test_0000622, feat_len: 384
+Number of proposals (before post-processing): 11793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2995
+after nms: 0.39094973834159974 0.0498131662607193 1.0
+Number of proposals (after score threshold): 2421
+145-th video: video_test_0000026, feat_len: 389
+Number of proposals (before post-processing): 11953
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3074
+after nms: 0.3958785151111455 0.0495263934135437 1.0
+Number of proposals (after score threshold): 1832
+146-th video: video_test_0001325, feat_len: 328
+Number of proposals (before post-processing): 10001
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2594
+after nms: 0.3393462460801155 0.033675093203783035 1.0
+Number of proposals (after score threshold): 1799
+147-th video: video_test_0000437, feat_len: 383
+Number of proposals (before post-processing): 11761
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2939
+after nms: 0.48878037001698066 0.042104121297597885 1.0
+Number of proposals (after score threshold): 2410
+148-th video: video_test_0001495, feat_len: 990
+Number of proposals (before post-processing): 31185
+Non-maximum Suppresion ...
+Number of proposals (after nms): 7675
+after nms: 0.36985301701188183 0.015316556207835674 1.0
+Number of proposals (after score threshold): 4446
+149-th video: video_test_0000624, feat_len: 224
+Number of proposals (before post-processing): 6673
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1719
+after nms: 0.34340176015762897 0.0612909272313118 1.0
+Number of proposals (after score threshold): 1016
+150-th video: video_test_0000724, feat_len: 271
+Number of proposals (before post-processing): 8177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2041
+after nms: 0.46475486925518844 0.04733426496386528 1.0
+Number of proposals (after score threshold): 1783
+151-th video: video_test_0001409, feat_len: 323
+Number of proposals (before post-processing): 9841
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2474
+after nms: 0.3027257309005375 0.03263568878173828 1.0
+Number of proposals (after score threshold): 1756
+152-th video: video_test_0000131, feat_len: 244
+Number of proposals (before post-processing): 7313
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1853
+after nms: 0.4368486551178898 0.04095622897148132 1.0
+Number of proposals (after score threshold): 1431
+153-th video: video_test_0000448, feat_len: 188
+Number of proposals (before post-processing): 5521
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1443
+after nms: 0.18846327932687038 0.029462309554219246 1.0
+Number of proposals (after score threshold): 516
+154-th video: video_test_0000444, feat_len: 294
+Number of proposals (before post-processing): 8913
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2256
+after nms: 0.41311494278364835 0.03827648237347603 1.0
+Number of proposals (after score threshold): 1607
+155-th video: video_test_0000443, feat_len: 546
+Number of proposals (before post-processing): 16977
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4236
+after nms: 0.3347826068886715 0.04416126757860184 1.0
+Number of proposals (after score threshold): 2612
+156-th video: video_test_0000442, feat_len: 290
+Number of proposals (before post-processing): 8785
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2238
+after nms: 0.3031610572798855 0.04045913368463516 1.0
+Number of proposals (after score threshold): 1255
+157-th video: video_test_0000238, feat_len: 192
+Number of proposals (before post-processing): 5649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1434
+after nms: 0.14658977999514283 0.052822284400463104 1.0
+Number of proposals (after score threshold): 137
+158-th video: video_test_0001527, feat_len: 398
+Number of proposals (before post-processing): 12241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3118
+after nms: 0.15400675834814292 0.020915141329169273 1.0
+Number of proposals (after score threshold): 733
+159-th video: video_test_0001522, feat_len: 86
+Number of proposals (before post-processing): 2257
+Non-maximum Suppresion ...
+Number of proposals (after nms): 612
+after nms: 0.5396044929724892 0.036246318370103836 1.0
+Number of proposals (after score threshold): 537
+160-th video: video_test_0000617, feat_len: 612
+Number of proposals (before post-processing): 19089
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4766
+after nms: 0.30610653473727917 0.024510333314538002 1.0
+Number of proposals (after score threshold): 2044
+161-th video: video_test_0001182, feat_len: 223
+Number of proposals (before post-processing): 6641
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1730
+after nms: 0.2639461250964961 0.061365678906440735 1.0
+Number of proposals (after score threshold): 619
+162-th video: video_test_0001391, feat_len: 581
+Number of proposals (before post-processing): 18097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4545
+after nms: 0.24486450088447076 0.022608311846852303 1.0
+Number of proposals (after score threshold): 1803
+163-th video: video_test_0000429, feat_len: 259
+Number of proposals (before post-processing): 7793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1984
+after nms: 0.48154887719447875 0.04705067351460457 1.0
+Number of proposals (after score threshold): 1782
+164-th video: video_test_0000426, feat_len: 286
+Number of proposals (before post-processing): 8657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2268
+after nms: 0.5067185926738949 0.047780394554138184 1.0
+Number of proposals (after score threshold): 1933
+165-th video: video_test_0000785, feat_len: 164
+Number of proposals (before post-processing): 4753
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1247
+after nms: 0.5160247119772453 0.03945533186197281 1.0
+Number of proposals (after score threshold): 1038
+166-th video: video_test_0000786, feat_len: 183
+Number of proposals (before post-processing): 5361
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1356
+after nms: 0.32703761506968543 0.045168761163949966 1.0
+Number of proposals (after score threshold): 1028
+167-th video: video_test_0001314, feat_len: 646
+Number of proposals (before post-processing): 20177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5049
+after nms: 0.3293350629189754 0.016153834760189056 1.0
+Number of proposals (after score threshold): 2520
+168-th video: video_test_0000392, feat_len: 206
+Number of proposals (before post-processing): 6097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1590
+after nms: 0.30047191174571997 0.03623824566602707 1.0
+Number of proposals (after score threshold): 954
+169-th video: video_test_0000423, feat_len: 392
+Number of proposals (before post-processing): 12049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2936
+after nms: 0.45452950138608833 0.02720346674323082 1.0
+Number of proposals (after score threshold): 2158
+170-th video: video_test_0001146, feat_len: 407
+Number of proposals (before post-processing): 12529
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3246
+after nms: 0.3098324393424322 0.023696208372712135 1.0
+Number of proposals (after score threshold): 2696
+171-th video: video_test_0001313, feat_len: 326
+Number of proposals (before post-processing): 9937
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2507
+after nms: 0.3357303055574635 0.03767332434654236 1.0
+Number of proposals (after score threshold): 1711
+172-th video: video_test_0001008, feat_len: 186
+Number of proposals (before post-processing): 5457
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1406
+after nms: 0.4390917542320312 0.036000046879053116 1.0
+Number of proposals (after score threshold): 1059
+173-th video: video_test_0001247, feat_len: 174
+Number of proposals (before post-processing): 5073
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1315
+after nms: 0.18933520682524366 0.06239885836839676 1.0
+Number of proposals (after score threshold): 504
+174-th video: video_test_0001558, feat_len: 267
+Number of proposals (before post-processing): 8049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2017
+after nms: 0.4305560811199747 0.02013801969587803 1.0
+Number of proposals (after score threshold): 1456
+175-th video: video_test_0001319, feat_len: 104
+Number of proposals (before post-processing): 2833
+Non-maximum Suppresion ...
+Number of proposals (after nms): 760
+after nms: 0.2978991199186758 0.08698364347219467 1.0
+Number of proposals (after score threshold): 567
+176-th video: video_test_0000308, feat_len: 453
+Number of proposals (before post-processing): 14001
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3495
+after nms: 0.5281552768998562 0.04472033306956291 1.0
+Number of proposals (after score threshold): 3070
+177-th video: video_test_0000730, feat_len: 199
+Number of proposals (before post-processing): 5873
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1488
+after nms: 0.5397426138747163 0.04991002753376961 1.0
+Number of proposals (after score threshold): 1309
+178-th video: video_test_0000058, feat_len: 213
+Number of proposals (before post-processing): 6321
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1595
+after nms: 0.2120157392129162 0.018890300765633583 1.0
+Number of proposals (after score threshold): 530
+179-th video: video_test_0000538, feat_len: 342
+Number of proposals (before post-processing): 10449
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2634
+after nms: 0.5374777701937211 0.06654839217662811 1.0
+Number of proposals (after score threshold): 2249
+180-th video: video_test_0001556, feat_len: 193
+Number of proposals (before post-processing): 5681
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1472
+after nms: 0.30090851686216646 0.03520094230771065 1.0
+Number of proposals (after score threshold): 817
+181-th video: video_test_0000903, feat_len: 590
+Number of proposals (before post-processing): 18385
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4786
+after nms: 0.5042860655626223 0.02873559109866619 1.0
+Number of proposals (after score threshold): 3873
+182-th video: video_test_0000504, feat_len: 136
+Number of proposals (before post-processing): 3857
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1030
+after nms: 0.27028537053/home/lzh/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+test.py:119: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input=Variable(input,volatile=True).cuda()
+test.py:120: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  target=Variable(target,volatile=True).cuda()
+ 0.02802613563835621 1.0
+Number of proposals (after score threshold): 346
+183-th video: video_test_0000626, feat_len: 478
+Number of proposals (before post-processing): 14801
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3669
+after nms: 0.38872584231699414 0.024210363626480103 1.0
+Number of proposals (after score threshold): 2434
+184-th video: video_test_0000839, feat_len: 717
+Number of proposals (before post-processing): 22449
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5547
+after nms: 0.39705949916103217 0.03487642481923103 1.0
+Number of proposals (after score threshold): 4227
+185-th video: video_test_0000220, feat_len: 461
+Number of proposals (before post-processing): 14257
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3616
+after nms: 0.2549706208859612 0.02994970977306366 1.0
+Number of proposals (after score threshold): 1480
+186-th video: video_test_0001389, feat_len: 265
+Number of proposals (before post-processing): 7985
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1976
+after nms: 0.39340695591930014 0.052670545876026154 1.0
+Number of proposals (after score threshold): 1411
+187-th video: video_test_0000940, feat_len: 174
+Number of proposals (before post-processing): 5073
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1310
+after nms: 0.4125532448320216 0.04993875324726105 1.0
+Number of proposals (after score threshold): 1029
+188-th video: video_test_0000989, feat_len: 362
+Number of proposals (before post-processing): 11089
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2811
+after nms: 0.34871339472491136 0.0357615128159523 1.0
+Number of proposals (after score threshold): 2025
+189-th video: video_test_0000946, feat_len: 52
+Number of proposals (before post-processing): 1169
+Non-maximum Suppresion ...
+Number of proposals (after nms): 362
+after nms: 0.32711064389479755 0.03936241939663887 1.0
+Number of proposals (after score threshold): 254
+190-th video: video_test_0000737, feat_len: 276
+Number of proposals (before post-processing): 8337
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2088
+after nms: 0.11911338857121737 0.02271898463368416 1.0
+Number of proposals (after score threshold): 334
+191-th video: video_test_0000796, feat_len: 238
+Number of proposals (before post-processing): 7121
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1844
+after nms: 0.4036052731995081 0.04000026732683182 1.0
+Number of proposals (after score threshold): 1396
+192-th video: video_test_0000793, feat_len: 3134
+Number of proposals (before post-processing): 99793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 24630
+after nms: 0.32418730810165125 0.0165758915245533 1.0
+Number of proposals (after score threshold): 13619
+193-th video: video_test_0000987, feat_len: 346
+Number of proposals (before post-processing): 10577
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2672
+after nms: 0.29268003706290513 0.0279490165412426 1.0
+Number of proposals (after score threshold): 1467
+194-th video: video_test_0001066, feat_len: 285
+Number of proposals (before post-processing): 8625
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2133
+after nms: 0.4663374022581993 0.03158993646502495 1.0
+Number of proposals (after score threshold): 1612
+195-th video: video_test_0000412, feat_len: 388
+Number of proposals (before post-processing): 11921
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2981
+after nms: 0.26429405973843684 0.030666114762425423 1.0
+Number of proposals (after score threshold): 1412
+196-th video: video_test_0000798, feat_len: 203
+Number of proposals (before post-processing): 6001
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1569
+after nms: 0.17299898519846116 0.026137594133615494 1.0
+Number of proposals (after score threshold): 429
+197-th video: video_test_0001549, feat_len: 215
+Number of proposals (before post-processing): 6385
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1691
+after nms: 0.4244738059886139 0.045664556324481964 1.0
+Number of proposals (after score threshold): 1282
+198-th video: video_test_0000011, feat_len: 148
+Number of proposals (before post-processing): 4241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1085
+after nms: 0.3953528292065117 0.05674448981881142 1.0
+Number of proposals (after score threshold): 663
+199-th video: video_test_0001257, feat_len: 464
+Number of proposals (before post-processing): 14353
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3666
+after nms: 0.5344493265380088 0.03668217733502388 1.0
+Number of proposals (after score threshold): 3166
+200-th video: video_test_0000541, feat_len: 54
+Number of proposals (before post-processing): 1233
+Non-maximum Suppresion ...
+Number of proposals (after nms): 379
+after nms: 0.20859162620512037 0.0565459206700325 1.0
+Number of proposals (after score threshold): 160
+201-th video: video_test_0000701, feat_len: 121
+Number of proposals (before post-processing): 3377
+Non-maximum Suppresion ...
+Number of proposals (after nms): 886
+after nms: 0.27295484659146374 0.05157998576760292 1.0
+Number of proposals (after score threshold): 473
+202-th video: video_test_0000250, feat_len: 397
+Number of proposals (before post-processing): 12209
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3046
+after nms: 0.36953776540235905 0.023515481501817703 1.0
+Number of proposals (after score threshold): 2016
+203-th video: video_test_0000254, feat_len: 393
+Number of proposals (before post-processing): 12081
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3023
+after nms: 0.684206034957357 0.058331169188022614 1.0
+Number of proposals (after score threshold): 2902
+204-th video: video_test_0000549, feat_len: 134
+Number of proposals (before post-processing): 3793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1007
+after nms: 0.33491266295017885 0.03807992488145828 1.0
+Number of proposals (after score threshold): 571
+205-th video: video_test_0000062, feat_len: 27
+Number of proposals (before post-processing): 379
+Non-maximum Suppresion ...
+Number of proposals (after nms): 161
+after nms: 0.3265820338118891 0.11736726015806198 1.0
+Number of proposals (after score threshold): 142
+206-th video: video_test_0001463, feat_len: 199
+Number of proposals (before post-processing): 5873
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1486
+after nms: 0.4232408227361388 0.0840529277920723 1.0
+Number of proposals (after score threshold): 1322
+207-th video: video_test_0001460, feat_len: 54
+Number of proposals (before post-processing): 1233
+Non-maximum Suppresion ...
+Number of proposals (after nms): 377
+after nms: 0.4461574276578205 0.07383515685796738 1.0
+Number of proposals (after score threshold): 323
+208-th video: video_test_0000807, feat_len: 298
+Number of proposals (before post-processing): 9041
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2287
+after nms: 0.48292807234059426 0.04896460846066475 1.0
+Number of proposals (after score threshold): 1933
+209-th video: video_test_0000319, feat_len: 260
+Number of proposals (before post-processing): 7825
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2047
+after nms: 0.32086158587138247 0.04126867651939392 1.0
+Number of proposals (after score threshold): 1440
+210-th video: video_test_0001468, feat_len: 346
+Number of proposals (before post-processing): 10577
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2665
+after nms: 0.5337998676199404 0.06356245279312134 1.0
+Number of proposals (after score threshold): 2365
+211-th video: video_test_0000846, feat_len: 50
+Number of proposals (before post-processing): 1105
+Non-maximum Suppresion ...
+Number of proposals (after nms): 342
+after nms: 0.5192057901220015 0.08605851233005524 1.0
+Number of proposals (after score threshold): 289
+Average proposal number: 1837.262911
+Make directory results/3 ...
+Writing result json file ...
+/home/lzh/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+running for tiou = 0.500000
+running for tiou = 0.550000
+running for tiou = 0.600000
+running for tiou = 0.650000
+running for tiou = 0.700000
+running for tiou = 0.750000
+running for tiou = 0.800000
+running for tiou = 0.850000
+running for tiou = 0.900000
+running for tiou = 0.950000
+running for tiou = 1.000000
+running for tiou = 0.050000
+running for tiou = 0.100000
+running for tiou = 0.150000
+running for tiou = 0.200000
+running for tiou = 0.250000
+running for tiou = 0.300000
+running for tiou = 0.350000
+running for tiou = 0.400000
+running for tiou = 0.450000
+running for tiou = 0.500000
+running for tiou = 0.550000
+running for tiou = 0.600000
+running for tiou = 0.650000
+running for tiou = 0.700000
+running for tiou = 0.750000
+running for tiou = 0.800000
+running for tiou = 0.850000
+running for tiou = 0.900000
+running for tiou = 0.950000
+running for tiou = 1.000000
+avg recall: 0.045888, prop_per_video: 9
+avg recall: 0.051898, prop_per_video: 11
+avg recall: 0.245682, prop_per_video: 99
+avg recall: 0.247902, prop_per_video: 101
+avg recall: 0.355596, prop_per_video: 199
+avg recall: 0.357193, prop_per_video: 201
+avg recall: 0.528886, prop_per_video: 498
+avg recall: 0.529319, prop_per_video: 500
+avg recall: 0.636689, prop_per_video: 998
+avg recall: 0.637257, prop_per_video: 1000
+Plotting avg recall vs avg proposal number ...

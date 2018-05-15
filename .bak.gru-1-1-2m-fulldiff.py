@@ -6,7 +6,6 @@ import torch
 import math
 from torch import nn
 from torch.autograd import Variable
-from model import *
 
 
 class MaSST(nn.Module):
@@ -16,10 +15,10 @@ class MaSST(nn.Module):
         self.options = options
         if self.options['rnn_drop'] > 0:
             print('using dropout in rnn!')
-        self.fc=nn.Linear(options['rnn_size'],options['num_anchors'])
-        self._init()
-        self.fc1=nn.Linear(options['video_feat_dim'],options['rnn_size'])
         self.rnn=MARNN(options,options['rnn_size'],options['rnn_size'],options['num_rnn_layers'],dropout=options['rnn_drop'])
+        self.fc=nn.Linear(2*options['rnn_size'],options['num_anchors'])
+        self.fc1=nn.Linear(options['video_feat_dim'],options['rnn_size'])
+        self._init()
 
     def set_tau(self,tau):
         self.rnn.set_tau(tau)
@@ -34,9 +33,9 @@ class MaSST(nn.Module):
         for module in self.modules():
             for name,param in module.named_parameters():
                 if 'weight' in name:
-                    nn.init.uniform_(param,-self.options['init_scale'],self.options['init_scale'])
+                    nn.init.uniform(param,-self.options['init_scale'],self.options['init_scale'])
                 elif 'bias' in name:
-                    nn.init.constant_(param,0.)
+                    nn.init.constant(param,0.)
 
 class MARNN(nn.Module):
 
@@ -51,7 +50,6 @@ class MARNN(nn.Module):
         self.use_bias = use_bias
         self.batch_first = batch_first
         self.dropout = dropout
-        self.head_size=options['head_size']
 
         for layer in range(num_layers):
             layer_input_size = input_size if layer == 0 else hidden_size
@@ -76,17 +74,16 @@ class MARNN(nn.Module):
             cell.set_tau(tau)
 
     @staticmethod
-    def _forward_rnn(cell, input_, length, hx,aux_hx):
+    def _forward_rnn(cell, input_, length, hx):
         max_time = input_.size(0)
         output = []
         cell._reset_mem()
         for time in range(max_time):
-            h_next,aux_next = cell(input_[time],hx,aux_hx)
+            h_next,o = cell(input_[time],hx)
             mask = Variable((time < length).float().unsqueeze(1).expand_as(h_next))
             h_next = h_next*mask + hx*(1 - mask)
-            output.append(h_next)
+            output.append(o)
             hx = h_next
-            aux_hx=aux_next
         output = torch.stack(output, 0)
         return output, hx
 
@@ -100,17 +97,15 @@ class MARNN(nn.Module):
             length = torch.LongTensor(length)
         if hx is None:
             hx = Variable(input_.data.new(batch_size, self.hidden_size).zero_())
-        aux_hx = Variable(input_.data.new(batch_size, 2*(self.head_size+1)).zero_())
         length=length.cuda(input_.get_device())
         hx=hx.cuda(input_.get_device())
-        aux_hx=aux_hx.cuda(input_.get_device())
         h = []
         layer_output = None
         for layer in range(self.num_layers):
             cell = self.get_cell(layer)
             input_ = self.dropout_layer(input_)
             layer_output, layer_h_n = MARNN._forward_rnn(
-                cell=cell, input_=input_, length=length, hx=hx,aux_hx=aux_hx)
+                cell=cell, input_=input_, length=length, hx=hx)
             layer_output = self.dropout_layer(layer_output)
             input_=layer_output
             h.append(layer_h_n)
@@ -125,13 +120,20 @@ class MANNCell(nn.Module):
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.use_bias = use_bias
-        self.time_fac=options['time_fac']
-        self.weight_ih = nn.Parameter(torch.FloatTensor(2*input_size, 3 * hidden_size))
-        self.weight_hh = nn.Parameter(torch.FloatTensor(2*hidden_size, 3 * hidden_size))
-        self.bias_ih = nn.Parameter(torch.FloatTensor(1,3 * hidden_size))
-        self.bias_hh = nn.Parameter(torch.FloatTensor(1,3 * hidden_size))
+        self.weight_ih = nn.Parameter(torch.FloatTensor(hidden_size, 3 * hidden_size))
+        self.weight_hh = nn.Parameter(torch.FloatTensor(hidden_size, 3 * hidden_size))
+        self.weight_rh = nn.Parameter(torch.FloatTensor(hidden_size, 3 * hidden_size))
+        self.weight_s1 = nn.Parameter(torch.FloatTensor(hidden_size,  hidden_size))
+        self.weight_s2 = nn.Parameter(torch.FloatTensor(hidden_size,  hidden_size))
+        self.weight_s3 = nn.Parameter(torch.FloatTensor(hidden_size,  hidden_size))
+        if use_bias:
+            self.bias = nn.Parameter(torch.FloatTensor(1,3 * hidden_size))
+        else:
+            self.register_parameter('bias', None)
+
         self.memcnt=0
         self.memcap=options['mem_cap']
+        self.entry_size=options['entry_size']
         self.head_size=options['head_size']
         mode=options['mode']
         if mode=='train':
@@ -141,30 +143,41 @@ class MANNCell(nn.Module):
         elif mode=='test':
             batch_size=options['test_batch_size']
         self.batch_size=batch_size 
-        self.auxcell = GRUCell(input_size+hidden_size,2*(self.head_size+1))
+        self.weight_im=nn.Parameter(torch.FloatTensor(hidden_size,self.head_size+1))
+        self.weight_hm=nn.Parameter(torch.FloatTensor(hidden_size,self.head_size+1))
         self.tau=1.
-        self.i_fc=nn.Sequential(
-                nn.Linear(input_size,self.head_size//2),
-                nn.ReLU(),
-                nn.Linear(self.head_size//2,self.head_size),
-                nn.Sigmoid())  
-        self.h_fc=nn.Sequential(
-                nn.Linear(hidden_size,self.head_size//2),
-                nn.ReLU(),
-                nn.Linear(self.head_size//2,self.head_size),
-                nn.Sigmoid())
+        self.fc1=nn.Linear(self.hidden_size,self.head_size)
         
         self.last_usage=None
         self.mem=None
+
+        self.weight_ic = nn.Parameter(torch.FloatTensor(hidden_size, 4))
+        self.weight_hc = nn.Parameter(torch.FloatTensor(hidden_size, 4))
+        self.weight_rc = nn.Parameter(torch.FloatTensor(hidden_size, 4))
+        if use_bias:
+            self.bias_c = nn.Parameter(torch.FloatTensor(1,4))
+        else:
+            self.register_parameter('bias_c', None)
+
+        self.weight_im1=nn.Parameter(torch.FloatTensor(hidden_size,self.head_size+1))
+        self.weight_hm1=nn.Parameter(torch.FloatTensor(hidden_size,self.head_size+1))
+        self.weight_mm1=nn.Parameter(torch.FloatTensor(hidden_size,self.head_size+1))
+        self.fc1=nn.Linear(self.hidden_size,self.head_size)
+        if use_bias:
+            self.bias_m1 = nn.Parameter(torch.FloatTensor(1,self.head_size+1))
+        else:
+            self.register_parameter('bias_m1', None)
+
+        self.bias_1 = nn.Parameter(torch.FloatTensor(1,hidden_size))
+        self.bias_2 = nn.Parameter(torch.FloatTensor(1,hidden_size))
+        self.bias_3 = nn.Parameter(torch.FloatTensor(1,hidden_size))
 
         self.reset_parameters()
     
     def _reset_mem(self):
         self.memcnt=0
-        self.imem=Variable(torch.zeros(self.batch_size,self.memcap,self.input_size),requires_grad=True).cuda()
-        self.hmem=Variable(torch.zeros(self.batch_size,self.memcap,self.hidden_size),requires_grad=True).cuda()
-        self.i_last_use=Variable(torch.ones(self.batch_size,self.memcap)*-9999999.).cuda()
-        self.h_last_use=Variable(torch.ones(self.batch_size,self.memcap)*-9999999.).cuda()
+        self.mem=Variable(torch.zeros(self.batch_size,self.memcap,self.entry_size),requires_grad=True).cuda()
+        self.last_usage=Variable(torch.ones(self.batch_size,self.memcap)*-99999.).cuda()
 
     def __repr__(self):
         s = '{name}({input_size}, {hidden_size})'
@@ -180,63 +193,49 @@ class MANNCell(nn.Module):
         stdv = 1.0 / math.sqrt(self.hidden_size)
         for n,p in self.named_parameters():
             if 'weight' in n:
-                nn.init.orthogonal_(p)
-            if 'bias' in n:
-                nn.init.constant_(p.data, val=0)
+                p.data.uniform_(-stdv, stdv)
+            if 'bias' in n and p is not None:
+                nn.init.constant(p.data, val=0)
         
-    def forward(self, input_, h_0, aux_h_0):
-
-        i=input_
-        h=h_0.detach()
-        read_head=self.auxcell(torch.cat([i,h],dim=1),aux_h_0) 
-        i_read_head,h_read_head=torch.split(read_head,self.head_size+1,dim=1)
-        i_head_vecs=torch.cat([self.i_fc(self.imem.detach()),self.time_fac*torch.sigmoid(self.i_last_use).detach().unsqueeze(2)],dim=2)
-        h_head_vecs=torch.cat([self.h_fc(self.hmem.detach()),self.time_fac*torch.sigmoid(self.h_last_use).detach().unsqueeze(2)],dim=2)
-        i_read_head=1/torch.sqrt((1e-6+(i_read_head.unsqueeze(1)-i_head_vecs)**2).sum(dim=2))
-        h_read_head=1/torch.sqrt((1e-6+(h_read_head.unsqueeze(1)-h_head_vecs)**2).sum(dim=2))
-        i_entry,i_read_index,h_entry,h_read_index=self.read(i_read_head,h_read_head,self.tau)
-        self.i_last_use.add_(-1).add_(-self.i_last_use*i_read_index)
-        self.h_last_use.add_(-1).add_(-self.h_last_use*h_read_index)
         
-        new_i=torch.cat([input_,i_entry],dim=1)
-        new_h0=torch.cat([h_0,h_entry],dim=1)
-        wi_b = torch.addmm(self.bias_ih, new_i, self.weight_ih)
-        wh_b = torch.addmm(self.bias_hh, new_h0, self.weight_hh)
-        ri,zi,ni=torch.split(wi_b,self.hidden_size,dim=1)
-        rh,zh,nh=torch.split(wh_b,self.hidden_size,dim=1)
-        r=torch.sigmoid(ri+rh)
-        z=torch.sigmoid(zi+zh)
-        n=torch.tanh(ni+r*nh)
-        h_1=(1-z)*n+z*h_0
-        
+    def forward(self, input_, h_0):
         if self.memcnt<self.memcap:
-            h_write_index=i_write_index=Variable(torch.cat([torch.zeros(self.memcnt),torch.ones(1),torch.zeros(self.memcap-1-self.memcnt)]).unsqueeze(0)).cuda()
+            write_index=Variable(torch.cat([torch.zeros(self.memcnt),torch.ones(1),torch.zeros(self.memcap-1-self.memcnt)]).unsqueeze(0)).cuda()
             self.memcnt+=1
         else:
-            h_write_index=h_read_index
-            i_write_index=i_read_index
-        self.write(input_,i_write_index,h_0,h_write_index)
+            write_index=self.read_index
+        self.write(h_0,write_index)
+        last_use=torch.sigmoid(self.last_usage).detach()
+        read_head=torch.tanh(input_.detach().mm(self.weight_im)+h_0.detach().mm(self.weight_hm))
+        head_vecs=torch.cat([self.fc1(self.mem.detach()),last_use.unsqueeze(2)],dim=2)
         
-        return h_1,read_head
+        read_head=(read_head.unsqueeze(1)*head_vecs).sum(dim=2)
+        entry,self.read_index=self.read(read_head,self.tau)
+        self.last_usage.add_(-1).add_(-self.last_usage*self.read_index)
+        w_b=torch.sigmoid(entry.mm(self.weight_rh)+h_0.mm(self.weight_hh)+input_.mm(self.weight_ih)+self.bias)
+        r,z,n=torch.split(w_b,self.hidden_size,dim=1)
+        h_new=torch.tanh(input_.mm(self.weight_s1)+self.bias_1+r*(h_0.mm(self.weight_s2)+self.bias_2)+z*(self.bias_3+entry.mm(self.weight_s3)))
+        head1=torch.tanh(input_.mm(self.weight_im1)+h_0.mm(self.weight_hm1)+entry.mm(self.weight_mm1)+self.bias_m1)
+        read_head1=(head1.unsqueeze(1)*head_vecs).sum(dim=2)
+        entry_o,_=self.read(read_head1,self.tau)
+        h_1=n*h_new+(1.-n)*h_0
+        o=torch.cat([h_1,entry_o],dim=1)
+        return h_1,o
 
-    def write(self,i,i_index,h,h_index):
-        i_ones=i_index.unsqueeze(2)
-        h_ones=h_index.unsqueeze(2)
-        self.imem=i.unsqueeze(1)*i_ones+self.imem*(1.-i_ones)
-        self.hmem=h.unsqueeze(1)*h_ones+self.hmem*(1.-h_ones)
+    def write(self,entry,index):
+        ones=index.unsqueeze(2)
+        zeros=1.0-ones
+        self.mem=entry.unsqueeze(1)*ones+self.mem*zeros
 
-    def read(self,i_read_head,h_read_head,tau):
-        i_index,_=self.gumbel_softmax(i_read_head,tau)
-        h_index,_=self.gumbel_softmax(h_read_head,tau)
-        i_entry=i_index.unsqueeze(2)*self.imem
-        h_entry=h_index.unsqueeze(2)*self.hmem
-        i_entry=i_entry.sum(dim=1)
-        h_entry=h_entry.sum(dim=1)
-        return i_entry,i_index,h_entry,h_index
+    def read(self,read_head,tau):
+        index,_=self.gumbel_softmax(read_head,tau)
+        entry=index.unsqueeze(2)*self.mem
+        entry=entry.sum(dim=1)
+        return entry,index
 
     def gumbel_softmax(self,input, tau):
             gumbel = Variable(-torch.log(1e-20-torch.log(1e-20+torch.rand(*input.shape)))).cuda()
-            y=torch.nn.functional.softmax((torch.log(1e-20+input)+gumbel)*tau,dim=1)
+            y=torch.nn.functional.softmax((input+gumbel)*tau,dim=1)
             ymax,pos=y.max(dim=1)
             hard_y=torch.eq(y,ymax.unsqueeze(1)).float()
             y=(hard_y-y).detach()+y

@@ -1,7 +1,8 @@
 """
 Train your model
 """
-
+import warnings
+warnings.filterwarnings("ignore")
 import os
 import shutil
 import argparse
@@ -16,28 +17,28 @@ from utils import *
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 
-def BceLoss(output,target,weight):
+def BceLoss(output,target,weight,length):
     log_weight=1 + (weight -1)*target
     loss=(1-target)*output+log_weight*(torch.log(1+(torch.exp(-torch.abs(output))))+torch.nn.functional.relu(-output))
-    return loss.mean()
+    return loss.mean()*max(length)*len(length)/sum(length)
 
 def evaluation(model,weight,options, val_dataloader):
 
     val_loss_list = []
-    val_count = val_dataloader.dataset.__len__()
     model.eval()
 
     for i,(input,target,length,mask) in enumerate(val_dataloader):
         print('Evaluating batch: #%d'%i)
-        input=Variable(input,volatile=True).cuda()
-        target=Variable(target,volatile=True).cuda()
-        mask=Variable(mask,volatile=True).cuda()
-        output=model(input,length)+mask
-        pos_weight=weight.expand_as(target)
-        loss=BceLoss(output,target,pos_weight)
-        val_loss_list.append(loss.data[0]*len(length))
+        with torch.no_grad():
+            input=Variable(input).cuda()
+            target=Variable(target).cuda()
+            mask=Variable(mask).cuda()
+            output=model(input,length)+mask
+            pos_weight=weight.expand_as(target)
+            loss=BceLoss(output,target,pos_weight,length)
+        val_loss_list.append(loss.item())
         
-    ave_val_loss = sum(val_loss_list) / float(val_count)
+    ave_val_loss = sum(val_loss_list) / len(val_loss_list)
     
     return ave_val_loss
     
@@ -90,6 +91,7 @@ def train(options):
     eval_id = 0
     total_iter = 0
     best_loss=100000.0
+    tau=1.
     for epoch in range(init_epoch, max_epochs):
         model.train()
         if epoch==options['max_epochs']//2:
@@ -97,7 +99,8 @@ def train(options):
             for pg in optimizer.param_groups:
                 pg['lr']=lr
         
-        print('epoch: %d/%d, lr: %.1E (%.1E)'%(epoch, max_epochs, lr, lr_init))
+        print('epoch: %d/%d, lr: %.1E (%.1E) tau:%d'%(epoch, max_epochs, lr, lr_init,tau))
+        valoss_list=[]
         for iter,(input,target,length,mask) in enumerate(train_dataloader):
             input_var = Variable(input,requires_grad=True).cuda()
             target_var = Variable(target).cuda()
@@ -105,22 +108,26 @@ def train(options):
             optimizer.zero_grad()
             output=model(input_var,length)+mask
             pos_weight=weight.expand_as(target_var)
-            loss=BceLoss(output,target_var,pos_weight)
+            loss=BceLoss(output,target_var,pos_weight,length)
+            reg_loss=torch.add(loss,0)
             for x in model.parameters():
                 if x is not None:
-                    loss+= options['reg']*torch.sum(x**2)/2
-            loss.backward()
-            torch.nn.utils.clip_grad_norm(model.parameters(),options['clip_gradient_norm'])
+                    reg_loss+= options['reg']*torch.sum(x**2)/2
+            reg_loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(),options['clip_gradient_norm'])
             optimizer.step()
 
             if iter % options['n_iters_display'] == 0:
-                print('iter: %d, epoch: %d/%d, \nlr: %.1E, loss: %.4f'%(iter, epoch, max_epochs, lr, loss.data[0]))
+                print('iter: %d, epoch: %d/%d, \nlr: %.1E, loss: %.4f, reg_loss: %.4f'%(iter, epoch, max_epochs, lr, loss.item(),reg_loss.item()))
             
             if (total_iter+1) % eval_in_iters == 0:
                 is_best=0       
                 print('Evaluating model ...')
                 val_model.load_state_dict(model.state_dict())
+                if options['rnn_type']=='mann':
+                    val_model.set_tau(tau)
                 val_loss = evaluation(val_model,weight,options,val_dataloader) 
+                valoss_list.append(val_loss)
                 if val_loss<best_loss:
                     best_loss=val_loss
                     is_best=1
@@ -135,7 +142,14 @@ def train(options):
                 eval_id = eval_id + 1
 
             total_iter += 1
-                
+        if tau<options['max_tau']:
+            tau+=options['step_tau']
+            if options['rnn_type']=='mann':
+                model.set_tau(tau)
+        if options['rnn_type']=='mann' and len(valoss_list)>3 and valoss_list[-1]<1.2 and valoss_list[-3]>valoss_list[-2] and valoss_list[-2]>valoss_list[-1]:
+            model.fc1.requires_grad=False
+            print('==================>fix input trans parameter!')
+              
                 
 
 if __name__ == '__main__':
@@ -154,4 +168,3 @@ if __name__ == '__main__':
         os.makedirs(work_dir)
     find_idle_gpu(options['gpu'])
     train(options)
-

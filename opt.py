@@ -1,6 +1,5 @@
 """
 Default hyper parameters
-
 Use this setting can obtain similar or even better performance as original SST paper
 """
 
@@ -23,34 +22,37 @@ def default_options():
 
     #*** MODEL CONFIG ***#
     options['video_feat_dim'] = 4096 # dim of video feature
-    options['num_rnn_layers'] = 2    # number of RNN layers
-    options['rnn_size'] =128       # hidden neuron size
+    options['num_rnn_layers'] = 1   # number of RNN layers
+    options['rnn_size'] = 128      # hidden neuron size
     options['rnn_type'] = 'mann'      # LSTM or GRU
-    options['rnn_drop'] = 0.3        # rnn dropout ratio 
+    options['rnn_drop'] = 0.4        # rnn dropout ratio 
     options['num_anchors'] = 32      # number of anchors
     
-    #*** MEMORY CONFIG***#
-    options['mem_cap']=30
-    options['entry_size']=options['rnn_size']
     
+    #*** MEMORY CONFIG***#
+    options['mem_cap']=32
+    options['max_tau']=options['mem_cap']-1
+    options['step_tau']=2
+    options['head_size']=30
+    options['time_fac']=10   
     #*** OPTIMIZATION ***#
     options['train_id'] = 1          # train id (useful when you have multiple runs, store checkpoints from diff runs into different folders: "checkpoints/1", "checkpoints/2", ...)
     options['gpu']=''
     options['use_weight'] = True     # whether use pre-calculated weights for positive/negative samples (deal with imbalance class problem)
     options['solver'] = 'adam'       # 'adam','rmsprop','sgd', or 'momentum'
     options['momentum'] =  0.9       # only valid when solver is set to momentum optimizer
-    options['batch_size'] = 160      # training batch size
+    options['batch_size'] = 80     # training batch size
     options['eval_batch_size'] = 40  # evaluation (loss) batch size
     options['test_batch_size'] = 1  # evaluation (loss) batch size
-    options['lr'] = 1e-3             # initial learning rate (I fix learning rate to 1e-3 during training phase)
+    options['lr'] = 1e-4             # initial learning rate (I fix learning rate to 1e-3 during training phase)
     options['reg'] = 1e-5            # regularization strength (control L2 regularization ratio)
     options['init_scale'] = 0.08     # the init scale for uniform distribution
-    options['max_epochs'] = 1000    # maximum training epochs to run
+    options['max_epochs'] = 200   # maximum training epochs to run
     options['init_epoch'] = 0        # initial epoch (useful when you needs to continue from some checkpoints)
-    options['n_eval_per_epoch'] = 0.1 # number of evaluations per epoch
+    options['n_eval_per_epoch'] = 1 # number of evaluations per epoch
     options['eval_init'] = False     # whether to evaluate the initialized model
     options['shuffle'] = True        # whether do data shuffling for training set
-    options['clip_gradient_norm'] = 10.0      # threshold to clip gradients: avoid gradient exploding problem; set to -1 to remove gradient clipping
+    options['clip_gradient_norm'] = 100      # threshold to clip gradients: avoid gradient exploding problem; set to -1 to remove gradient clipping
     options['log_input_min']  = 1e-20          # minimum input to the log() function
     options['sample_len'] = 2048//16 + 1        # the length ratio of the sampled stream compared to the video 
     options['proposal_tiou_threshold'] = 0.5   # tiou threshold to generate positive samples, when changed, re-calculate class weights for positive/negative class

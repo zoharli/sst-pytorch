@@ -34,9 +34,9 @@ class ProposalModel(nn.Module):
         for module in self.modules():
             for name,param in module.named_parameters():
                 if 'weight' in name:
-                    nn.init.uniform(param,-self.options['init_scale'],self.options['init_scale'])
+                    nn.init.uniform_(param,-self.options['init_scale'],self.options['init_scale'])
                 elif 'bias' in name:
-                    nn.init.constant(param,0.)
+                    nn.init.constant_(param,0.)
 
 class LSTMCell(nn.Module):
 
@@ -70,7 +70,7 @@ class LSTMCell(nn.Module):
             weight.data.uniform_(-stdv, stdv)
         # The bias is just set to zero vectors.
         if self.use_bias:
-            nn.init.constant(self.bias.data, val=0)
+            nn.init.constant_(self.bias.data, val=0)
 
 
     def forward(self, input_, hx):
@@ -93,7 +93,7 @@ class LSTMCell(nn.Module):
         wh_b = torch.addmm(bias_batch, h_0, self.weight_hh)
         wi = torch.mm(input_, self.weight_ih)
         f, i, o, g = torch.split(wh_b + wi,
-                                 split_size=self.hidden_size, dim=1)
+                                 self.hidden_size, dim=1)
         c_1 = torch.sigmoid(f)*c_0 + torch.sigmoid(i)*torch.tanh(g)
         h_1 = torch.sigmoid(o) * torch.tanh(c_1)
         return h_1, c_1
@@ -129,7 +129,7 @@ class GRUCell(nn.Module):
             weight.data.uniform_(-stdv, stdv)
         # The bias is just set to zero vectors.
         if self.use_bias:
-            nn.init.constant(self.bias.data, val=0)
+            nn.init.constant_(self.bias.data, val=0)
 
 
     def forward(self, input_, h_0):
@@ -148,7 +148,7 @@ class GRUCell(nn.Module):
         batch_size = h_0.size(0)
         bias_batch = (self.bias.unsqueeze(0)
                       .expand(batch_size, *self.bias.size()))
-        bias_ih,bias_hh = torch.split(bias_batch,split_size=self.hidden_size*3,dim=1)
+        bias_ih,bias_hh = torch.split(bias_batch,self.hidden_size*3,dim=1)
         wi_b = torch.addmm(bias_ih, input_, self.weight_ih)
         wh_b = torch.addmm(bias_hh, h_0, self.weight_hh)
         ri,zi,ni=torch.split(wi_b,self.hidden_size,dim=1)
