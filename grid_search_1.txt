@@ -48118,3 +48118,548 @@ Number of proposals (after score threshold): 2144
 Number of proposals (before post-processing): 13137
 Non-maximum Suppresion ...
 Number of proposals (after nms): 3407
+after nms: 0.3665435831596906 0.044452328234910965 1.0
+Number of proposals (after score threshold): 2574
+122-th video: video_test_0001123, feat_len: 481
+Number of proposals (before post-processing): 14897
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3728
+after nms: 0.5103566964444717 0.0663551464676857 1.0
+Number of proposals (after score threshold): 3467
+123-th video: video_test_0001267, feat_len: 236
+Number of proposals (before post-processing): 7057
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1857
+after nms: 0.20164097334405204 0.06893915683031082 1.0
+Number of proposals (after score threshold): 651
+124-th video: video_test_0001127, feat_len: 339
+Number of proposals (before post-processing): 10353
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2613
+after nms: 0.3210485459651429 0.04278526455163956 1.0
+Number of proposals (after score threshold): 1582
+125-th video: video_test_0000689, feat_len: 243
+Number of proposals (before post-processing): 7281
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1964
+after nms: 0.1514539075427349 0.06573693454265594 1.0
+Number of proposals (after score threshold): 319
+126-th video: video_test_0000756, feat_len: 67
+Number of proposals (before post-processing): 1649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 496
+after nms: 0.4233309694025065 0.0964743122458458 1.0
+Number of proposals (after score threshold): 415
+127-th video: video_test_0001431, feat_len: 671
+Number of proposals (before post-processing): 20977
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5294
+after nms: 0.39257395577247206 0.05520692095160484 1.0
+Number of proposals (after score threshold): 4002
+128-th video: video_test_0000129, feat_len: 359
+Number of proposals (before post-processing): 10993
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2807
+after nms: 0.3199667976190388 0.039743900299072266 1.0
+Number of proposals (after score threshold): 1803
+129-th video: video_test_0001433, feat_len: 36
+Number of proposals (before post-processing): 657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 256
+after nms: 0.5398077225545421 0.10016503930091858 1.0
+Number of proposals (after score threshold): 249
+130-th video: video_test_0001343, feat_len: 780
+Number of proposals (before post-processing): 24465
+Non-maximum Suppresion ...
+Number of proposals (after nms): 6294
+after nms: 0.2748471424155219 0.047366444021463394 1.0
+Number of proposals (after score threshold): 2635
+131-th video: video_test_0000324, feat_len: 279
+Number of proposals (before post-processing): 8433
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2264
+after nms: 0.2672403596288956 0.043425679206848145 1.0
+Number of proposals (after score threshold): 1173
+132-th video: video_test_0001064, feat_len: 517
+Number of proposals (before post-processing): 16049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4100
+after nms: 0.6210195329830778 0.06000259146094322 1.0
+Number of proposals (after score threshold): 3687
+133-th video: video_test_0001531, feat_len: 407
+Number of proposals (before post-processing): 12529
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3298
+after nms: 0.24277926040073464 0.044478241354227066 1.0
+Number of proposals (after score threshold): 1477
+134-th video: video_test_0001532, feat_len: 447
+Number of proposals (before post-processing): 13809
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3559
+after nms: 0.3234119125916386 0.05861413851380348 1.0
+Number of proposals (after score threshold): 2176
+135-th video: video_test_0000413, feat_len: 80
+Number of proposals (before post-processing): 2065
+Non-maximum Suppresion ...
+Number of proposals (after nms): 570
+after nms: 0.3919440513313339 0.057332757860422134 1.0
+Number of proposals (after score threshold): 469
+136-th video: video_test_0000991, feat_len: 154
+Number of proposals (before post-processing): 4433
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1171
+after nms: 0.453875159881341 0.06570779532194138 1.0
+Number of proposals (after score threshold): 918
+137-th video: video_test_0001255, feat_len: 1973
+Number of proposals (before post-processing): 62641
+Non-maximum Suppresion ...
+Number of proposals (after nms): 15679
+after nms: 0.30229404499673884 0.03853650763630867 1.0
+Number of proposals (after score threshold): 8764
+138-th video: video_test_0001202, feat_len: 85
+Number of proposals (before post-processing): 2225
+Non-maximum Suppresion ...
+Number of proposals (after nms): 655
+after nms: 0.28217284093603834 0.07477062195539474 1.0
+Number of proposals (after score threshold): 462
+139-th video: video_test_0001080, feat_len: 129
+Number of proposals (before post-processing): 3633
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1003
+after nms: 0.4017212447057574 0.08341623842716217 1.0
+Number of proposals (after score threshold): 786
+140-th video: video_test_0001081, feat_len: 219
+Number of proposals (before post-processing): 6513
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1737
+after nms: 0.3002985401564826 0.05826706066727638 1.0
+Number of proposals (after score threshold): 821
+141-th video: video_test_0000847, feat_len: 442
+Number of proposals (before post-processing): 13649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3471
+after nms: 0.38429493890676536 0.04710571840405464 1.0
+Number of proposals (after score threshold): 2935
+142-th video: video_test_0000028, feat_len: 273
+Number of proposals (before post-processing): 8241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2134
+after nms: 0.4187121464754782 0.055996619164943695 1.0
+Number of proposals (after score threshold): 1687
+143-th video: video_test_0000844, feat_len: 317
+Number of proposals (before post-processing): 9649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2425
+after nms: 0.43780988911378016 0.06527440249919891 1.0
+Number of proposals (after score threshold): 1864
+144-th video: video_test_0000622, feat_len: 384
+Number of proposals (before post-processing): 11793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3088
+after nms: 0.3959114294622209 0.050978563725948334 1.0
+Number of proposals (after score threshold): 2566
+145-th video: video_test_0000026, feat_len: 389
+Number of proposals (before post-processing): 11953
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3002
+after nms: 0.4229498646885335 0.04592188820242882 1.0
+Number of proposals (after score threshold): 1916
+146-th video: video_test_0001325, feat_len: 328
+Number of proposals (before post-processing): 10001
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2655
+after nms: 0.30707509941272365 0.04877839982509613 1.0
+Number of proposals (after score threshold): 1773
+147-th video: video_test_0000437, feat_len: 383
+Number of proposals (before post-processing): 11761
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2956
+after nms: 0.519621877781089 0.07570600509643555 1.0
+Number of proposals (after score threshold): 2577
+148-th video: video_test_0001495, feat_len: 990
+Number of proposals (before post-processing): 31185
+Non-maximum Suppresion ...
+Number of proposals (after nms): 7752
+after nms: 0.3912560993500854 0.03798669949173927 1.0
+Number of proposals (after score threshold): 5266
+149-th video: video_test_0000624, feat_len: 224
+Number of proposals (before post-processing): 6673
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1751
+after nms: 0.3532801226275026 0.05113120377063751 1.0
+Number of proposals (after score threshold): 1157
+150-th video: video_test_0000724, feat_len: 271
+Number of proposals (before post-processing): 8177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2118
+after nms: 0.5469067771413396 0.09574876725673676 1.0
+Number of proposals (after score threshold): 2055
+151-th video: video_test_0001409, feat_len: 323
+Number of proposals (before post-processing): 9841
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2508
+after nms: 0.3275071377784275 0.046274181455373764 1.0
+Number of proposals (after score threshold): 1969
+152-th video: video_test_0000131, feat_len: 244
+Number of proposals (before post-processing): 7313
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1933
+after nms: 0.45358855384259844 0.05385579541325569 1.0
+Number of proposals (after score threshold): 1522
+153-th video: video_test_0000448, feat_len: 188
+Number of proposals (before post-processing): 5521
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1499
+after nms: 0.21106816083441343 0.053659528493881226 1.0
+Number of proposals (after score threshold): 574
+154-th video: video_test_0000444, feat_len: 294
+Number of proposals (before post-processing): 8913
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2309
+after nms: 0.4549295282731097 0.06047110632061958 1.0
+Number of proposals (after score threshold): 1775
+155-th video: video_test_0000443, feat_len: 546
+Number of proposals (before post-processing): 16977
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4356
+after nms: 0.3480198435918099 0.05185171216726303 1.0
+Number of proposals (after score threshold): 2919
+156-th video: video_test_0000442, feat_len: 290
+Number of proposals (before post-processing): 8785
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2254
+after nms: 0.3212491046015864 0.05548030510544777 1.0
+Number of proposals (after score threshold): 1372
+157-th video: video_test_0000238, feat_len: 192
+Number of proposals (before post-processing): 5649
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1561
+after nms: 0.17717579294003255 0.041716109961271286 1.0
+Number of proposals (after score threshold): 474
+158-th video: video_test_0001527, feat_len: 398
+Number of proposals (before post-processing): 12241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3226
+after nms: 0.1869130513278025 0.051952000707387924 1.0
+Number of proposals (after score threshold): 971
+159-th video: video_test_0001522, feat_len: 86
+Number of proposals (before post-processing): 2257
+Non-maximum Suppresion ...
+Number of proposals (after nms): 618
+after nms: 0.5748780864233627 0.05408588796854019 1.0
+Number of proposals (after score threshold): 569
+160-th video: video_test_0000617, feat_len: 612
+Number of proposals (before post-processing): 19089
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4757
+after nms: 0.3152050485903785 0.04035826027393341 1.0
+Number of proposals (after score threshold): 2217
+161-th video: video_test_0001182, feat_len: 223
+Number of proposals (before post-processing): 6641
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1796
+after nms: 0.2795279962021053 0.05335856229066849 1.0
+Number of proposals (after score threshold): 740
+162-th video: video_test_0001391, feat_len: 581
+Number of proposals (before post-processing): 18097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4655
+after nms: 0.2675350226922047 0.03119794838130474 1.0
+Number of proposals (after score threshold): 2167
+163-th video: video_test_0000429, feat_len: 259
+Number of proposals (before post-processing): 7793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2104
+after nms: 0.39042119257251234 0.06605345755815506 1.0
+Number of proposals (after score threshold): 1817
+164-th video: video_test_0000426, feat_len: 286
+Number of proposals (before post-processing): 8657
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2333
+after nms: 0.5473571004185537 0.05216199532151222 1.0
+Number of proposals (after score threshold): 2054
+165-th video: video_test_0000785, feat_len: 164
+Number of proposals (before post-processing): 4753
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1243
+after nms: 0.5585108949763106 0.09858013689517975 1.0
+Number of proposals (after score threshold): 1152
+166-th video: video_test_0000786, feat_len: 183
+Number of proposals (before post-processing): 5361
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1429
+after nms: 0.33297943348095 0.043779972940683365 1.0
+Number of proposals (after score threshold): 1105
+167-th video: video_test_0001314, feat_len: 646
+Number of proposals (before post-processing): 20177
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5067
+after nms: 0.3757285329277802 0.042355820536613464 1.0
+Number of proposals (after score threshold): 3281
+168-th video: video_test_0000392, feat_len: 206
+Number of proposals (before post-processing): 6097
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1637
+after nms: 0.3011677511168386 0.03659706935286522 1.0
+Number of proposals (after score threshold): 997
+169-th video: video_test_0000423, feat_len: 392
+Number of proposals (before post-processing): 12049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3071
+after nms: 0.46584906801945297 0.04030812531709671 1.0
+Number of proposals (after score threshold): 2392
+170-th video: video_test_0001146, feat_len: 407
+Number of proposals (before post-processing): 12529
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3117
+after nms: 0.32725445198939135 0.04218366742134094 1.0
+Number of proposals (after score threshold): 2774
+171-th video: video_test_0001313, feat_len: 326
+Number of proposals (before post-processing): 9937
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2542
+after nms: 0.3331101670887623 0.053872935473918915 1.0
+Number of proposals (after score threshold): 1758
+172-th video: video_test_0001008, feat_len: 186
+Number of proposals (before post-processing): 5457
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1388
+after nms: 0.47378007775328257 0.060185398906469345 1.0
+Number of proposals (after score threshold): 1220
+173-th video: video_test_0001247, feat_len: 174
+Number of proposals (before post-processing): 5073
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1424
+after nms: 0.2122747457031621 0.07298967242240906 1.0
+Number of proposals (after score threshold): 597
+174-th video: video_test_0001558, feat_len: 267
+Number of proposals (before post-processing): 8049
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2063
+after nms: 0.4839268235441873 0.04309465363621712 1.0
+Number of proposals (after score threshold): 1634
+175-th video: video_test_0001319, feat_len: 104
+Number of proposals (before post-processing): 2833
+Non-maximum Suppresion ...
+Number of proposals (after nms): 824
+after nms: 0.30829057525120024 0.08717706799507141 1.0
+Number of proposals (after score threshold): 624
+176-th video: video_test_0000308, feat_len: 453
+Number of proposals (before post-processing): 14001
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3570
+after nms: 0.5364933186343738 0.05139666423201561 1.0
+Number of proposals (after score threshold): 3126
+177-th video: video_test_0000730, feat_len: 199
+Number of proposals (before post-processing): 5873
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1540
+after nms: 0.5825514911782819 0.07991784065961838 1.0
+Number of proposals (after score threshold): 1449
+178-th video: video_test_0000058, feat_len: 213
+Number of proposals (before post-processing): 6321
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1665
+after nms: 0.2396433712595755 0.027868004515767097 1.0
+Number of proposals (after score threshold): 656
+179-th video: video_test_0000538, feat_len: 342
+Number of proposals (before post-processing): 10449
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2624
+after nms: 0.5741768783020855 0.07947179675102234 1.0
+Number of proposals (after score threshold): 2411
+180-th video: video_test_0001556, feat_len: 193
+Number of proposals (before post-processing): 5681
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1523
+after nms: 0.29122193897349696 0.05554310604929924 1.0
+Number of proposals (after score threshold): 863
+181-th video: video_test_0000903, feat_len: 590
+Number of proposals (before post-processing): 18385
+Non-maximum Suppresion ...
+Number of proposals (after nms): 4862
+after nms: 0.5514954199232176 0.05192955583333969 1.0
+Number of proposals (after score threshold): 4218
+182-th video: video_test_0000504, feat_len: 136
+Number of proposals (before post-processing): 3857
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1032
+after nms: 0.3142376767919045 0.04034770652651787 1.0
+Number of proposals (after score threshold): 503
+183-th video: video_test_0000626, feat_len: 478
+Number of proposals (before post-processing): 14801
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3712
+after nms: 0.4115742464812778 0.04837147518992424 1.0
+Number of proposals (after score threshold): 2753
+184-th video: video_test_0000839, feat_len: 717
+Number of proposals (before post-processing): 22449
+Non-maximum Suppresion ...
+Number of proposals (after nms): 5623
+after nms: 0.4648262954487795 0.0506972074508667 1.0
+Number of proposals (after score threshold): 4916
+185-th video: video_test_0000220, feat_len: 461
+Number of proposals (before post-processing): 14257
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3701
+after nms: 0.26571749911614123 0.053415022790431976 1.0
+Number of proposals (after score threshold): 1713
+186-th video: video_test_0001389, feat_len: 265
+Number of proposals (before post-processing): 7985
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2026
+after nms: 0.43490608168539735 0.07111144065856934 1.0
+Number of proposals (after score threshold): 1625
+187-th video: video_test_0000940, feat_len: 174
+Number of proposals (before post-processing): 5073
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1350
+after nms: 0.4424243306120237 0.07852176576852798 1.0
+Number of proposals (after score threshold): 1140
+188-th video: video_test_0000989, feat_len: 362
+Number of proposals (before post-processing): 11089
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3001
+after nms: 0.3548740402735479 0.04759928584098816 1.0
+Number of proposals (after score threshold): 2508
+189-th video: video_test_0000946, feat_len: 52
+Number of proposals (before post-processing): 1169
+Non-maximum Suppresion ...
+Number of proposals (after nms): 355
+after nms: 0.37150076755755385 0.065218985080719 1.0
+Number of proposals (after score threshold): 299
+190-th video: video_test_0000737, feat_len: 276
+Number of proposals (before post-processing): 8337
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2277
+after nms: 0.13171707911087224 0.039693884551525116 1.0
+Number of proposals (after score threshold): 359
+191-th video: video_test_0000796, feat_len: 238
+Number of proposals (before post-processing): 7121
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1925
+after nms: 0.3912512733893735 0.04474440589547157 1.0
+Number of proposals (after score threshold): 1502
+192-th video: video_test_0000793, feat_len: 3134
+Number of proposals (before post-processing): 99793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 24822
+after nms: 0.34076018641911365 0.027196772396564484 1.0
+Number of proposals (after score threshold): 15364
+193-th video: video_test_0000987, feat_len: 346
+Number of proposals (before post-processing): 10577
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2732
+after nms: 0.2953132996608341 0.05354997143149376 1.0
+Number of proposals (after score threshold): 1470
+194-th video: video_test_0001066, feat_len: 285
+Number of proposals (before post-processing): 8625
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2181
+after nms: 0.47235267095230193 0.06942062079906464 1.0
+Number of proposals (after score threshold): 1807
+195-th video: video_test_0000412, feat_len: 388
+Number of proposals (before post-processing): 11921
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3151
+after nms: 0.2831302385709846 0.04845621436834335 1.0
+Number of proposals (after score threshold): 1923
+196-th video: video_test_0000798, feat_len: 203
+Number of proposals (before post-processing): 6001
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1634
+after nms: 0.1816727680928157 0.05668824166059494 1.0
+Number of proposals (after score threshold): 464
+197-th video: video_test_0001549, feat_len: 215
+Number of proposals (before post-processing): 6385
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1665
+after nms: 0.4689420926163683 0.054432064294815063 1.0
+Number of proposals (after score threshold): 1386
+198-th video: video_test_0000011, feat_len: 148
+Number of proposals (before post-processing): 4241
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1130
+after nms: 0.4259258291296727 0.06824713945388794 1.0
+Number of proposals (after score threshold): 791
+199-th video: video_test_0001257, feat_len: 464
+Number of proposals (before post-processing): 14353
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3718
+after nms: 0.565850322845684 0.05123056471347809 1.0
+Number of proposals (after score threshold): 3300
+200-th video: video_test_0000541, feat_len: 54
+Number of proposals (before post-processing): 1233
+Non-maximum Suppresion ...
+Number of proposals (after nms): 376
+after nms: 0.19956067445232195 0.053667712956666946 1.0
+Number of proposals (after score threshold): 147
+201-th video: video_test_0000701, feat_len: 121
+Number of proposals (before post-processing): 3377
+Non-maximum Suppresion ...
+Number of proposals (after nms): 928
+after nms: 0.2913534764987256 0.06970294564962387 1.0
+Number of proposals (after score threshold): 561
+202-th video: video_test_0000250, feat_len: 397
+Number of proposals (before post-processing): 12209
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3151
+after nms: 0.4410213494737804 0.039523668587207794 1.0
+Number of proposals (after score threshold): 2393
+203-th video: video_test_0000254, feat_len: 393
+Number of proposals (before post-processing): 12081
+Non-maximum Suppresion ...
+Number of proposals (after nms): 3021
+after nms: 0.707242689575434 0.07414985448122025 1.0
+Number of proposals (after score threshold): 2948
+204-th video: video_test_0000549, feat_len: 134
+Number of proposals (before post-processing): 3793
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1046
+after nms: 0.3552700389554122 0.048887547105550766 1.0
+Number of proposals (after score threshold): 665
+205-th video: video_test_0000062, feat_len: 27
+Number of proposals (before post-processing): 379
+Non-maximum Suppresion ...
+Number of proposals (after nms): 159
+after nms: 0.44628954945870164 0.15293119847774506 1.0
+Number of proposals (after score threshold): 155
+206-th video: video_test_0001463, feat_len: 199
+Number of proposals (before post-processing): 5873
+Non-maximum Suppresion ...
+Number of proposals (after nms): 1583
+after nms: 0.42319931160242064 0.055067334324121475 1.0
+Number of proposals (after score threshold): 1370
+207-th video: video_test_0001460, feat_len: 54
+Number of proposals (before post-processing): 1233
+Non-maximum Suppresion ...
+Number of proposals (after nms): 373
+after nms: 0.4617827431406157 0.09374839812517166 1.0
+Number of proposals (after score threshold): 321
+208-th video: video_test_0000807, feat_len: 298
+Number of proposals (before post-processing): 9041
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2375
+after nms: 0.507693177963558 0.06704898178577423 1.0
+Number of proposals (after score threshold): 2148
+209-th video: video_test_0000319, feat_len: 260
+Number of proposals (before post-processing): 7825
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2013
+after nms: 0.3246901992928668 0.07301241904497147 1.0
+Number of proposals (after score threshold): 1608
+210-th video: video_test_0001468, feat_len: 346
+Number of proposals (before post-processing): 10577
+Non-maximum Suppresion ...
+Number of proposals (after nms): 2659
+after nms: 0.5646745193947209 0.08357670158147812 1.0
+Number of proposals (after score threshold): 2481
+211-th video: video_test_0000846, feat_len: 50
+Number of proposals (before post-processing): 1105
+Non-maximum Suppresion ...
+Number of proposals (after nms): 342
+after nms: 0.5750885192762342 0.14544236660003662 1.0
+Number of proposals (after score threshold): 338
+Average proposal number: 2055.563380
+Make directory results/16 ...
+Writing result json file ...
